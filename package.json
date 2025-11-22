@@ -7,10 +7,16 @@
     "start": "npm run dev",
     "build": "npm run lint && tsc && vite build",
     "lint": "eslint .",
-    "dev": "vite"
+    "dev": "vite",
+    "generate-atlas": "node src/generate-sprite-atlas.js"
   },
   "dependencies": {
-    "pixi.js": "^8.8.1"
+    "@types/howler": "^2.2.12",
+    "@types/webfontloader": "^1.6.38",
+    "color": "^5.0.3",
+    "howler": "^2.2.4",
+    "pixi.js": "^8.8.1",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
