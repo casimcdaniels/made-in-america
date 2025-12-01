@@ -699,55 +699,268 @@ export const historicalEvents: HistoricalEvent[] = [
 		description: "Colorado National Guard attacks a tent colony of striking coal miners and their families, killing 21 people including women and children. The massacre draws national attention to the violent suppression of labor organizing and the brutal conditions in mining.",
 		era: "industrial"
 	},
-	// Digital Era (merged Post-Industrial and Digital)
 	{
-		id: "automation-1",
+		id: "industrial-9",
+		title: "Plessy v. Ferguson",
+		date: "1896",
+		description: "The Supreme Court rules that 'separate but equal' facilities are constitutional, legalizing racial segregation. This decision establishes Jim Crow laws across the South, creating a system of legal segregation that restricts Black workers to the lowest-paying, most dangerous jobs. Black workers are excluded from skilled trades, professional positions, and union membership, forced into segregated, substandard working conditions.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-10",
 		title: "Post-War Economic Boom",
 		date: "1950s",
 		description: "The post-World War II economic expansion brings prosperity to many American workers. Manufacturing jobs are plentiful, but automation begins to replace manual labor in factories. The rise of the middle class coincides with increasing mechanization.",
-		era: "digital"
+		era: "industrial"
 	},
 	{
-		id: "automation-2",
+		id: "industrial-11",
+		title: "Brown v. Board of Education",
+		date: "1954",
+		description: "The Supreme Court rules that racial segregation in public schools is unconstitutional, overturning 'separate but equal' and beginning the end of legal segregation. While focused on education, this decision challenges the entire system of Jim Crow segregation, including workplace discrimination. However, workplace desegregation remains slow, with many employers maintaining segregated hiring practices.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-12",
+		title: "Montgomery Bus Boycott",
+		date: "1955-1956",
+		description: "African Americans in Montgomery, Alabama, boycott segregated buses for over a year, led by Rosa Parks and Martin Luther King Jr. The boycott succeeds when the Supreme Court rules bus segregation unconstitutional. This marks a turning point in the Civil Rights Movement, demonstrating the power of organized resistance to segregation and inspiring workplace organizing against discrimination.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-13",
+		title: "Civil Rights Act of 1964",
+		date: "July 2, 1964",
+		description: "President Johnson signs the Civil Rights Act, outlawing discrimination based on race, color, religion, sex, or national origin in employment and public accommodations. This landmark legislation ends legal segregation and workplace discrimination, making it illegal for employers to refuse to hire Black workers or maintain segregated facilities. However, enforcement is slow, and many employers continue discriminatory practices.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-14",
 		title: "Interstate Highway System",
 		date: "1956",
 		description: "The Federal-Aid Highway Act creates the interstate highway system, transforming transportation and logistics. This infrastructure enables the growth of suburban manufacturing and changes how goods and workers move across the country.",
-		era: "digital"
+		era: "industrial"
 	},
 	{
-		id: "automation-3",
+		id: "industrial-15",
 		title: "Automation in Manufacturing",
 		date: "1960s",
 		description: "Automated machinery becomes widespread in factories. Workers must adapt to operating and maintaining machines rather than performing manual tasks. This shift creates new skilled jobs while eliminating many unskilled positions.",
-		era: "digital"
+		era: "industrial"
 	},
 	{
-		id: "automation-4",
+		id: "industrial-16",
 		title: "United Auto Workers Strike",
 		date: "1945-1946",
 		description: "The UAW launches a massive strike against General Motors, demanding wage increases after wartime wage freezes. The 113-day strike results in a 17.5% wage increase and sets a pattern for post-war labor relations, establishing the power of industrial unions.",
-		era: "digital"
+		era: "industrial"
 	},
 	{
-		id: "automation-5",
+		id: "industrial-17",
 		title: "Numerical Control Machines",
 		date: "1952",
 		description: "MIT develops the first numerically controlled machine tool, allowing machines to be programmed rather than manually operated. This innovation begins the transition from skilled machinists to machine operators and programmers, fundamentally changing manufacturing work.",
-		era: "digital"
+		era: "industrial"
 	},
 	{
-		id: "automation-6",
+		id: "industrial-18",
 		title: "Steel Strike of 1959",
 		date: "July-November 1959",
 		description: "A 116-day strike by the United Steelworkers shuts down the American steel industry. The strike focuses on job security and work rules as automation threatens to eliminate positions. The settlement includes protections against automation-related layoffs.",
-		era: "digital"
+		era: "industrial"
 	},
 	{
-		id: "automation-7",
+		id: "industrial-19",
 		title: "Robotic Assembly Lines",
 		date: "1961",
 		description: "General Motors installs the first industrial robot, the Unimate, at a New Jersey plant. This marks the beginning of robotic automation in manufacturing, creating new maintenance and programming jobs while reducing the need for assembly line workers.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-20",
+		title: "Apollo 11 Moon Landing",
+		date: "July 20, 1969",
+		description: "The successful moon landing showcases the power of computing and software engineering. The mission relied on computers and programming, demonstrating that software could accomplish previously impossible tasks and creating new career paths.",
+		era: "industrial"
+	},
+	// Post-Industrial Era
+	{
+		id: "post-industrial-1",
+		title: "Fair Employment Practices",
+		date: "1970s",
+		description: "Following the Civil Rights Act, federal and state governments establish fair employment practices and affirmative action programs to address workplace discrimination. These policies begin to open skilled trades, professional positions, and management roles to Black workers, though progress is slow and resistance remains strong in many industries.",
+		era: "post-industrial"
+	},
+	// Digital Era
+	{
+		id: "digital-1",
+		title: "Personal Computer Revolution",
+		date: "1970s-1980s",
+		description: "The introduction of personal computers transforms work and creates new industries. Software development becomes a viable career path, though women who were early programmers face increasing exclusion as the field becomes more prestigious.",
 		era: "digital"
+	},
+	{
+		id: "digital-2",
+		title: "Telephone Operators Transition",
+		date: "1970s-1980s",
+		description: "Automated switching systems eliminate most telephone operator jobs. Many women operators transition to programming and data entry roles, representing one of the largest workforce transitions in American history.",
+		era: "digital"
+	},
+	{
+		id: "digital-4",
+		title: "AT&T Strike",
+		date: "1983",
+		description: "675,000 AT&T workers strike for 22 days over job security concerns as the company prepares for divestiture. The strike highlights worker anxiety about technological change and corporate restructuring in the telecommunications industry.",
+		era: "digital"
+	},
+	{
+		id: "digital-5",
+		title: "Word Processor Revolution",
+		date: "1970s",
+		description: "Word processing machines replace typewriters in offices, eliminating many typist positions while creating new roles for word processor operators. This technology shift disproportionately affects women office workers and reshapes secretarial work.",
+		era: "digital"
+	},
+	{
+		id: "digital-6",
+		title: "IBM PC Launch",
+		date: "August 1981",
+		description: "IBM introduces the personal computer, making computing accessible to businesses and individuals. This creates massive demand for software developers and technical support workers while reducing the need for traditional data processing clerks.",
+		era: "digital"
+	},
+	{
+		id: "digital-7",
+		title: "Printers' Strike",
+		date: "1983",
+		description: "Newspaper printers strike against automation that threatens their jobs. The conflict represents a broader struggle as computer typesetting replaces traditional printing skills, forcing workers to adapt or face unemployment.",
+		era: "digital"
+	},
+	// AI Era
+	{
+		id: "ai-1",
+		title: "Rise of the Internet",
+		date: "1990s-2000s",
+		description: "The World Wide Web creates entirely new industries and transforms existing ones. E-commerce, digital services, and remote work become possible, fundamentally changing where and how people work.",
+		era: "ai"
+	},
+	{
+		id: "ai-2",
+		title: "Financial Crisis",
+		date: "2008",
+		description: "The Great Recession leads to massive job losses and economic uncertainty. Many workers face long-term unemployment, while others pivot to new careers in technology and services. The crisis accelerates automation as companies seek efficiency.",
+		era: "ai"
+	},
+	{
+		id: "ai-3",
+		title: "ChatGPT and AI Tools",
+		date: "2022-2024",
+		description: "The release of ChatGPT and similar AI tools sparks widespread discussion about automation in knowledge work. Writers, coders, and other professionals grapple with how AI will change their work, echoing concerns from previous automation waves.",
+		era: "ai"
+	},
+	{
+		id: "ai-4",
+		title: "Writers Guild Strike",
+		date: "2023",
+		description: "Hollywood writers strike for 148 days, demanding protections against AI replacing their work. The strike results in restrictions on AI-generated scripts and establishes that AI cannot replace human writers, setting precedents for other creative industries.",
+		era: "ai"
+	},
+	{
+		id: "ai-5",
+		title: "Amazon Warehouse Automation",
+		date: "2010s-2020s",
+		description: "Amazon introduces Kiva robots and automated fulfillment systems, reducing the need for human warehouse workers while creating new roles for robot maintenance technicians. This represents the largest-scale automation of logistics work in history.",
+		era: "ai"
+	},
+	{
+		id: "ai-6",
+		title: "Uber/Lyft Driver Protests",
+		date: "2019-2024",
+		description: "Ride-share drivers organize strikes and protests demanding better pay, benefits, and job security. The gig economy model challenges traditional employment relationships, sparking debates about worker classification and the future of work.",
+		era: "ai"
+	},
+	{
+		id: "ai-7",
+		title: "AI Code Generation Tools",
+		date: "2021-2024",
+		description: "GitHub Copilot and similar AI coding assistants become widespread, raising questions about the future of software development jobs. Some developers embrace the tools as productivity enhancers, while others fear displacement of entry-level programming work.",
+		era: "ai"
+	},
+	// Post-Industrial Era
+	{
+		id: "post-industrial-1",
+		title: "Post-War Economic Boom",
+		date: "1950s",
+		description: "The post-World War II economic expansion brings prosperity to many American workers. Manufacturing jobs are plentiful, but automation begins to replace manual labor in factories. The rise of the middle class coincides with increasing mechanization.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-2",
+		title: "Brown v. Board of Education",
+		date: "1954",
+		description: "The Supreme Court rules that racial segregation in public schools is unconstitutional, overturning 'separate but equal' and beginning the end of legal segregation. While focused on education, this decision challenges the entire system of Jim Crow segregation, including workplace discrimination. However, workplace desegregation remains slow, with many employers maintaining segregated hiring practices.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-3",
+		title: "Montgomery Bus Boycott",
+		date: "1955-1956",
+		description: "African Americans in Montgomery, Alabama, boycott segregated buses for over a year, led by Rosa Parks and Martin Luther King Jr. The boycott succeeds when the Supreme Court rules bus segregation unconstitutional. This marks a turning point in the Civil Rights Movement, demonstrating the power of organized resistance to segregation and inspiring workplace organizing against discrimination.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-4",
+		title: "Civil Rights Act of 1964",
+		date: "July 2, 1964",
+		description: "President Johnson signs the Civil Rights Act, outlawing discrimination based on race, color, religion, sex, or national origin in employment and public accommodations. This landmark legislation ends legal segregation and workplace discrimination, making it illegal for employers to refuse to hire Black workers or maintain segregated facilities. However, enforcement is slow, and many employers continue discriminatory practices.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-5",
+		title: "Fair Employment Practices",
+		date: "1960s-1970s",
+		description: "Following the Civil Rights Act, federal and state governments establish fair employment practices and affirmative action programs to address workplace discrimination. These policies begin to open skilled trades, professional positions, and management roles to Black workers, though progress is slow and resistance remains strong in many industries.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-6",
+		title: "Interstate Highway System",
+		date: "1956",
+		description: "The Federal-Aid Highway Act creates the interstate highway system, transforming transportation and logistics. This infrastructure enables the growth of suburban manufacturing and changes how goods and workers move across the country.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-7",
+		title: "Automation in Manufacturing",
+		date: "1960s",
+		description: "Automated machinery becomes widespread in factories. Workers must adapt to operating and maintaining machines rather than performing manual tasks. This shift creates new skilled jobs while eliminating many unskilled positions.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-8",
+		title: "United Auto Workers Strike",
+		date: "1945-1946",
+		description: "The UAW launches a massive strike against General Motors, demanding wage increases after wartime wage freezes. The 113-day strike results in a 17.5% wage increase and sets a pattern for post-war labor relations, establishing the power of industrial unions.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-9",
+		title: "Numerical Control Machines",
+		date: "1952",
+		description: "MIT develops the first numerically controlled machine tool, allowing machines to be programmed rather than manually operated. This innovation begins the transition from skilled machinists to machine operators and programmers, fundamentally changing manufacturing work.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-10",
+		title: "Steel Strike of 1959",
+		date: "July-November 1959",
+		description: "A 116-day strike by the United Steelworkers shuts down the American steel industry. The strike focuses on job security and work rules as automation threatens to eliminate positions. The settlement includes protections against automation-related layoffs.",
+		era: "post-industrial"
+	},
+	{
+		id: "post-industrial-11",
+		title: "Robotic Assembly Lines",
+		date: "1961",
+		description: "General Motors installs the first industrial robot, the Unimate, at a New Jersey plant. This marks the beginning of robotic automation in manufacturing, creating new maintenance and programming jobs while reducing the need for assembly line workers.",
+		era: "post-industrial"
 	},
 	// Digital Computing Era
 	{

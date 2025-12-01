@@ -34,7 +34,7 @@ export const eras: Era[] = [
 	{
 		id: "agrarian",
 		name: "Agrarian / Colonial Era",
-		years: "1760–1820",
+		years: "1600s–1820",
 		description: "Pre-industrial farming in rural America",
 		context: "Daily life centered on planting, harvesting, household labor, and local community responsibilities",
 		primarySources: ["Crèvecœur's Letters from an American Farmer", "John & Abigail Adams letters"]
@@ -50,23 +50,23 @@ export const eras: Era[] = [
 	{
 		id: "industrial",
 		name: "Industrial Era",
-		years: "1880–1910",
-		description: "Rapid industrialization, urban factories, meatpacking, and labor unrest",
-		context: "Labor movements: Haymarket Strike (1886), Homestead Strike (1892), Pullman Strike (1894)",
-		primarySources: ["Upton Sinclair's The Jungle", "1906 U.S. House Report on Chicago Stockyards"]
+		years: "1880–1970",
+		description: "Rapid industrialization, urban factories, meatpacking, labor unrest, and the rise of automation",
+		context: "Labor movements: Haymarket Strike (1886), Homestead Strike (1892), Pullman Strike (1894). Later period sees automation and early computing transform manufacturing",
+		primarySources: ["Upton Sinclair's The Jungle", "1906 U.S. House Report on Chicago Stockyards", "Oral histories of Texas oil technicians", "Bureau of Labor Statistics bulletins on automation"]
 	},
 	{
 		id: "post-industrial",
 		name: "Post-Industrial Era",
-		years: "1950–1995",
-		description: "Rise of industrial machinery, automated equipment, and early computing. Workers adapting to machinery and transitioning to software development",
-		context: "Workers adapting to machinery that replaces manual labor, and the emergence of computing and software development",
-		primarySources: ["Oral histories of Texas oil technicians", "Bureau of Labor Statistics bulletins on automation", "Historical studies of women in tech", "Hidden Figures"]
+		years: "1970–2000",
+		description: "Transition to service economy, rise of computing, and early digital technologies",
+		context: "Workers transitioning from manufacturing to service and technology sectors. The rise of personal computing and software development transforms work",
+		primarySources: ["Historical studies of women in tech", "Hidden Figures", "Bureau of Labor Statistics on service sector growth"]
 	},
 	{
 		id: "digital",
 		name: "Digital Era",
-		years: "2000–2025",
+		years: "2000–present",
 		description: "Robotics, AI, and automation replacing human work",
 		context: "Robotics, AI, and automation replacing human work across industries",
 		primarySources: ["H. David Autor's 'Why Are There Still So Many Jobs?'", "Norbert Wiener's The Human Use of Human Beings"]
@@ -761,6 +761,70 @@ export const jobs: Job[] = [
 			maritalStatus: 'any'
 		}
 	},
+	{
+		id: "industrial-7",
+		title: "Porter - Colored Men Only",
+		company: "Pullman Company",
+		location: "Chicago, Illinois",
+		type: "Full-time",
+		salary: "$1.25 per day (Plus Tips)",
+		description: "Colored men only - white men need not apply. This is colored men's work - serving white passengers on trains. Jim Crow laws require segregation - colored men serve colored passengers, but mostly you serve white passengers who treat you like a servant. Daily duties: Arrive at station before dawn. Load luggage onto train - heavy bags, your back will ache. Serve white passengers - carry their bags, shine their shoes, make their beds. You must be polite, respectful, never look white passengers in the eye. Call them 'sir' and 'ma'am' - never use their first names. Work 12-14 hour days, sleep in cramped quarters. White passengers will insult you, call you names, treat you like less than human. But you must smile, be polite, never complain. If a white passenger complains about you, you're fired immediately. Tips are your main income - $1.25 base pay is nothing. But white passengers often don't tip colored porters, or tip very little. You compete with other colored porters for tips - be too friendly, you're fired. Be not friendly enough, you get no tips. This is the only work available to colored men on trains - you can't be conductor, engineer, or any skilled position. Those jobs are white only. You're a servant, not a worker. But it's work, and for colored men with families to feed, it's better than nothing.",
+		requirements: [
+			"Colored men only - white men need not apply",
+			"Age 18-45, strong and healthy",
+			"Must be polite and respectful at all times",
+			"Willingness to work 12-14 hour days",
+			"Must accept segregation - colored men serve white passengers",
+			"Must never complain or show disrespect",
+			"Physical strength - must carry heavy luggage",
+			"Must work for tips - base pay is minimal",
+			"Acceptance that skilled positions are white only"
+		],
+		postedDate: "June 15, 1900",
+		era: "industrial",
+		filters: {
+			gender: 'male',
+			race: 'black',
+			minAge: 18,
+			maxAge: 45,
+			education: 'none',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "industrial-8",
+		title: "Janitor - Colored Men Only",
+		company: "Office Building",
+		location: "Birmingham, Alabama",
+		type: "Full-time",
+		salary: "$8-10 per week",
+		description: "Colored men only - this is colored men's work. White men won't do this work, and colored men are considered suited for manual labor. Jim Crow laws require segregation - you work in colored-only areas, use colored-only facilities. Daily duties: Arrive at 5 AM, before white workers arrive. Clean all offices - sweep, mop, empty trash. Clean bathrooms - white bathrooms and colored bathrooms are separate. You can only use colored bathrooms, colored water fountains. Scrub floors on hands and knees - your knees will be raw. Empty wastebaskets, clean windows, polish floors. Work until 7 PM, after white workers leave. You must be invisible - white workers shouldn't see you, shouldn't interact with you. If a white worker complains about you, you're fired. You work in the basement, the back rooms, the colored-only areas. Never use the front entrance - that's for white people. Never ride the elevator with white people - wait for the next one. You're not a person, you're a cleaning machine. $8-10 per week - barely enough to survive, but it's work. Colored men only - white men don't do this work.",
+		requirements: [
+			"Colored men only - white men need not apply",
+			"Age 18-50, able-bodied",
+			"Must work early morning and evening hours",
+			"Willingness to work in segregated conditions",
+			"Must use colored-only facilities",
+			"Must be invisible - no interaction with white workers",
+			"Physical ability - must scrub floors, lift heavy trash",
+			"Acceptance of low pay and harsh conditions",
+			"Must never complain or show disrespect"
+		],
+		postedDate: "September 5, 1910",
+		era: "industrial",
+		filters: {
+			gender: 'male',
+			race: 'black',
+			minAge: 18,
+			maxAge: 50,
+			education: 'none',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
 	// Early Automation Era
 	{
 		id: "automation-1",
@@ -781,7 +845,7 @@ export const jobs: Job[] = [
 			"Must accept responsibility for dangerous equipment"
 		],
 		postedDate: "August 15, 1955",
-		era: "post-industrial",
+		era: "industrial",
 		filters: {
 			gender: 'male',
 			race: 'white',
@@ -812,7 +876,7 @@ export const jobs: Job[] = [
 			"No colored men or women - supervisory positions white only"
 		],
 		postedDate: "February 22, 1962",
-		era: "post-industrial",
+		era: "industrial",
 		filters: {
 			gender: 'male',
 			race: 'white',
@@ -843,7 +907,7 @@ export const jobs: Job[] = [
 			"No known communist or subversive affiliations"
 		],
 		postedDate: "November 10, 1968",
-		era: "post-industrial",
+		era: "industrial",
 		filters: {
 			gender: 'any',
 			race: 'white',
@@ -906,7 +970,7 @@ export const jobs: Job[] = [
 			"Must accept low pay and harsh working conditions"
 		],
 		postedDate: "March 15, 1958",
-		era: "post-industrial",
+		era: "industrial",
 		filters: {
 			gender: 'female',
 			race: 'white',
