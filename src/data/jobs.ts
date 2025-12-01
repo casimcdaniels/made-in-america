@@ -52,7 +52,7 @@ export const eras: Era[] = [
 		name: "Industrial Era",
 		years: "1880–1970",
 		description: "Rapid industrialization, urban factories, meatpacking, labor unrest, and the rise of automation",
-		context: "Labor movements: Haymarket Strike (1886), Homestead Strike (1892), Pullman Strike (1894). Later period sees automation and early computing transform manufacturing",
+		context: "Building on the First Industrial Revolution's foundation, the Second Industrial Revolution (1880-1914) brings steel, electricity, and mass production. Labor movements emerge: Haymarket Strike (1886), Homestead Strike (1892), Pullman Strike (1894). The mature industrial era (1914-1970) sees automation, assembly lines, and early computing transform manufacturing, while unions gain power and workers adapt to new technologies.",
 		primarySources: ["Upton Sinclair's The Jungle", "1906 U.S. House Report on Chicago Stockyards", "Oral histories of Texas oil technicians", "Bureau of Labor Statistics bulletins on automation"]
 	},
 	{
