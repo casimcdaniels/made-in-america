@@ -21,7 +21,14 @@ const { post } = Astro.props;
 	</div>
 	
 	<div class="post-content">
-		{post.content}
+		<span class="post-text" data-translation={post.translation || undefined}>
+			{post.content}
+		</span>
+		{post.translation && (
+			<button class="translate-button" data-post-id={post.id}>
+				<span class="translate-text">Translate to English</span>
+			</button>
+		)}
 	</div>
 	
 	<div class="post-actions">
@@ -41,28 +48,58 @@ const { post } = Astro.props;
 </article>
 
 <script>
-	// Add interactive like functionality
+	// Add interactive like functionality and translation
 	document.addEventListener('DOMContentLoaded', () => {
 		const likeButtons = document.querySelectorAll('.like-button');
 		
 		likeButtons.forEach(button => {
-			button.addEventListener('click', function() {
-				const postId = this.dataset.postId;
-				const countElement = this.querySelector('.action-count');
+			button.addEventListener('click', function(this: HTMLButtonElement) {
+				const postId = (this as HTMLElement).dataset.postId;
+				const countElement = this.querySelector('.action-count') as HTMLElement;
 				const currentCount = parseInt(countElement?.textContent || '0');
 				
 				// Toggle liked state
 				if (this.classList.contains('liked')) {
 					this.classList.remove('liked');
-					countElement.textContent = currentCount - 1;
+					if (countElement) countElement.textContent = String(currentCount - 1);
 					this.style.transform = 'scale(1)';
 				} else {
 					this.classList.add('liked');
-					countElement.textContent = currentCount + 1;
+					if (countElement) countElement.textContent = String(currentCount + 1);
 					this.style.transform = 'scale(1.2)';
 					setTimeout(() => {
 						this.style.transform = 'scale(1)';
 					}, 200);
+				}
+			});
+		});
+
+		// Translation functionality
+		const translateButtons = document.querySelectorAll('.translate-button');
+		translateButtons.forEach(button => {
+			button.addEventListener('click', function(this: HTMLButtonElement) {
+				const postId = (this as HTMLElement).dataset.postId;
+				const postElement = document.querySelector(`article[data-post-id="${postId}"]`) as HTMLElement;
+				const textElement = postElement?.querySelector('.post-text') as HTMLElement;
+				const translateText = this.querySelector('.translate-text') as HTMLElement;
+				
+				if (textElement && (textElement as HTMLElement).dataset.translation) {
+					const translation = (textElement as HTMLElement).dataset.translation || '';
+					
+					if (textElement.classList.contains('translated')) {
+						// Switch back to original
+						const originalText = (textElement as HTMLElement).dataset.originalText || textElement.textContent || '';
+						textElement.textContent = originalText;
+						textElement.classList.remove('translated');
+						if (translateText) translateText.textContent = 'Translate to English';
+					} else {
+						// Store original and switch to translation
+						const originalText = textElement.textContent || '';
+						(textElement as HTMLElement).dataset.originalText = originalText;
+						textElement.textContent = translation;
+						textElement.classList.add('translated');
+						if (translateText) translateText.textContent = 'Show Original';
+					}
 				}
 			});
 		});
@@ -183,6 +220,38 @@ const { post } = Astro.props;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 		text-align: justify;
 		text-justify: inter-word;
+	}
+
+	.post-text {
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.translate-button {
+		background: transparent;
+		border: 1px solid #8b7355;
+		color: #4a5568;
+		padding: 0.4rem 0.8rem;
+		font-size: 0.75rem;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		cursor: pointer;
+		transition: all 0.2s;
+		border-radius: 0;
+		margin-top: 0.5rem;
+		font-weight: 600;
+	}
+
+	.translate-button:hover {
+		background: rgba(74, 85, 104, 0.1);
+		border-color: #4a5568;
+		color: #8b4a4a;
+	}
+
+	.post-text.translated {
+		font-style: italic;
+		color: #666;
 	}
 
 	.post-actions {
