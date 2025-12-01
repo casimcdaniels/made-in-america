@@ -383,6 +383,198 @@ export const jobs: Job[] = [
 			maritalStatus: 'any'
 		}
 	},
+	{
+		id: "market-revolution-6",
+		title: "Seamstress - Piece Work",
+		company: "Garment Workshop",
+		location: "New York City, New York",
+		type: "Piece Work",
+		salary: "$0.50-$1.00 per day (Piece Rate)",
+		description: "Seeking seamstresses for garment finishing. This is WOMEN'S WORK - sewing, finishing, piece work. You work from home or in a crowded workshop. Daily duties: Work 12-14 hour days, 6-7 days per week. Sew seams by hand - your fingers will bleed, your eyes will strain. Finish garments - hemming, buttonholes, trimming. Work piece-rate - the faster you work, the more you earn, but the rate is set so low you must work constantly to survive. Work in dim light - your eyesight will be destroyed by age 30. Your back will ache from hunching over. You'll work until you drop, then start again the next day. Many women work at home, trying to care for children while sewing. Others work in workshops - crowded, stuffy, no ventilation. The work is seasonal - busy before holidays, slow in summer. When there's no work, you starve. This is one of the few jobs available to women, but it pays starvation wages. You compete with other desperate women, driving down the piece rate. No benefits, no security, no future. Just work until you can't work anymore.",
+		requirements: [
+			"Women only - this is women's work",
+			"Age 16-50, preferably 18-35",
+			"Ability to sew by hand - precise stitching required",
+			"Willingness to work 12-14 hour days, 6-7 days per week",
+			"Must work piece-rate - pay depends on speed",
+			"Acceptance of low wages - competition drives down rates",
+			"Must provide own thread and needles",
+			"Willingness to work in crowded, poorly lit conditions",
+			"No prior experience necessary - we'll teach you",
+			"Must work constantly to earn enough to survive"
+		],
+		postedDate: "October 12, 1850",
+		era: "market-revolution",
+		filters: {
+			gender: 'female',
+			race: 'any',
+			minAge: 16,
+			maxAge: 50,
+			education: 'none',
+			experience: 'none',
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "market-revolution-7",
+		title: "School Teacher - Women Only",
+		company: "Common School",
+		location: "Rural New England",
+		type: "Teaching",
+		salary: "$4-8 per month (Room & Board with Family)",
+		description: "Seeking schoolteacher for one-room schoolhouse. This is one of the FEW PROFESSIONAL ROLES for women - teaching is considered 'women's work' because it's nurturing, like motherhood. But pay is low, conditions are poor. Daily duties: Teach all grades in one room - ages 5-16, 30-50 students. Teach reading, writing, arithmetic, basic geography. Maintain discipline - many students are older, stronger than you. Clean the schoolhouse - you're janitor too. Board with local families - rotate monthly, never have a home. Work 6 days per week, sometimes 7. Your pay is docked for room and board - you'll save little. Many teachers are young, single women - they work a few years, then marry and quit (expected to). Married women are discouraged from teaching - husbands should support them. You must be 'respectable' - good moral character, proper behavior. The community watches you constantly. But it's better than factory work or domestic service - you have some respect, some independence. Free white women only - this is one of the few opportunities for education and professional work.",
+		requirements: [
+			"Women only - teaching is women's work",
+			"Free white women only - colored women need not apply",
+			"Age 18-30, preferably 20-25",
+			"Single women preferred - married women expected to quit",
+			"Basic education required - must be able to read and write",
+			"Good moral character - must be 'respectable'",
+			"Willingness to board with local families",
+			"Ability to manage 30-50 students of all ages",
+			"Must teach all subjects - reading, writing, arithmetic",
+			"Acceptance of low pay - teaching is not lucrative"
+		],
+		postedDate: "August 1, 1855",
+		era: "market-revolution",
+		filters: {
+			gender: 'female',
+			race: 'white',
+			minAge: 18,
+			maxAge: 30,
+			education: 'elementary',
+			experience: 'none',
+			maritalStatus: 'single'
+		}
+	},
+	{
+		id: "market-revolution-8",
+		title: "Free Black Laborer - Dock Work",
+		company: "Port Authority",
+		location: "Philadelphia, Pennsylvania",
+		type: "Manual Labor",
+		salary: "$1.00-$1.50 per day (Irregular Work)",
+		description: "Seeking laborers for dock work. Free colored men welcome - this is hard, dangerous work that white men avoid. But you'll be paid less, treated worse. Daily duties: Load and unload ships - carry heavy cargo on your back, your spine will be destroyed. Work in all weather - rain, snow, blazing sun. Work 10-12 hour days when work is available. But work is irregular - ships come and go, you may work one day, starve the next. You compete with other free colored men, Irish immigrants - all desperate for work. White workers get better jobs, better pay. You get the worst work, lowest pay. No security, no benefits, no future. If you're injured, you're fired. If you complain, you're fired. Free colored men are excluded from skilled trades - carpenters' unions won't admit you, blacksmiths won't train you. This is one of the few jobs available. You're free, but you're not equal. White workers resent you - they say you drive down wages. But you have no choice - this is work, or starve.",
+		requirements: [
+			"Men only - this is men's work requiring strength",
+			"Free colored men - slaves need not apply",
+			"Age 18-45, strong and healthy",
+			"Physical strength - must carry heavy cargo",
+			"Willingness to work irregular hours - work when ships arrive",
+			"Acceptance of low pay - free colored men paid less than white workers",
+			"Willingness to work in all weather conditions",
+			"No prior experience necessary",
+			"Must compete with other desperate workers",
+			"Acceptance that skilled trades are closed to you"
+		],
+		postedDate: "July 15, 1850",
+		era: "market-revolution",
+		filters: {
+			gender: 'male',
+			race: 'black',
+			minAge: 18,
+			maxAge: 45,
+			education: 'none',
+			experience: 'none',
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "market-revolution-9",
+		title: "Chinese Railroad Worker",
+		company: "Central Pacific Railroad",
+		location: "Sierra Nevada, California",
+		type: "Construction",
+		salary: "$1.00 per day (Less than White Workers)",
+		description: "Seeking Chinese workers for railroad construction through mountains. Chinese workers preferred for dangerous work - blasting, tunneling, working in extreme conditions. We pay you less than white workers, work you harder, treat you worse. Daily duties: Blast through mountains - many workers die in explosions. Tunnel through rock - cave-ins are common, you'll be buried alive. Work 12-14 hour days, 6-7 days per week. Live in tent camps - crowded, filthy, disease-ridden. Food is poor quality - you'll be malnourished. White workers get $1.50 per day, you get $1.00. White workers get better food, better housing. You get the worst of everything. Accidents are constant - crushed by rocks, explosions, falls. If you're injured, you're fired. If you die, we hire another. Chinese workers are considered expendable - cheaper than white workers, more desperate, easier to control. You can't speak English? Doesn't matter, just work. You can't organize? Good - we don't want unions. You're isolated, discriminated against, exploited. But it's work, and for immigrants with no other options, it's better than starving.",
+		requirements: [
+			"Men only - this is men's work",
+			"Chinese immigrants preferred - work cheap, work hard",
+			"Age 18-40, strong and healthy",
+			"Willingness to work in extreme danger - blasting, tunneling",
+			"Acceptance of lower pay than white workers",
+			"Willingness to work 12-14 hour days, 6-7 days per week",
+			"Must live in tent camps - crowded, filthy conditions",
+			"No prior experience necessary",
+			"Willingness to work in all weather, all conditions",
+			"Acceptance that you're considered expendable"
+		],
+		postedDate: "May 10, 1867",
+		era: "market-revolution",
+		filters: {
+			gender: 'male',
+			race: 'any',
+			minAge: 18,
+			maxAge: 40,
+			education: 'none',
+			experience: 'none',
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "market-revolution-10",
+		title: "Clerk - Store Assistant",
+		company: "Dry Goods Store",
+		location: "Boston, Massachusetts",
+		type: "Clerical",
+		salary: "$6-10 per week",
+		description: "Seeking clerk for dry goods store. This is MEN'S WORK - requires education, literacy, dealing with customers. Young men preferred - they're cheaper, more compliant. Daily duties: Work 10-12 hour days, 6 days per week. Assist customers - measure fabric, weigh goods, calculate prices. Keep accounts - record sales, balance books. Stock shelves - lift heavy boxes, your back will ache. Sweep floors, clean windows - you're janitor too. The owner watches constantly - make a mistake, you're fired. You must be polite, respectful, never complain. Many clerks are young men hoping to learn the business, become shopkeepers themselves. But most never do - they stay clerks, working for others their whole lives. This requires education - must be able to read, write, do arithmetic. Free white men only - this is skilled work requiring education that slaves and free colored men are denied. You have some respect, some security, but pay is low, advancement is rare.",
+		requirements: [
+			"Men only - this is men's work",
+			"Free white men only - requires education",
+			"Age 16-30, preferably 18-25",
+			"Basic education required - must read, write, do arithmetic",
+			"Polite, respectful demeanor - must deal with customers",
+			"Willingness to work 10-12 hour days, 6 days per week",
+			"Physical ability - must lift heavy boxes, stock shelves",
+			"No prior experience necessary - we'll train you",
+			"Must be trustworthy - handling money and accounts",
+			"Acceptance that advancement is rare - most stay clerks"
+		],
+		postedDate: "March 5, 1850",
+		era: "market-revolution",
+		filters: {
+			gender: 'male',
+			race: 'white',
+			minAge: 16,
+			maxAge: 30,
+			education: 'elementary',
+			experience: 'none',
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "market-revolution-11",
+		title: "Coal Miner - Men Only",
+		company: "Coal Mine",
+		location: "Pennsylvania",
+		type: "Mining",
+		salary: "$1.50-$2.00 per day (Dangerous Work)",
+		description: "Seeking miners for coal extraction. This is BRUTAL, DANGEROUS work - men die daily. Irish and Welsh immigrants preferred - they work cheap, work hard, can't complain. Daily duties: Descend into mine before dawn - dark, cramped, suffocating. Dig coal with pickaxe - your arms will shake with exhaustion. Load coal into carts - your back will break. Work in darkness, breathing coal dust - your lungs will be destroyed. Cave-ins are constant - you'll be buried alive. Explosions from gas - you'll be burned, crushed, killed. Work 10-12 hour days, 6 days per week. Many miners die before age 40 - black lung, accidents, explosions. If you're injured, you're fired. If you die, they hire another. No safety regulations - accidents are your fault. Irish workers are preferred - they're desperate, work for less, less likely to organize. This is free labor, but it's worse than slavery in many ways - at least slaves are valuable property, you're disposable. But it's work, and for immigrants with no other options, it's better than starving.",
+		requirements: [
+			"Men only - this is men's work",
+			"Irish or Welsh immigrants preferred - work cheap",
+			"Age 18-45, strong and healthy",
+			"Physical strength - must dig coal, load carts",
+			"Willingness to work in extreme danger - cave-ins, explosions",
+			"Acceptance of dangerous work - many workers die",
+			"Willingness to work 10-12 hour days, 6 days per week",
+			"Must work in darkness, breathing coal dust",
+			"No prior experience necessary",
+			"Acceptance that you're considered expendable"
+		],
+		postedDate: "September 20, 1855",
+		era: "market-revolution",
+		filters: {
+			gender: 'male',
+			race: 'white',
+			minAge: 18,
+			maxAge: 45,
+			education: 'none',
+			experience: 'none',
+			maritalStatus: 'any'
+		}
+	},
 	// Industrial Era
 	{
 		id: "industrial-1",

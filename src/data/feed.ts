@@ -146,6 +146,72 @@ export const feedPosts: FeedPost[] = [
 		comments: 28,
 		reactions: []
 	},
+	{
+		id: "market-revolution-8",
+		author: "Anonymous Free Black Worker",
+		authorRole: "Dock Laborer, Philadelphia",
+		content: "I'm free, but I'm not equal. White workers get $1.50 a day for dock work, I get $1.00. White workers get steady work, I get what's left over. The carpenters' union won't admit me - 'colored men need not apply.' The blacksmiths won't train me - 'we don't train colored apprentices.' So I'm stuck with the worst work, lowest pay. I'm free, but what does freedom mean when you can't get a fair wage, can't learn a trade, can't advance? I work harder than white workers, but I'm paid less, treated worse. This is what freedom means for colored men - the right to work for less.",
+		timestamp: "1852",
+		era: "market-revolution",
+		likes: 67,
+		comments: 18,
+		reactions: []
+	},
+	{
+		id: "market-revolution-9",
+		author: "Irish Immigrant Worker",
+		authorRole: "Canal Digger",
+		content: "We came from Ireland starving, thinking America was the land of opportunity. Instead we found canal digging - backbreaking work, 12 hours a day, $1 a day. We live in shanties, eat poor food, die from disease. The work is dangerous - cave-ins, explosions, accidents. Many of us die. But what choice do we have? We can't go back to Ireland - there's nothing there but starvation. We can't get better work - native workers won't hire us, say we drive down wages. So we dig canals, build railroads, do the work no one else will do. We're free, but we're not free.",
+		timestamp: "1840",
+		era: "market-revolution",
+		likes: 89,
+		comments: 22,
+		reactions: []
+	},
+	{
+		id: "market-revolution-10",
+		author: "Former Artisan",
+		authorRole: "Shoemaker Turned Factory Worker",
+		content: "I was a master shoemaker - had my own shop, my own tools, my own customers. Made good shoes, earned good wages, had respect. Then factories started making shoes - cheaper, faster, not as good, but cheaper. My customers left, I couldn't compete. Lost my shop, lost my tools, lost everything. Now I work in a factory - same work, but I'm a wage worker, not a craftsman. I work for someone else, get paid by the hour, have no control. The factory owner makes the profit, I get a wage. I lost my independence, my skill, my dignity. This is progress?",
+		timestamp: "1855",
+		era: "market-revolution",
+		likes: 112,
+		comments: 34,
+		reactions: []
+	},
+	{
+		id: "market-revolution-11",
+		author: "Child Worker",
+		authorRole: "Mill Worker, Age 12",
+		content: "I've been working in the mill since I was 10. My family needed the money - father lost his farm, we moved to the city. I work 12 hours a day, same as the adults, but I get paid less. The machines are dangerous - I've seen children lose fingers, get caught in machinery. The foreman yells at us, hits us if we're slow. I'm always tired, always hungry. I can't go to school - we need the money. I'll work here until I'm too old or too broken, then what? This is my life - work, sleep, work again. I'm 12 years old, but I feel 50.",
+		timestamp: "1840",
+		era: "market-revolution",
+		likes: 45,
+		comments: 12,
+		reactions: []
+	},
+	{
+		id: "market-revolution-12",
+		author: "German Immigrant",
+		authorRole: "Brewer, Milwaukee",
+		content: "We came from Germany with skills - brewing, carpentry, farming. In Germany, I was a respected brewer. Here, I'm just another immigrant. I opened a small brewery, but it's hard - competing with established brewers, dealing with nativists who hate Germans. We work hard, save money, try to build something. But we face discrimination - 'foreigners' taking jobs, driving down wages. We're not taking jobs - we're creating them. We're not driving down wages - we're building businesses. But nativists don't see that. They see threats, not neighbors.",
+		timestamp: "1850",
+		era: "market-revolution",
+		likes: 34,
+		comments: 8,
+		reactions: []
+	},
+	{
+		id: "market-revolution-13",
+		author: "Farm Wife",
+		authorRole: "Homesteader, Frontier",
+		content: "We moved west, thinking we'd have our own farm, our own land. But the work is endless. I rise before dawn, work until dark. Plant, weed, harvest, preserve, cook, clean, care for children, tend animals. My husband works the fields, but I work just as hard - the farm can't survive without my labor. But it's not recognized as 'work' - it's just what women do. We face crop failures, harsh winters, disease, isolation. Many families fail, lose everything, move on. We're free, but we're not free from work, from struggle, from hardship. This is the frontier - opportunity and exhaustion, hope and despair.",
+		timestamp: "1860",
+		era: "market-revolution",
+		likes: 56,
+		comments: 15,
+		reactions: []
+	},
 	// Industrial Era - Based on The Jungle and 1906 House Report
 	{
 		id: "industrial-1",
