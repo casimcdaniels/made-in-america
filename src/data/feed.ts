@@ -142,7 +142,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Oil Refinery Technician, Texas",
 		content: "From oral history interview: These new automated control systems are incredible! My father worked the oil fields in the 1920s - backbreaking manual labor, dangerous work. Now I sit in a control room monitoring screens. The machines do the heavy lifting, the dangerous work. I make $4,200 a year - more than my father ever dreamed. But I had to learn new skills. The old-timers who couldn't adapt... they're gone.",
 		timestamp: "September 5, 1958",
-		era: "automation",
+		era: "post-industrial",
 		likes: 45,
 		comments: 7,
 		reactions: ["🤖", "👍"]
@@ -153,7 +153,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Assembly Line Supervisor, Detroit",
 		content: "The Bureau of Labor Statistics says automation is creating as many jobs as it's eliminating. I see it firsthand. We installed robotic welders - replaced 20 manual welders. But now we need technicians to maintain them, programmers to optimize them, supervisors to manage the new workflow. I had to go back to school, learn about these machines. The workers who adapt thrive. Those who don't... it's hard.",
 		timestamp: "March 12, 1965",
-		era: "automation",
+		era: "post-industrial",
 		likes: 78,
 		comments: 15,
 		reactions: ["⚙️", "💡"]
@@ -164,7 +164,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Machine Operator, Boeing",
 		content: "I used to operate a manual lathe - turning metal by hand, measuring with calipers. Now I program a computer-controlled machine. The pay jumped from $3,800 to $4,800 a year. The work is safer, cleaner. But I watch the older guys struggle. Some can't learn the new systems. They get transferred to maintenance, or they take early retirement. Progress is great, but what about the people left behind?",
 		timestamp: "November 20, 1969",
-		era: "automation",
+		era: "post-industrial",
 		likes: 92,
 		comments: 23,
 		reactions: ["🤔", "💭"]
@@ -175,7 +175,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Bureau of Labor Statistics",
 		content: "BLS Report: 'The Impact of Automation on Employment': Our study shows automation is not eliminating jobs wholesale - it's transforming them. Workers are moving from manual labor to machine operation, from operation to maintenance, from maintenance to programming. The key is retraining. Companies investing in worker education see higher productivity and lower turnover. The future belongs to adaptable workers.",
 		timestamp: "January 15, 1964",
-		era: "automation",
+		era: "post-industrial",
 		likes: 34,
 		comments: 8,
 		reactions: ["📊", "💡"]
@@ -186,7 +186,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Former Farm Worker, Now Factory Worker",
 		content: "Left the farm in '55, came to the city for factory work. Started on the assembly line - repetitive, mind-numbing. But then they automated my station. I thought I'd be fired. Instead, they trained me to maintain the machines. Now I'm a technician making twice what I did before. The machines didn't replace me - they gave me a better job. But I know I'm lucky. Not everyone gets that chance.",
 		timestamp: "May 8, 1967",
-		era: "automation",
+		era: "post-industrial",
 		likes: 56,
 		comments: 12,
 		reactions: ["👍", "💪"]
@@ -198,7 +198,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Rear Admiral, Computer Scientist",
 		content: "I've been programming since the 1940s - back when 'computers' were people, mostly women, doing calculations by hand. Now we have machines that can do millions of calculations per second. But programming isn't about the machine - it's about solving problems, thinking logically, breaking down complex tasks. Women excel at this work. We've been doing it all along, just with different tools. The future of computing belongs to those who can think, not just those who can lift heavy equipment.",
 		timestamp: "January 15, 1975",
-		era: "digital",
+		era: "post-industrial",
 		likes: 156,
 		comments: 34,
 		reactions: ["💻", "👩‍💻", "🚀"]
@@ -209,7 +209,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "NASA Mathematician & Computer",
 		content: "From Hidden Figures: They said women couldn't do this work. They said we weren't smart enough, that math was for men. But here we are - Dorothy Vaughan, Mary Jackson, and I - calculating trajectories for space missions. We were 'computers' before machines took that name. The electronic computers are powerful, but they need us to program them, to verify their calculations, to think through the problems. The real power is in the human mind.",
 		timestamp: "July 20, 1969",
-		era: "digital",
+		era: "post-industrial",
 		likes: 289,
 		comments: 67,
 		reactions: ["🌙", "⭐", "👏"]
@@ -220,7 +220,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "NASA Supervisor & Programmer",
 		content: "I started as a 'computer' - doing calculations by hand. When NASA got the IBM 7090, I taught myself FORTRAN. They were going to replace us with machines, but I showed them - we could program the machines. I became the first Black supervisor at NASA. Now I'm training other women to code. The machines don't replace us - they amplify our abilities. But you have to adapt, learn new skills, or you'll be left behind.",
 		timestamp: "December 1, 1961",
-		era: "digital",
+		era: "post-industrial",
 		likes: 198,
 		comments: 45,
 		reactions: ["💪", "👏", "🚀"]
@@ -231,7 +231,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Now: Computer Programmer",
 		content: "I was a telephone operator for 10 years - connecting calls, routing messages. When AT&T started automating, I thought I'd lose my job. Instead, they trained us to program the switching systems. Now I write code for telephone networks. The skills transferred - attention to detail, logical thinking, problem-solving. Many of my colleagues couldn't make the transition, but those of us who did found better-paying, more interesting work. Technology doesn't have to eliminate jobs - it can transform them.",
 		timestamp: "March 20, 1980",
-		era: "digital",
+		era: "post-industrial",
 		likes: 87,
 		comments: 18,
 		reactions: ["📞", "💻", "💡"]
@@ -242,7 +242,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Software Developer & Entrepreneur",
 		content: "The personal computer revolution is here! We're putting computing power in everyone's hands - not just big corporations, but individuals, small businesses, students. Software is the key. If you can code, you can build anything. The opportunities are endless. But you have to learn. The jobs of the future won't be about physical labor - they'll be about knowledge, creativity, problem-solving. Code is the new literacy.",
 		timestamp: "March 15, 1990",
-		era: "digital",
+		era: "post-industrial",
 		likes: 445,
 		comments: 89,
 		reactions: ["💻", "🔥", "💰"]
@@ -253,7 +253,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Computer Scientist & Women's Advocate",
 		content: "Women built the foundation of computing - we were the first programmers, the first 'computers,' the first software engineers. But as the field grew more prestigious and lucrative, men pushed us out. We need to reclaim our place. Computing needs diverse perspectives. The problems we're solving affect everyone - we need everyone at the table. Let's build a tech industry that reflects the world it serves.",
 		timestamp: "June 12, 1992",
-		era: "digital",
+		era: "post-industrial",
 		likes: 234,
 		comments: 56,
 		reactions: ["👩‍💻", "💪", "🌍"]
@@ -265,7 +265,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "AI Researcher, Stanford",
 		content: "Just trained a model that can write code better than I can. Feeling equal parts amazed and terrified. As H. David Autor asks: 'Why are there still so many jobs?' History shows automation creates new jobs even as it eliminates old ones. But this time feels different - AI is automating cognitive work, not just manual labor. We need to think carefully about what this means for the future of work.",
 		timestamp: "March 10, 2024",
-		era: "ai",
+		era: "digital",
 		likes: 1234,
 		comments: 234,
 		reactions: ["🤖", "😱", "💭"]
@@ -276,7 +276,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Prompt Engineer",
 		content: "My job didn't exist 2 years ago. Now I'm making $200k teaching AI how to communicate effectively. As Norbert Wiener wrote in 'The Human Use of Human Beings' - the question isn't whether machines will replace us, but how we'll use them. The future of work isn't about replacing humans - it's about humans and AI working together. The best prompt engineers are creative, empathetic, and curious - skills AI doesn't have.",
 		timestamp: "February 14, 2025",
-		era: "ai",
+		era: "digital",
 		likes: 892,
 		comments: 156,
 		reactions: ["💡", "🚀", "💰"]
@@ -287,7 +287,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "AI Ethics Researcher, MIT",
 		content: "We're automating knowledge work now - lawyers, doctors, writers, coders. AI can do parts of all these jobs. But Autor's research shows something interesting: when technology automates routine tasks, it often increases demand for non-routine work - creative problem-solving, human interaction, judgment. We need to redefine work, not just replace it. The future is collaborative, not competitive.",
 		timestamp: "January 8, 2025",
-		era: "ai",
+		era: "digital",
 		likes: 567,
 		comments: 98,
 		reactions: ["🤔", "💭", "🌍"]
@@ -298,7 +298,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "ML Engineer",
 		content: "Spent 3 hours debugging why GPT-4 gave me a wrong answer. Turns out my prompt was ambiguous. The AI is powerful, but it's not magic. Understanding how to work WITH these systems is the real skill. Prompt engineering is the new programming. But as Wiener warned - we must ensure these tools serve human purposes, not replace human judgment.",
 		timestamp: "March 1, 2025",
-		era: "ai",
+		era: "digital",
 		likes: 345,
 		comments: 45,
 		reactions: ["💻", "😅", "💡"]
@@ -309,7 +309,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Labor Economist, MIT",
 		content: "From 'Why Are There Still So Many Jobs?': The history of automation shows a paradox - as machines replace human labor, new jobs emerge. Why? Because automation increases productivity, lowers costs, creates new industries. But AI is different - it automates cognitive tasks, not just manual ones. The question isn't whether jobs will exist, but what skills they'll require. Adaptability, creativity, human connection - these remain uniquely human.",
 		timestamp: "May 15, 2023",
-		era: "ai",
+		era: "digital",
 		likes: 678,
 		comments: 123,
 		reactions: ["📊", "💭", "🎓"]
@@ -320,7 +320,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Now: AI Content Strategist",
 		content: "I thought AI would replace me. Instead, it amplified my work. I used to write 5 articles a week. Now I write 20 - AI helps with research, drafts, editing. I focus on strategy, creativity, human connection. My income doubled. But I had to learn new skills - prompt engineering, AI tooling, workflow optimization. The writers who adapted are thriving. Those who didn't... they're struggling. History repeats itself.",
 		timestamp: "December 10, 2024",
-		era: "ai",
+		era: "digital",
 		likes: 456,
 		comments: 78,
 		reactions: ["✍️", "💡", "💰"]
@@ -331,7 +331,7 @@ export const feedPosts: FeedPost[] = [
 		authorRole: "Cybernetics Pioneer (quoted)",
 		content: "From 'The Human Use of Human Beings' (1950): 'The machine... is the modern counterpart of the Golem of the Rabbi of Prague.' We create powerful tools, but we must ensure they serve human purposes. The danger isn't that machines will become too intelligent - it's that we'll become too dependent, losing our own capacity for judgment and creativity. Technology should amplify human abilities, not replace human values.",
 		timestamp: "1950 (quoted 2024)",
-		era: "ai",
+		era: "digital",
 		likes: 789,
 		comments: 145,
 		reactions: ["📚", "💭", "🎯"]
@@ -479,55 +479,55 @@ export const historicalEvents: HistoricalEvent[] = [
 		description: "Colorado National Guard attacks a tent colony of striking coal miners and their families, killing 21 people including women and children. The massacre draws national attention to the violent suppression of labor organizing and the brutal conditions in mining.",
 		era: "industrial"
 	},
-	// Early Automation Era
+	// Digital Era (merged Post-Industrial and Digital)
 	{
 		id: "automation-1",
 		title: "Post-War Economic Boom",
 		date: "1950s",
 		description: "The post-World War II economic expansion brings prosperity to many American workers. Manufacturing jobs are plentiful, but automation begins to replace manual labor in factories. The rise of the middle class coincides with increasing mechanization.",
-		era: "automation"
+		era: "digital"
 	},
 	{
 		id: "automation-2",
 		title: "Interstate Highway System",
 		date: "1956",
 		description: "The Federal-Aid Highway Act creates the interstate highway system, transforming transportation and logistics. This infrastructure enables the growth of suburban manufacturing and changes how goods and workers move across the country.",
-		era: "automation"
+		era: "digital"
 	},
 	{
 		id: "automation-3",
 		title: "Automation in Manufacturing",
 		date: "1960s",
 		description: "Automated machinery becomes widespread in factories. Workers must adapt to operating and maintaining machines rather than performing manual tasks. This shift creates new skilled jobs while eliminating many unskilled positions.",
-		era: "automation"
+		era: "digital"
 	},
 	{
 		id: "automation-4",
 		title: "United Auto Workers Strike",
 		date: "1945-1946",
 		description: "The UAW launches a massive strike against General Motors, demanding wage increases after wartime wage freezes. The 113-day strike results in a 17.5% wage increase and sets a pattern for post-war labor relations, establishing the power of industrial unions.",
-		era: "automation"
+		era: "digital"
 	},
 	{
 		id: "automation-5",
 		title: "Numerical Control Machines",
 		date: "1952",
 		description: "MIT develops the first numerically controlled machine tool, allowing machines to be programmed rather than manually operated. This innovation begins the transition from skilled machinists to machine operators and programmers, fundamentally changing manufacturing work.",
-		era: "automation"
+		era: "digital"
 	},
 	{
 		id: "automation-6",
 		title: "Steel Strike of 1959",
 		date: "July-November 1959",
 		description: "A 116-day strike by the United Steelworkers shuts down the American steel industry. The strike focuses on job security and work rules as automation threatens to eliminate positions. The settlement includes protections against automation-related layoffs.",
-		era: "automation"
+		era: "digital"
 	},
 	{
 		id: "automation-7",
 		title: "Robotic Assembly Lines",
 		date: "1961",
 		description: "General Motors installs the first industrial robot, the Unimate, at a New Jersey plant. This marks the beginning of robotic automation in manufacturing, creating new maintenance and programming jobs while reducing the need for assembly line workers.",
-		era: "automation"
+		era: "digital"
 	},
 	// Digital Computing Era
 	{
@@ -662,25 +662,19 @@ export function getEraTheme(eraId: string) {
 			accent: "#DC143C",
 			bg: "#F5F5F5"
 		},
-		automation: {
-			primary: "#1E90FF",
-			secondary: "#87CEEB",
-			accent: "#FFD700",
-			bg: "#F0F8FF"
-		},
-		digital: {
+		"post-industrial": {
 			primary: "#00CED1",
 			secondary: "#20B2AA",
 			accent: "#FF1493",
 			bg: "#E0FFFF"
 		},
-		ai: {
+		digital: {
 			primary: "#0a66c2",
 			secondary: "#004182",
 			accent: "#00D4FF",
 			bg: "#F5F5F5"
 		}
 	};
-	return themes[eraId] || themes.ai;
+	return themes[eraId] || themes.digital;
 }
 

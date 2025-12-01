@@ -48,27 +48,19 @@ export const eras: Era[] = [
 		primarySources: ["Upton Sinclair's The Jungle", "1906 U.S. House Report on Chicago Stockyards"]
 	},
 	{
-		id: "automation",
-		name: "Early Automation / Mid-20th Century",
-		years: "1950–1970",
-		description: "Rise of industrial machinery and automated equipment",
-		context: "Workers adapting to machinery that replaces some manual labor",
-		primarySources: ["Oral histories of Texas oil technicians", "Bureau of Labor Statistics bulletins on automation"]
+		id: "post-industrial",
+		name: "Post-Industrial Era",
+		years: "1950–1995",
+		description: "Rise of industrial machinery, automated equipment, and early computing. Workers adapting to machinery and transitioning to software development",
+		context: "Workers adapting to machinery that replaces manual labor, and the emergence of computing and software development",
+		primarySources: ["Oral histories of Texas oil technicians", "Bureau of Labor Statistics bulletins on automation", "Historical studies of women in tech", "Hidden Figures"]
 	},
 	{
 		id: "digital",
-		name: "Digital Computing / Early Tech Era",
-		years: "1970–1995",
-		description: "Women in computing, early software development, telephone operators transitioning to programmers",
-		context: "Focus on social and workplace dynamics rather than physical labor",
-		primarySources: ["Historical studies of women in tech", "Hidden Figures"]
-	},
-	{
-		id: "ai",
-		name: "AI / Modern Software Era",
+		name: "Digital Era",
 		years: "2000–2025",
-		description: "AI, agentic tools, automation in knowledge work",
-		context: "Concerns about job displacement, evolving skills, and the meaning of work",
+		description: "Robotics, AI, and automation replacing human work",
+		context: "Robotics, AI, and automation replacing human work across industries",
 		primarySources: ["H. David Autor's 'Why Are There Still So Many Jobs?'", "Norbert Wiener's The Human Use of Human Beings"]
 	}
 ];
@@ -428,7 +420,7 @@ export const jobs: Job[] = [
 			"Must accept responsibility for dangerous equipment"
 		],
 		postedDate: "August 15, 1955",
-		era: "automation",
+		era: "post-industrial",
 		filters: {
 			gender: 'male',
 			race: 'white',
@@ -459,7 +451,7 @@ export const jobs: Job[] = [
 			"No colored men or women - supervisory positions white only"
 		],
 		postedDate: "February 22, 1962",
-		era: "automation",
+		era: "post-industrial",
 		filters: {
 			gender: 'male',
 			race: 'white',
@@ -490,7 +482,7 @@ export const jobs: Job[] = [
 			"No known communist or subversive affiliations"
 		],
 		postedDate: "November 10, 1968",
-		era: "automation",
+		era: "post-industrial",
 		filters: {
 			gender: 'any',
 			race: 'white',
@@ -522,7 +514,7 @@ export const jobs: Job[] = [
 			"Must accept low pay with no advancement opportunities"
 		],
 		postedDate: "June 5, 1960",
-		era: "automation",
+		era: "post-industrial",
 		filters: {
 			gender: 'female',
 			race: 'white',
@@ -553,7 +545,7 @@ export const jobs: Job[] = [
 			"Must accept low pay and harsh working conditions"
 		],
 		postedDate: "March 15, 1958",
-		era: "automation",
+		era: "post-industrial",
 		filters: {
 			gender: 'female',
 			race: 'white',
@@ -584,7 +576,7 @@ export const jobs: Job[] = [
 			"Must accept that men advance faster in technical roles"
 		],
 		postedDate: "May 5, 1975",
-		era: "digital",
+		era: "post-industrial",
 		filters: {
 			gender: 'male',
 			race: 'any',
@@ -614,7 +606,7 @@ export const jobs: Job[] = [
 			"No men - this position is for women only"
 		],
 		postedDate: "September 18, 1980",
-		era: "digital",
+		era: "post-industrial",
 		filters: {
 			gender: 'female',
 			race: 'any',
@@ -644,7 +636,7 @@ export const jobs: Job[] = [
 			"Passion for technology"
 		],
 		postedDate: "March 12, 1990",
-		era: "digital",
+		era: "post-industrial",
 		filters: {
 			gender: 'any',
 			race: 'any',
@@ -675,7 +667,7 @@ export const jobs: Job[] = [
 			"Must accept disrupted sleep schedule and isolation"
 		],
 		postedDate: "January 20, 1985",
-		era: "digital",
+		era: "post-industrial",
 		filters: {
 			gender: 'male',
 			race: 'any',
@@ -707,7 +699,7 @@ export const jobs: Job[] = [
 			"Must accept that most applicants are rejected"
 		],
 		postedDate: "January 15, 2020",
-		era: "ai",
+		era: "digital",
 		filters: {
 			gender: 'any',
 			race: 'any',
@@ -737,7 +729,7 @@ export const jobs: Job[] = [
 			"Must work as 1099 contractor"
 		],
 		postedDate: "March 8, 2024",
-		era: "ai",
+		era: "digital",
 		filters: {
 			gender: 'any',
 			race: 'any',
@@ -767,7 +759,7 @@ export const jobs: Job[] = [
 			"No candidates without PhD will be considered"
 		],
 		postedDate: "November 20, 2023",
-		era: "ai",
+		era: "digital",
 		filters: {
 			gender: 'any',
 			race: 'any',
@@ -797,7 +789,7 @@ export const jobs: Job[] = [
 			"Strong analytical and communication skills"
 		],
 		postedDate: "February 14, 2025",
-		era: "ai",
+		era: "digital",
 		filters: {
 			gender: 'any',
 			race: 'any',
@@ -829,7 +821,7 @@ export const jobs: Job[] = [
 			"Acceptance that this work will damage your mental health"
 		],
 		postedDate: "March 1, 2024",
-		era: "ai",
+		era: "digital",
 		filters: {
 			gender: 'any',
 			race: 'any',
@@ -861,7 +853,7 @@ export const jobs: Job[] = [
 			"Competition with workers worldwide drives pay down"
 		],
 		postedDate: "January 10, 2024",
-		era: "ai",
+		era: "digital",
 		filters: {
 			gender: 'any',
 			race: 'any',
