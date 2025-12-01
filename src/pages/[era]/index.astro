@@ -44,10 +44,6 @@ if (!eraData) {
 		</div>
 
 		<div class="content-layout">
-			<aside class="sidebar">
-				<JobFilter />
-			</aside>
-			
 			<div class="main-content">
 				<div class="tabs-container">
 					<div class="tabs-header">
@@ -63,17 +59,25 @@ if (!eraData) {
 
 					<div class="tab-content active" id="tab-content-jobs">
 						<div class="jobs-container">
-							<div class="jobs-header">
-								<div class="jobs-stats" id="jobs-stats">
-									<span class="jobs-count" id="jobs-count">{jobs.length} {jobs.length === 1 ? 'job' : 'jobs'} available</span>
-									<span class="jobs-excluded" id="jobs-excluded" style="display: none;"></span>
+							<div class="jobs-layout">
+								<aside class="sidebar">
+									<JobFilter />
+								</aside>
+								
+								<div class="jobs-content">
+									<div class="jobs-header">
+										<div class="jobs-stats" id="jobs-stats">
+											<span class="jobs-count" id="jobs-count">{jobs.length} {jobs.length === 1 ? 'job' : 'jobs'} available</span>
+											<span class="jobs-excluded" id="jobs-excluded" style="display: none;"></span>
+										</div>
+									</div>
+
+									<JobFeed jobs={jobs} />
+
+									<div class="no-jobs" id="no-jobs" style="display: none;">
+										<p>No job listings match your filters.</p>
+									</div>
 								</div>
-							</div>
-
-							<JobFeed jobs={jobs} />
-
-							<div class="no-jobs" id="no-jobs" style="display: none;">
-								<p>No job listings match your filters.</p>
 							</div>
 						</div>
 					</div>
@@ -187,6 +191,19 @@ if (!eraData) {
 	}
 
 	.content-layout {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		min-width: 0;
+	}
+
+	.jobs-layout {
 		display: grid;
 		grid-template-columns: 280px 1fr;
 		gap: 1.5rem;
@@ -200,10 +217,7 @@ if (!eraData) {
 		overflow-y: auto;
 	}
 
-	.main-content {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
+	.jobs-content {
 		min-width: 0;
 	}
 
@@ -348,7 +362,7 @@ if (!eraData) {
 	}
 
 	@media (max-width: 1024px) {
-		.content-layout {
+		.jobs-layout {
 			grid-template-columns: 1fr;
 		}
 
