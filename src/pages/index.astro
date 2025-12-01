@@ -4,6 +4,7 @@ import { eras, jobs } from '../data/jobs';
 
 const totalJobs = jobs.length;
 const totalEras = eras.length;
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Made in America - History of Work in America">
@@ -65,7 +66,7 @@ const totalEras = eras.length;
 			
 			<div class="eras-grid">
 				{eras.map((era, index) => (
-					<a href={`/${era.id}`} class="era-card">
+					<a href={`${base}${era.id}`} class="era-card">
 						<div class="era-card-number">{String(index + 1).padStart(2, '0')}</div>
 						<div class="era-header">
 							<h2>{era.name}</h2>

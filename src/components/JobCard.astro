@@ -6,9 +6,10 @@ interface Props {
 }
 
 const { job } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
-<a href={`/${job.era}/${job.id}`} class="job-card">
+<a href={`${base}${job.era}/${job.id}`} class="job-card">
 	<div class="job-header">
 		<h3 class="job-title">{job.title}</h3>
 		<span class="job-type">{job.type}</span>

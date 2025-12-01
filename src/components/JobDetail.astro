@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { job } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <article class="job-detail">
@@ -19,7 +20,7 @@ const { job } = Astro.props;
 				{job.salary && <span class="job-detail-salary">💰 {job.salary}</span>}
 			</div>
 		</div>
-		<a href={`/${job.era}`} class="back-link">← Back to Listings</a>
+		<a href={`${base}${job.era}`} class="back-link">← Back to Listings</a>
 	</div>
 
 	<div class="job-detail-content">
