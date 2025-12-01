@@ -877,12 +877,12 @@ export const jobs: Job[] = [
 
 export function getJobsByEra(eraId: string): Job[] {
 	const eraJobs = jobs.filter(job => job.era === eraId);
-	// Sort chronologically by postedDate
+	// Sort chronologically by postedDate - most recent first
 	return eraJobs.sort((a, b) => {
 		// Parse dates - handle various formats
 		const dateA = parseDate(a.postedDate);
 		const dateB = parseDate(b.postedDate);
-		return dateA.getTime() - dateB.getTime();
+		return dateB.getTime() - dateA.getTime(); // Most recent first
 	});
 }
 

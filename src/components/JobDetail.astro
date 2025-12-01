@@ -229,38 +229,48 @@ const { job } = Astro.props;
 		display: flex;
 		gap: 1rem;
 		padding-top: 2rem;
-		border-top: 2px solid #e0e0e0;
+		border-top: 2px solid #8b7355;
 	}
 
 	.apply-button,
 	.save-button {
 		padding: 0.75rem 2rem;
 		font-size: 1rem;
-		font-weight: 600;
-		border: none;
-		border-radius: 24px;
+		font-weight: 700;
+		border: 2px solid #4a5568;
+		border-radius: 0;
 		cursor: pointer;
 		transition: all 0.2s;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-family: 'Newsreader', serif;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 	}
 
 	.apply-button {
-		background: #0a66c2;
-		color: #fff;
+		background: #8b4a4a;
+		color: #fefcf8;
 		flex: 1;
+		border-color: #8b4a4a;
 	}
 
 	.apply-button:hover {
-		background: #004182;
+		background: #6a3838;
+		border-color: #6a3838;
+		box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+		transform: translate(-1px, -1px);
 	}
 
 	.save-button {
-		background: #fff;
-		color: #0a66c2;
-		border: 1px solid #0a66c2;
+		background: #fefcf8;
+		color: #4a5568;
+		border-color: #4a5568;
 	}
 
 	.save-button:hover {
-		background: #f0f7ff;
+		background: #faf8f3;
+		box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+		transform: translate(-1px, -1px);
 	}
 
 	@media (max-width: 768px) {

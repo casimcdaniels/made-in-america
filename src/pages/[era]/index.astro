@@ -3,8 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Feed from '../../components/Feed.astro';
 import JobFilter from '../../components/JobFilter.astro';
 import JobFeed from '../../components/JobFeed.astro';
+import Events from '../../components/Events.astro';
 import { getJobsByEra, getEraById, eras, type Job } from '../../data/jobs';
-import { getFeedPostsByEra, getEraTheme } from '../../data/feed';
+import { getFeedPostsByEra, getEraTheme, getHistoricalEventsByEra } from '../../data/feed';
 
 export async function getStaticPaths() {
 	return eras.map((era) => ({
@@ -21,6 +22,7 @@ if (!era) {
 const eraData = getEraById(era);
 const jobs = getJobsByEra(era);
 const feedPosts = getFeedPostsByEra(era);
+const historicalEvents = getHistoricalEventsByEra(era);
 const theme = getEraTheme(era);
 
 if (!eraData) {
@@ -52,7 +54,7 @@ if (!eraData) {
 							<span class="tab-count" id="tab-jobs-count">{jobs.length}</span>
 						</button>
 						<button class="tab-button" data-tab="feed" id="tab-feed">
-							Community Feed
+							Community
 							<span class="tab-count">{feedPosts.length}</span>
 						</button>
 					</div>
@@ -84,7 +86,14 @@ if (!eraData) {
 
 					<div class="tab-content" id="tab-content-feed" style="display: none;">
 						<div class="feed-section">
-							<Feed posts={feedPosts} eraId={era} />
+							<div class="feed-layout">
+								<div class="feed-content">
+									<Feed posts={feedPosts} eraId={era} />
+								</div>
+								<aside class="events-sidebar">
+									<Events events={historicalEvents} />
+								</aside>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -302,6 +311,24 @@ if (!eraData) {
 		padding: 1.25rem;
 	}
 
+	.feed-layout {
+		display: grid;
+		grid-template-columns: 1fr 320px;
+		gap: 1.5rem;
+		align-items: start;
+	}
+
+	.feed-content {
+		min-width: 0;
+	}
+
+	.events-sidebar {
+		position: sticky;
+		top: 1rem;
+		max-height: calc(100vh - 2rem);
+		overflow-y: auto;
+	}
+
 	.jobs-container {
 		background: transparent;
 		border: none;
@@ -372,6 +399,17 @@ if (!eraData) {
 		}
 	}
 
+	@media (max-width: 1024px) {
+		.feed-layout {
+			grid-template-columns: 1fr;
+		}
+
+		.events-sidebar {
+			position: static;
+			max-height: none;
+		}
+	}
+
 	@media (max-width: 768px) {
 		.era-page {
 			padding: 1rem;
@@ -397,6 +435,10 @@ if (!eraData) {
 
 		.main-content {
 			gap: 1rem;
+		}
+
+		.feed-section {
+			padding: 1rem;
 		}
 	}
 </style>

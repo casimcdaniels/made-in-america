@@ -373,7 +373,278 @@ export function getFeedPostsByEra(eraId: string): FeedPost[] {
 		.sort((a, b) => {
 			const dateA = parseFeedDate(a.timestamp);
 			const dateB = parseFeedDate(b.timestamp);
-			return dateA.getTime() - dateB.getTime();
+			return dateB.getTime() - dateA.getTime(); // Most recent first
+		});
+}
+
+export interface HistoricalEvent {
+	id: string;
+	title: string;
+	date: string;
+	description: string;
+	era: string;
+}
+
+export const historicalEvents: HistoricalEvent[] = [
+	// Agrarian Era
+	{
+		id: "agrarian-1",
+		title: "Declaration of Independence",
+		date: "July 4, 1776",
+		description: "The Continental Congress adopts the Declaration of Independence, establishing the United States as a new nation. This momentous event shapes the American identity and the concept of free labor versus servitude.",
+		era: "agrarian"
+	},
+	{
+		id: "agrarian-2",
+		title: "American Revolutionary War",
+		date: "1775-1783",
+		description: "The war for independence disrupts agricultural production and trade. Many farmers serve as soldiers, while women and enslaved people maintain farms. The war establishes the foundation for American economic independence.",
+		era: "agrarian"
+	},
+	{
+		id: "agrarian-3",
+		title: "Northwest Ordinance",
+		date: "1787",
+		description: "Establishes the process for admitting new states and prohibits slavery in the Northwest Territory. This sets precedents for westward expansion and the future of labor in new territories.",
+		era: "agrarian"
+	},
+	{
+		id: "agrarian-4",
+		title: "Cotton Gin Invention",
+		date: "1793",
+		description: "Eli Whitney's cotton gin revolutionizes cotton processing, making it 50 times faster. This innovation increases demand for enslaved labor in the South while reducing the need for skilled workers in cotton processing, reshaping the agricultural labor market.",
+		era: "agrarian"
+	},
+	{
+		id: "agrarian-5",
+		title: "Shays' Rebellion",
+		date: "1786-1787",
+		description: "Massachusetts farmers, burdened by debt and taxes, rebel against the state government. The uprising highlights the economic struggles of agricultural workers and the tension between debtors and creditors in the new nation.",
+		era: "agrarian"
+	},
+	// Industrial Era
+	{
+		id: "industrial-1",
+		title: "Haymarket Affair",
+		date: "May 4, 1886",
+		description: "A labor demonstration in Chicago turns violent when a bomb is thrown at police. The incident leads to the execution of labor leaders and becomes a symbol of the struggle for workers' rights and the eight-hour workday.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-2",
+		title: "Homestead Strike",
+		date: "July 6, 1892",
+		description: "A violent labor dispute at Carnegie Steel's Homestead plant. Pinkerton detectives and strikers clash, resulting in deaths. The strike's failure demonstrates the power of corporations and the challenges facing organized labor.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-3",
+		title: "Pullman Strike",
+		date: "May-July 1894",
+		description: "A nationwide railroad strike led by the American Railway Union. President Cleveland sends federal troops to break the strike, marking a turning point in federal intervention in labor disputes and the power of unions.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-4",
+		title: "Publication of The Jungle",
+		date: "1906",
+		description: "Upton Sinclair's novel exposes the horrific conditions in Chicago's meatpacking industry. The public outcry leads to the Pure Food and Drug Act and Meat Inspection Act, though working conditions remain largely unchanged.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-5",
+		title: "Great Railroad Strike",
+		date: "July 1877",
+		description: "The first nationwide strike in U.S. history spreads across railroads after companies cut wages. Federal troops are called in to suppress the strike, resulting in over 100 deaths. This marks the beginning of large-scale labor organizing and federal intervention in labor disputes.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-6",
+		title: "Bessemer Process Revolutionizes Steel",
+		date: "1850s-1860s",
+		description: "The Bessemer process makes steel production faster and cheaper, fueling industrial expansion. This innovation creates thousands of new factory jobs while making older ironworking skills obsolete, forcing workers to adapt to new industrial methods.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-7",
+		title: "Triangle Shirtwaist Factory Fire",
+		date: "March 25, 1911",
+		description: "A fire at a New York garment factory kills 146 workers, mostly young immigrant women. Locked exit doors and inadequate fire escapes expose dangerous working conditions. The tragedy galvanizes the labor movement and leads to new workplace safety regulations.",
+		era: "industrial"
+	},
+	{
+		id: "industrial-8",
+		title: "Ludlow Massacre",
+		date: "April 20, 1914",
+		description: "Colorado National Guard attacks a tent colony of striking coal miners and their families, killing 21 people including women and children. The massacre draws national attention to the violent suppression of labor organizing and the brutal conditions in mining.",
+		era: "industrial"
+	},
+	// Early Automation Era
+	{
+		id: "automation-1",
+		title: "Post-War Economic Boom",
+		date: "1950s",
+		description: "The post-World War II economic expansion brings prosperity to many American workers. Manufacturing jobs are plentiful, but automation begins to replace manual labor in factories. The rise of the middle class coincides with increasing mechanization.",
+		era: "automation"
+	},
+	{
+		id: "automation-2",
+		title: "Interstate Highway System",
+		date: "1956",
+		description: "The Federal-Aid Highway Act creates the interstate highway system, transforming transportation and logistics. This infrastructure enables the growth of suburban manufacturing and changes how goods and workers move across the country.",
+		era: "automation"
+	},
+	{
+		id: "automation-3",
+		title: "Automation in Manufacturing",
+		date: "1960s",
+		description: "Automated machinery becomes widespread in factories. Workers must adapt to operating and maintaining machines rather than performing manual tasks. This shift creates new skilled jobs while eliminating many unskilled positions.",
+		era: "automation"
+	},
+	{
+		id: "automation-4",
+		title: "United Auto Workers Strike",
+		date: "1945-1946",
+		description: "The UAW launches a massive strike against General Motors, demanding wage increases after wartime wage freezes. The 113-day strike results in a 17.5% wage increase and sets a pattern for post-war labor relations, establishing the power of industrial unions.",
+		era: "automation"
+	},
+	{
+		id: "automation-5",
+		title: "Numerical Control Machines",
+		date: "1952",
+		description: "MIT develops the first numerically controlled machine tool, allowing machines to be programmed rather than manually operated. This innovation begins the transition from skilled machinists to machine operators and programmers, fundamentally changing manufacturing work.",
+		era: "automation"
+	},
+	{
+		id: "automation-6",
+		title: "Steel Strike of 1959",
+		date: "July-November 1959",
+		description: "A 116-day strike by the United Steelworkers shuts down the American steel industry. The strike focuses on job security and work rules as automation threatens to eliminate positions. The settlement includes protections against automation-related layoffs.",
+		era: "automation"
+	},
+	{
+		id: "automation-7",
+		title: "Robotic Assembly Lines",
+		date: "1961",
+		description: "General Motors installs the first industrial robot, the Unimate, at a New Jersey plant. This marks the beginning of robotic automation in manufacturing, creating new maintenance and programming jobs while reducing the need for assembly line workers.",
+		era: "automation"
+	},
+	// Digital Computing Era
+	{
+		id: "digital-1",
+		title: "Apollo 11 Moon Landing",
+		date: "July 20, 1969",
+		description: "The successful moon landing showcases the power of computing and software engineering. The mission relied on computers and programming, demonstrating that software could accomplish previously impossible tasks and creating new career paths.",
+		era: "digital"
+	},
+	{
+		id: "digital-2",
+		title: "Personal Computer Revolution",
+		date: "1970s-1980s",
+		description: "The introduction of personal computers transforms work and creates new industries. Software development becomes a viable career path, though women who were early programmers face increasing exclusion as the field becomes more prestigious.",
+		era: "digital"
+	},
+	{
+		id: "digital-3",
+		title: "Telephone Operators Transition",
+		date: "1970s-1980s",
+		description: "Automated switching systems eliminate most telephone operator jobs. Many women operators transition to programming and data entry roles, representing one of the largest workforce transitions in American history.",
+		era: "digital"
+	},
+	{
+		id: "digital-4",
+		title: "AT&T Strike",
+		date: "1983",
+		description: "675,000 AT&T workers strike for 22 days over job security concerns as the company prepares for divestiture. The strike highlights worker anxiety about technological change and corporate restructuring in the telecommunications industry.",
+		era: "digital"
+	},
+	{
+		id: "digital-5",
+		title: "Word Processor Revolution",
+		date: "1970s",
+		description: "Word processing machines replace typewriters in offices, eliminating many typist positions while creating new roles for word processor operators. This technology shift disproportionately affects women office workers and reshapes secretarial work.",
+		era: "digital"
+	},
+	{
+		id: "digital-6",
+		title: "IBM PC Launch",
+		date: "August 1981",
+		description: "IBM introduces the personal computer, making computing accessible to businesses and individuals. This creates massive demand for software developers and technical support workers while reducing the need for traditional data processing clerks.",
+		era: "digital"
+	},
+	{
+		id: "digital-7",
+		title: "Printers' Strike",
+		date: "1983",
+		description: "Newspaper printers strike against automation that threatens their jobs. The conflict represents a broader struggle as computer typesetting replaces traditional printing skills, forcing workers to adapt or face unemployment.",
+		era: "digital"
+	},
+	// AI Era
+	{
+		id: "ai-1",
+		title: "Rise of the Internet",
+		date: "1990s-2000s",
+		description: "The World Wide Web creates entirely new industries and transforms existing ones. E-commerce, digital services, and remote work become possible, fundamentally changing where and how people work.",
+		era: "ai"
+	},
+	{
+		id: "ai-2",
+		title: "Financial Crisis",
+		date: "2008",
+		description: "The Great Recession leads to massive job losses and economic uncertainty. Many workers face long-term unemployment, while others pivot to new careers in technology and services. The crisis accelerates automation as companies seek efficiency.",
+		era: "ai"
+	},
+	{
+		id: "ai-3",
+		title: "ChatGPT and AI Tools",
+		date: "2022-2024",
+		description: "The release of ChatGPT and similar AI tools sparks widespread discussion about automation in knowledge work. Writers, coders, and other professionals grapple with how AI will change their work, echoing concerns from previous automation waves.",
+		era: "ai"
+	},
+	{
+		id: "ai-4",
+		title: "Writers Guild Strike",
+		date: "2023",
+		description: "Hollywood writers strike for 148 days, demanding protections against AI replacing their work. The strike results in restrictions on AI-generated scripts and establishes that AI cannot replace human writers, setting precedents for other creative industries.",
+		era: "ai"
+	},
+	{
+		id: "ai-5",
+		title: "Amazon Warehouse Automation",
+		date: "2010s-2020s",
+		description: "Amazon introduces Kiva robots and automated fulfillment systems, reducing the need for human warehouse workers while creating new roles for robot maintenance technicians. This represents the largest-scale automation of logistics work in history.",
+		era: "ai"
+	},
+	{
+		id: "ai-6",
+		title: "Uber/Lyft Driver Protests",
+		date: "2019-2024",
+		description: "Ride-share drivers organize strikes and protests demanding better pay, benefits, and job security. The gig economy model challenges traditional employment relationships, sparking debates about worker classification and the future of work.",
+		era: "ai"
+	},
+	{
+		id: "ai-7",
+		title: "AI Code Generation Tools",
+		date: "2021-2024",
+		description: "GitHub Copilot and similar AI coding assistants become widespread, raising questions about the future of software development jobs. Some developers embrace the tools as productivity enhancers, while others fear displacement of entry-level programming work.",
+		era: "ai"
+	},
+	{
+		id: "ai-8",
+		title: "Starbucks Unionization Wave",
+		date: "2021-2024",
+		description: "Hundreds of Starbucks locations unionize, representing one of the largest organizing drives in service sector history. Workers demand better wages, scheduling, and working conditions, challenging the company's anti-union stance and inspiring other service workers.",
+		era: "ai"
+	}
+];
+
+export function getHistoricalEventsByEra(eraId: string): HistoricalEvent[] {
+	return historicalEvents
+		.filter(event => event.era === eraId)
+		.sort((a, b) => {
+			const dateA = parseFeedDate(a.date);
+			const dateB = parseFeedDate(b.date);
+			return dateB.getTime() - dateA.getTime(); // Most recent first
 		});
 }
 
