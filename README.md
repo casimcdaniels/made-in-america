@@ -1,43 +1,106 @@
-# Astro Starter Kit: Minimal
+# Made in America
 
-```sh
-npm create astro@latest -- --template minimal
+A LinkedIn/Indeed-style job board showcasing work opportunities across five distinct eras of American history. This educational project explores how work, wages, and workplace conditions have evolved from colonial times to the modern AI era.
+
+**Made in America** - Where every job tells a story of American work.
+
+## Features
+
+- **Five Historical Eras**: Browse job listings from different periods of American work history
+- **Modern UI**: Clean, professional interface inspired by LinkedIn and Indeed
+- **Era-Specific Context**: Each era includes historical context and primary sources
+- **Detailed Job Listings**: Full job descriptions, requirements, and era-appropriate details
+
+## Historical Eras
+
+1. **Agrarian / Colonial Era (1760–1820)**
+   - Pre-industrial farming in rural America
+   - Primary sources: Crèvecœur's Letters from an American Farmer, John & Abigail Adams letters
+
+2. **Industrial Era (1880–1910)**
+   - Rapid industrialization, urban factories, meatpacking, and labor unrest
+   - Primary sources: Upton Sinclair's The Jungle, 1906 U.S. House Report on Chicago Stockyards
+
+3. **Early Automation / Mid-20th Century (1950–1970)**
+   - Rise of industrial machinery and automated equipment
+   - Primary sources: Oral histories of Texas oil technicians, Bureau of Labor Statistics bulletins
+
+4. **Digital Computing / Early Tech Era (1970–1995)**
+   - Women in computing, early software development
+   - Primary sources: Historical studies of women in tech, Hidden Figures
+
+5. **AI / Modern Software Era (2000–2025)**
+   - AI, agentic tools, automation in knowledge work
+   - Primary sources: H. David Autor's "Why Are There Still So Many Jobs?", Norbert Wiener's The Human Use of Human Beings
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Development
 
-## 🚀 Project Structure
+```bash
+npm run dev
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+Visit `http://localhost:4321` to view the application.
 
-```text
+### Build
+
+```bash
+npm run build
+```
+
+### Preview
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
 /
-├── public/
+├── public/          # Static assets
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/ # Reusable components
+│   │   ├── JobCard.astro
+│   │   └── JobDetail.astro
+│   ├── data/       # Job and era data
+│   │   └── jobs.ts
+│   ├── layouts/    # Page layouts
+│   │   └── Layout.astro
+│   ├── pages/      # Route pages
+│   │   ├── index.astro
+│   │   └── [era]/
+│   │       ├── index.astro
+│   │       └── [jobId].astro
+│   └── styles/     # Global styles
+│       └── global.css
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Routes
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- `/` - Homepage with era selection
+- `/[era]` - Job listings for a specific era (e.g., `/agrarian`, `/industrial`)
+- `/[era]/[jobId]` - Individual job detail page
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Technologies
 
-## 🧞 Commands
+- [Astro](https://astro.build) - Web framework
+- TypeScript - Type safety
+- CSS - Styling
 
-All commands are run from the root of the project, from a terminal:
+## License
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Educational project for exploring American work history.

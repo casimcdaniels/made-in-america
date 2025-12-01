@@ -1,0 +1,241 @@
+---
+import type { Job } from '../data/jobs';
+
+interface Props {
+	job: Job;
+}
+
+const { job } = Astro.props;
+---
+
+<article class="job-detail">
+	<div class="job-detail-header">
+		<div>
+			<h1 class="job-detail-title">{job.title}</h1>
+			<div class="job-detail-company">{job.company}</div>
+			<div class="job-detail-meta">
+				<span class="job-detail-location">📍 {job.location}</span>
+				<span class="job-detail-type">{job.type}</span>
+				{job.salary && <span class="job-detail-salary">💰 {job.salary}</span>}
+			</div>
+		</div>
+		<a href={`/${job.era}`} class="back-link">← Back to Listings</a>
+	</div>
+
+	<div class="job-detail-content">
+		<section class="job-section">
+			<h2>Job Description</h2>
+			<p>{job.description}</p>
+		</section>
+
+		<section class="job-section">
+			<h2>Requirements</h2>
+			<ul class="requirements-list">
+				{job.requirements.map(req => (
+					<li>{req}</li>
+				))}
+			</ul>
+		</section>
+
+		<section class="job-section">
+			<div class="job-info">
+				<div class="info-item">
+					<strong>Posted:</strong> {job.postedDate}
+				</div>
+				<div class="info-item">
+					<strong>Job Type:</strong> {job.type}
+				</div>
+				{job.salary && (
+					<div class="info-item">
+						<strong>Salary:</strong> {job.salary}
+					</div>
+				)}
+			</div>
+		</section>
+	</div>
+
+	<div class="job-detail-actions">
+		<button class="apply-button">Apply Now</button>
+		<button class="save-button">Save Job</button>
+	</div>
+</article>
+
+<style>
+	.job-detail {
+		background: #fff;
+		border-radius: 8px;
+		padding: 2rem;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.job-detail-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
+		border-bottom: 2px solid #e0e0e0;
+		gap: 2rem;
+	}
+
+	.job-detail-title {
+		margin: 0 0 0.5rem 0;
+		font-size: 2rem;
+		font-weight: 600;
+		color: #1a1a1a;
+	}
+
+	.job-detail-company {
+		font-size: 1.25rem;
+		font-weight: 500;
+		color: #333;
+		margin-bottom: 1rem;
+	}
+
+	.job-detail-meta {
+		display: flex;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+		font-size: 1rem;
+		color: #666;
+	}
+
+	.job-detail-location,
+	.job-detail-type,
+	.job-detail-salary {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.back-link {
+		color: #0a66c2;
+		text-decoration: none;
+		font-size: 0.95rem;
+		white-space: nowrap;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		transition: background 0.2s;
+	}
+
+	.back-link:hover {
+		background: #f0f7ff;
+	}
+
+	.job-detail-content {
+		margin-bottom: 2rem;
+	}
+
+	.job-section {
+		margin-bottom: 2rem;
+	}
+
+	.job-section h2 {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin: 0 0 1rem 0;
+		color: #1a1a1a;
+	}
+
+	.job-section p {
+		line-height: 1.8;
+		color: #555;
+		font-size: 1rem;
+		margin: 0;
+	}
+
+	.requirements-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.requirements-list li {
+		padding: 0.75rem 0;
+		padding-left: 1.5rem;
+		position: relative;
+		color: #555;
+		line-height: 1.6;
+	}
+
+	.requirements-list li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: #0a66c2;
+		font-weight: bold;
+	}
+
+	.job-info {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1rem;
+		background: #f9f9f9;
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+
+	.info-item {
+		font-size: 0.95rem;
+		color: #555;
+	}
+
+	.info-item strong {
+		color: #333;
+		margin-right: 0.5rem;
+	}
+
+	.job-detail-actions {
+		display: flex;
+		gap: 1rem;
+		padding-top: 2rem;
+		border-top: 2px solid #e0e0e0;
+	}
+
+	.apply-button,
+	.save-button {
+		padding: 0.75rem 2rem;
+		font-size: 1rem;
+		font-weight: 600;
+		border: none;
+		border-radius: 24px;
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.apply-button {
+		background: #0a66c2;
+		color: #fff;
+		flex: 1;
+	}
+
+	.apply-button:hover {
+		background: #004182;
+	}
+
+	.save-button {
+		background: #fff;
+		color: #0a66c2;
+		border: 1px solid #0a66c2;
+	}
+
+	.save-button:hover {
+		background: #f0f7ff;
+	}
+
+	@media (max-width: 768px) {
+		.job-detail-header {
+			flex-direction: column;
+		}
+
+		.job-detail-title {
+			font-size: 1.5rem;
+		}
+
+		.job-detail-actions {
+			flex-direction: column;
+		}
+	}
+</style>
+

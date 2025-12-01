@@ -1,0 +1,274 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import JobCard from '../../components/JobCard.astro';
+import Feed from '../../components/Feed.astro';
+import { getJobsByEra, getEraById, eras } from '../../data/jobs';
+import { getFeedPostsByEra, getEraTheme } from '../../data/feed';
+
+export async function getStaticPaths() {
+	return eras.map((era) => ({
+		params: { era: era.id },
+	}));
+}
+
+const { era } = Astro.params;
+
+if (!era) {
+	return Astro.redirect('/');
+}
+
+const eraData = getEraById(era);
+const jobs = getJobsByEra(era);
+const feedPosts = getFeedPostsByEra(era);
+const theme = getEraTheme(era);
+
+if (!eraData) {
+	return Astro.redirect('/');
+}
+---
+
+<Layout title={`${eraData.name} - Made in America`}>
+	<div class="era-page" style={`--era-primary: ${theme.primary}; --era-secondary: ${theme.secondary}; --era-accent: ${theme.accent};`}>
+		<div class="era-banner">
+			<div class="era-banner-content">
+				<h1>{eraData.name}</h1>
+				<div class="era-banner-meta">
+					<span class="era-years">{eraData.years}</span>
+				</div>
+				<p class="era-banner-description">{eraData.description}</p>
+				<div class="era-banner-context">
+					<strong>Historical Context:</strong> {eraData.context}
+				</div>
+			</div>
+		</div>
+
+		<div class="content-layout">
+			<div class="main-content">
+				<Feed posts={feedPosts} eraId={era} />
+				
+				<div class="jobs-container">
+					<div class="jobs-header">
+						<h2>💼 Available Positions</h2>
+						<span class="jobs-count">{jobs.length} {jobs.length === 1 ? 'job' : 'jobs'} available</span>
+					</div>
+
+					<div class="jobs-grid">
+						{jobs.map((job, index) => (
+							<JobCard job={job} />
+						))}
+					</div>
+
+					{jobs.length === 0 && (
+						<div class="no-jobs">
+							<p>No job listings available for this era.</p>
+						</div>
+					)}
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.era-page {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	.era-banner {
+		background: #fff;
+		color: #000;
+		border-radius: 0;
+		padding: 2rem;
+		margin-bottom: 2rem;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+		position: relative;
+		overflow: hidden;
+		animation: slideInDown 0.6s ease-out;
+		border: 2px solid #000;
+		border-top: 4px solid #000;
+	}
+
+	@keyframes slideInDown {
+		from {
+			opacity: 0;
+			transform: translateY(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.era-banner-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.era-banner-content h1 {
+		margin: 0 0 0.5rem 0;
+		font-size: 3rem;
+		font-weight: 700;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		border-bottom: 4px solid #000;
+		padding-bottom: 0.5rem;
+		line-height: 1.1;
+	}
+
+	.era-banner-meta {
+		margin-bottom: 1rem;
+	}
+
+	.era-years {
+		font-size: 0.9rem;
+		color: #333;
+		background: #000;
+		color: #fff;
+		padding: 0.5rem 1rem;
+		border-radius: 0;
+		display: inline-block;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		font-weight: 700;
+		margin-top: 0.5rem;
+	}
+
+	.era-banner-description {
+		font-size: 1rem;
+		margin: 1rem 0;
+		color: #333;
+		line-height: 1.7;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-align: justify;
+	}
+
+	.era-banner-context {
+		font-size: 0.9rem;
+		color: #666;
+		line-height: 1.6;
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: 2px solid #000;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-align: justify;
+	}
+
+	.era-banner-context strong {
+		opacity: 1;
+	}
+
+	.content-layout {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.jobs-container {
+		background: #fff;
+		border-radius: 0;
+		padding: 2rem;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+		animation: fadeIn 0.6s ease-out 0.2s both;
+		border: 1px solid #000;
+		position: relative;
+		border-top: 3px solid #000;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	.jobs-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+		padding-bottom: 1rem;
+		border-bottom: 3px solid #000;
+	}
+
+	.jobs-header h2 {
+		margin: 0;
+		font-size: 2rem;
+		font-weight: 700;
+		color: #000;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		border-bottom: 2px solid #000;
+		padding-bottom: 0.5rem;
+		display: inline-block;
+	}
+
+	.jobs-count {
+		color: #666;
+		font-size: 0.8rem;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.jobs-grid {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.jobs-grid > * {
+		animation: fadeInUp 0.5s ease-out both;
+	}
+
+	.jobs-grid > *:nth-child(1) { animation-delay: 0.1s; }
+	.jobs-grid > *:nth-child(2) { animation-delay: 0.2s; }
+	.jobs-grid > *:nth-child(3) { animation-delay: 0.3s; }
+	.jobs-grid > *:nth-child(4) { animation-delay: 0.4s; }
+	.jobs-grid > *:nth-child(5) { animation-delay: 0.5s; }
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.no-jobs {
+		text-align: center;
+		padding: 4rem 2rem;
+		color: #666;
+	}
+
+	@media (max-width: 768px) {
+		.era-banner {
+			padding: 2rem;
+		}
+
+		.era-banner-content h1 {
+			font-size: 1.75rem;
+		}
+
+		.jobs-header {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.5rem;
+		}
+	}
+</style>
+

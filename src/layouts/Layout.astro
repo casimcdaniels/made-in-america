@@ -1,0 +1,219 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+	const { title, description = "Made in America - Explore work across American history through authentic job boards from five distinct eras" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Newsreader:wght@400;600;700&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-container">
+				<a href="/" class="logo">
+					<span class="logo-text">Made in America</span>
+					<span class="logo-subtitle">Job Boards</span>
+				</a>
+				<nav class="nav">
+					<a href="/" class="nav-link">Home</a>
+					<a href="/agrarian" class="nav-link">Agrarian Era</a>
+					<a href="/industrial" class="nav-link">Industrial Era</a>
+					<a href="/automation" class="nav-link">Early Automation</a>
+					<a href="/digital" class="nav-link">Digital Computing</a>
+					<a href="/ai" class="nav-link">AI Era</a>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer class="footer">
+			<div class="footer-container">
+				<p>&copy; 2025 Made in America. Educational project exploring work across American history.</p>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style>
+	:global(html) {
+		font-family: 'Newsreader', 'Old Standard TT', 'Times New Roman', serif;
+		line-height: 1.6;
+		color: #1a1a1a;
+		background-color: #faf8f3;
+		background-image: 
+			repeating-linear-gradient(
+				0deg,
+				transparent,
+				transparent 2px,
+				rgba(0, 0, 0, 0.02) 2px,
+				rgba(0, 0, 0, 0.02) 4px
+			),
+			radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.01) 0%, transparent 100%);
+		background-attachment: fixed;
+	}
+
+	:global(body) {
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	:global(main) {
+		flex: 1;
+	}
+
+	.header {
+		background: #fff;
+		border-bottom: 4px double #000;
+		border-top: 3px solid #000;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background-image: 
+			repeating-linear-gradient(
+				0deg,
+				transparent,
+				transparent 1px,
+				rgba(0, 0, 0, 0.02) 1px,
+				rgba(0, 0, 0, 0.02) 2px
+			);
+	}
+
+	.header-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1.5rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #000;
+	}
+
+	.logo {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0;
+		text-decoration: none;
+		color: #000;
+		font-weight: 700;
+		font-size: 2.5rem;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		position: relative;
+		padding: 0;
+		border: none;
+		line-height: 1;
+		text-align: left;
+	}
+	
+	.logo-text {
+		border-bottom: 3px solid #000;
+		padding-bottom: 0.25rem;
+		line-height: 1.1;
+	}
+	
+	.logo-subtitle {
+		font-size: 0.75rem;
+		font-weight: 400;
+		letter-spacing: 0.15em;
+		color: #333;
+		font-style: normal;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		margin-top: 0.25rem;
+		letter-spacing: 0.2em;
+	}
+
+	.logo-icon {
+		font-size: 1.5rem;
+	}
+
+	.nav {
+		display: flex;
+		gap: 1.5rem;
+		align-items: center;
+	}
+
+	.nav-link {
+		color: #000;
+		text-decoration: none;
+		font-size: 0.85rem;
+		padding: 0.25rem 0.5rem;
+		border-bottom: 1px solid transparent;
+		transition: all 0.2s;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		font-style: normal;
+		position: relative;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-weight: 600;
+	}
+
+	.nav-link:hover {
+		color: #000;
+		border-bottom-color: #000;
+		background: rgba(0, 0, 0, 0.05);
+	}
+
+	.footer {
+		background: #fff;
+		border-top: 4px double #000;
+		margin-top: 4rem;
+		background-image: 
+			repeating-linear-gradient(
+				0deg,
+				transparent,
+				transparent 1px,
+				rgba(0, 0, 0, 0.02) 1px,
+				rgba(0, 0, 0, 0.02) 2px
+			);
+	}
+
+	.footer-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+		text-align: center;
+		color: #333;
+		font-size: 0.75rem;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		border-top: 1px solid #000;
+	}
+
+	@media (max-width: 768px) {
+		.header-container {
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.nav {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1rem;
+		}
+	}
+</style>
+

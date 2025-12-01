@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import JobDetail from '../../components/JobDetail.astro';
+import { jobs, getEraById } from '../../data/jobs';
+
+export async function getStaticPaths() {
+	return jobs.map((job) => ({
+		params: { era: job.era, jobId: job.id },
+	}));
+}
+
+const { era, jobId } = Astro.params;
+
+if (!era || !jobId) {
+	return Astro.redirect('/');
+}
+
+const job = jobs.find(j => j.id === jobId && j.era === era);
+const eraData = getEraById(era);
+
+if (!job || !eraData) {
+	return Astro.redirect(`/${era}`);
+}
+---
+
+<Layout title={`${job.title} at ${job.company} - Made in America`}>
+	<div class="job-page">
+		<JobDetail job={job} />
+	</div>
+</Layout>
+
+<style>
+	.job-page {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+</style>
+

@@ -1,16 +1,331 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import { eras } from '../data/jobs';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Made in America - Job Boards Through History">
+	<div class="homepage">
+		<section class="hero">
+			<h1>Made in America</h1>
+			<p class="hero-subtitle">Job Boards Through History</p>
+			<p class="hero-tagline">Explore how work has evolved across American history</p>
+			<p class="hero-description">
+				From colonial farms to AI-powered workplaces, discover job listings from five distinct eras 
+				that shaped the American workforce. Each board reflects the work, wages, and workplace 
+				conditions of its time.
+			</p>
+			<div class="hero-emoji">
+				<span>📋</span>
+				<span>💼</span>
+				<span>🏭</span>
+				<span>💻</span>
+				<span>🤖</span>
+			</div>
+		</section>
+
+		<section class="eras-grid">
+			{eras.map(era => (
+				<a href={`/${era.id}`} class="era-card">
+					<div class="era-header">
+						<h2>{era.name}</h2>
+						<span class="era-years">{era.years}</span>
+					</div>
+					<p class="era-description">{era.description}</p>
+					<div class="era-context">
+						<strong>Context:</strong> {era.context}
+					</div>
+					<div class="era-sources">
+						<strong>Primary Sources:</strong>
+						<ul>
+							{era.primarySources.map(source => (
+								<li>{source}</li>
+							))}
+						</ul>
+					</div>
+					<div class="era-link">View Jobs →</div>
+				</a>
+			))}
+		</section>
+	</div>
+</Layout>
+
+<style>
+	.homepage {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+		background: #fff;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+		border-left: 1px solid #000;
+		border-right: 1px solid #000;
+		min-height: 100vh;
+	}
+
+	.hero {
+		text-align: center;
+		padding: 3rem 2rem 2rem;
+		margin-bottom: 3rem;
+		border-bottom: 4px double #000;
+		position: relative;
+	}
+	
+	.hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: repeating-linear-gradient(
+			to right,
+			#000 0px,
+			#000 10px,
+			transparent 10px,
+			transparent 20px
+		);
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	.hero h1 {
+		font-size: 4.5rem;
+		font-weight: 700;
+		margin: 0 0 0.5rem 0;
+		color: #000;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		line-height: 1;
+		border-bottom: 4px solid #000;
+		padding-bottom: 0.5rem;
+		display: inline-block;
+	}
+
+	.hero-subtitle {
+		font-size: 1.2rem;
+		color: #333;
+		margin: 1rem 0 0.5rem 0;
+		font-weight: 600;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		font-style: normal;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+	}
+	
+	.hero-tagline {
+		font-size: 0.9rem;
+		color: #666;
+		margin: 0.5rem 0 1.5rem 0;
+		font-weight: 400;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		font-style: normal;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.hero-description {
+		font-size: 1rem;
+		color: #1a1a1a;
+		max-width: 800px;
+		margin: 1.5rem auto 0;
+		line-height: 1.7;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-align: justify;
+	}
+
+	.hero-emoji {
+		font-size: 2.5rem;
+		margin-top: 2rem;
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.hero-emoji span {
+		display: inline-block;
+		animation: float 3s ease-in-out infinite;
+	}
+
+	.hero-emoji span:nth-child(1) { animation-delay: 0s; }
+	.hero-emoji span:nth-child(2) { animation-delay: 0.2s; }
+	.hero-emoji span:nth-child(3) { animation-delay: 0.4s; }
+	.hero-emoji span:nth-child(4) { animation-delay: 0.6s; }
+	.hero-emoji span:nth-child(5) { animation-delay: 0.8s; }
+
+	@keyframes float {
+		0%, 100% {
+			transform: translateY(0px) rotate(0deg);
+		}
+		50% {
+			transform: translateY(-20px) rotate(5deg);
+		}
+	}
+
+	.eras-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+		column-rule: 1px solid #000;
+	}
+
+	.era-card {
+		background: #fff;
+		border: 1px solid #000;
+		border-radius: 0;
+		padding: 1.5rem;
+		text-decoration: none;
+		color: inherit;
+		transition: all 0.2s;
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		animation: fadeInUp 0.6s ease-out both;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.era-card:nth-child(1) { animation-delay: 0.1s; }
+	.era-card:nth-child(2) { animation-delay: 0.2s; }
+	.era-card:nth-child(3) { animation-delay: 0.3s; }
+	.era-card:nth-child(4) { animation-delay: 0.4s; }
+	.era-card:nth-child(5) { animation-delay: 0.5s; }
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.era-card:hover {
+		border-color: #000;
+		box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+		transform: translate(-2px, -2px);
+		background: #fafafa;
+	}
+
+	.era-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 1rem;
+		gap: 1rem;
+	}
+
+	.era-header h2 {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #000;
+		flex: 1;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		line-height: 1.2;
+		border-bottom: 2px solid #000;
+		padding-bottom: 0.5rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.era-years {
+		font-size: 0.75rem;
+		color: #333;
+		background: #000;
+		color: #fff;
+		padding: 0.25rem 0.5rem;
+		border: none;
+		border-radius: 0;
+		white-space: nowrap;
+		font-weight: 700;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.era-description {
+		font-size: 1rem;
+		color: #555;
+		margin: 0 0 1rem 0;
+		line-height: 1.6;
+		font-weight: 500;
+	}
+
+	.era-context {
+		font-size: 0.9rem;
+		color: #666;
+		margin-bottom: 1rem;
+		line-height: 1.6;
+	}
+
+	.era-context strong {
+		color: #333;
+	}
+
+	.era-sources {
+		font-size: 0.85rem;
+		color: #666;
+		margin-bottom: 1.5rem;
+		flex: 1;
+	}
+
+	.era-sources strong {
+		color: #333;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.era-sources ul {
+		margin: 0;
+		padding-left: 1.25rem;
+		line-height: 1.6;
+	}
+
+	.era-sources li {
+		margin-bottom: 0.25rem;
+	}
+
+	.era-link {
+		color: #0a66c2;
+		font-weight: 600;
+		font-size: 1rem;
+		margin-top: auto;
+		padding-top: 1rem;
+		border-top: 1px solid #f0f0f0;
+	}
+
+	.era-card:hover .era-link {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		.hero h1 {
+			font-size: 2rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.25rem;
+		}
+
+		.eras-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
