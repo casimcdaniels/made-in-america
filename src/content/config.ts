@@ -39,6 +39,11 @@ const postsCollection = defineCollection({
 		reactions: z.array(z.string()).optional(),
 		translation: z.string().optional(),
 		language: z.string().optional(),
+		images: z.array(z.object({
+			url: z.string(),
+			alt: z.string(),
+			citation: z.string(),
+		})).optional(),
 	}),
 });
 
