@@ -68,6 +68,84 @@ export const feedPosts: FeedPost[] = [
 		comments: 7,
 		reactions: ["🇺🇸", "💪", "🏠"]
 	},
+	// Market Revolution Era (1820-1880) - Based on Lowell Mill Girls, Frederick Douglass, Tocqueville
+	{
+		id: "market-revolution-1",
+		author: "Sarah Bagley",
+		authorRole: "Lowell Mill Girl",
+		content: "I came to Lowell from a New Hampshire farm, thinking I'd work a few years, save money, then return home. But the work is harder than I imagined. We work 13 hours a day, the noise of the looms is deafening, and the air is thick with cotton dust. I cough constantly. The boarding house matron watches us like hawks - curfew at 10, church on Sunday, no men visitors. But I earn $3 a week - more than I could ever earn on the farm. I'm saving to help my family pay off debts. Some say this is 'respectable' work for women, but I wonder - is it respectable to work ourselves to death?",
+		timestamp: "March 20, 1845",
+		era: "market-revolution",
+		likes: 34,
+		comments: 8,
+		reactions: []
+	},
+	{
+		id: "market-revolution-2",
+		author: "Frederick Douglass",
+		authorRole: "Former Slave, Abolitionist",
+		content: "From my Narrative: I worked as a caulker in Baltimore, a skilled trade. My master hired me out - he received my wages, I received nothing but the privilege of working. Free white caulkers resented slave labor - it drove down their wages. But my master preferred slaves - we couldn't quit, couldn't demand better pay, couldn't organize. The distinction between free and slave labor is not just about freedom - it's about who controls the fruits of labor. Free workers can organize, can strike, can demand better conditions. Slaves cannot. This is why slave labor is preferred - it's cheaper, more controllable, and the wages go to the owner, not the worker.",
+		timestamp: "1845",
+		era: "market-revolution",
+		likes: 89,
+		comments: 23,
+		reactions: []
+	},
+	{
+		id: "market-revolution-3",
+		author: "Harriet Hanson Robinson",
+		authorRole: "Former Lowell Mill Girl, Writer",
+		content: "From Loom and Spindle: We organized! In 1834 and 1836, we went on strike - 'turnouts' we called them. We demanded shorter hours, better pay, an end to the speed-up. The company threatened us, fired the leaders, but we stood together. We were young women, far from home, but we had each other. The strikes failed - the company had too much power. But we learned that workers must organize. The factory system treats us as machines, but we are human beings with rights and dignity.",
+		timestamp: "1836",
+		era: "market-revolution",
+		likes: 67,
+		comments: 15,
+		reactions: []
+	},
+	{
+		id: "market-revolution-4",
+		author: "Alexis de Tocqueville",
+		authorRole: "French Observer (quoted)",
+		content: "From Democracy in America (1835): 'In America, I saw that the manufacturing industry... creates an aristocracy... The master and the workman have here no similarity, and their differences increase every day. The one is in a constant state of dependence and servitude.' The factory system creates new forms of inequality - not the old aristocracy of birth, but a new aristocracy of capital. The worker is dependent on the employer, has no property, no security. This is the price of progress.",
+		timestamp: "1835 (quoted)",
+		era: "market-revolution",
+		likes: 45,
+		comments: 12,
+		reactions: []
+	},
+	{
+		id: "market-revolution-5",
+		author: "William Heighton",
+		authorRole: "Labor Organizer, Philadelphia",
+		content: "From The Mechanics' Free Press: Artisans! The factory system is destroying our trade. Master craftsmen become factory owners, journeymen become wage workers, apprentices become factory hands. We lose our independence, our skill, our dignity. We must organize! Join the Mechanics' Union! We demand shorter hours, better wages, the right to organize. The factory owners have capital, but we have numbers. Together, we can resist the degradation of our craft.",
+		timestamp: "1828",
+		era: "market-revolution",
+		likes: 78,
+		comments: 19,
+		reactions: []
+	},
+	{
+		id: "market-revolution-6",
+		author: "Mary Paul",
+		authorRole: "Lowell Mill Girl",
+		content: "Letter to my father: 'I am well and contented. I work in the mill, and though it is hard work, I am used to it. I earn $3.25 a week, and after paying for board, I have $1.25 left. I am saving to help pay off the farm mortgage. The boarding house is clean, the food is good, and I have made friends. But I miss home. The work is monotonous - the same motion, hour after hour, day after day. I wonder if this is what my life will be - a machine, not a person.'",
+		timestamp: "November 20, 1845",
+		era: "market-revolution",
+		likes: 56,
+		comments: 11,
+		reactions: []
+	},
+	{
+		id: "market-revolution-7",
+		author: "Solomon Northup",
+		authorRole: "Free Black Man, Enslaved (quoted)",
+		content: "From Twelve Years a Slave: I was a free man, a skilled carpenter, earning good wages in New York. Then I was kidnapped, sold into slavery. In Louisiana, I worked as a slave carpenter - skilled work, but I received nothing. My master hired me out, kept all my wages. Free white carpenters resented me - slave labor drove down their wages. But I was property, not a person. I had no rights, no freedom, no pay. The distinction between free and slave labor is not just about freedom - it's about who owns your body, your time, your labor.",
+		timestamp: "1853 (quoted)",
+		era: "market-revolution",
+		likes: 112,
+		comments: 28,
+		reactions: []
+	},
 	// Industrial Era - Based on The Jungle and 1906 House Report
 	{
 		id: "industrial-1",
@@ -421,6 +499,63 @@ export const historicalEvents: HistoricalEvent[] = [
 		date: "1786-1787",
 		description: "Massachusetts farmers, burdened by debt and taxes, rebel against the state government. The uprising highlights the economic struggles of agricultural workers and the tension between debtors and creditors in the new nation.",
 		era: "agrarian"
+	},
+	// Market Revolution Era (1820-1880)
+	{
+		id: "market-revolution-1",
+		title: "Lowell Mill System Established",
+		date: "1823",
+		description: "The Boston Manufacturing Company establishes the Lowell mill system, creating the first large-scale factory in America. The system employs young women from New England farms, housing them in company boarding houses with strict moral codes. This marks the beginning of the factory system and the transformation of work from household production to wage labor.",
+		era: "market-revolution"
+	},
+	{
+		id: "market-revolution-2",
+		title: "Lowell Mill Girls Strike",
+		date: "1834",
+		description: "Hundreds of Lowell mill workers stage the first major strike by women workers in American history. They protest wage cuts and increased work speed, organizing a 'turnout' that shuts down the mills. Though the strike fails, it demonstrates that women workers can organize and resist exploitation, setting precedents for future labor organizing.",
+		era: "market-revolution"
+	},
+	{
+		id: "market-revolution-3",
+		title: "Panic of 1837",
+		date: "1837",
+		description: "A severe economic depression devastates workers across America. Artisans lose their workshops, wage workers lose their jobs, and unemployment soars. The panic accelerates the transition from independent artisan production to dependent wage labor, as workers desperate for income accept factory jobs at lower wages.",
+		era: "market-revolution"
+	},
+	{
+		id: "market-revolution-4",
+		title: "Ten-Hour Movement",
+		date: "1840s",
+		description: "Workers organize to demand a ten-hour workday, challenging the standard 12-14 hour factory day. The movement spreads across New England, with workers petitioning state legislatures and organizing strikes. While largely unsuccessful, the movement establishes the principle that workers have the right to limit working hours and organize for better conditions.",
+		era: "market-revolution"
+	},
+	{
+		id: "market-revolution-5",
+		title: "Irish Famine Migration",
+		date: "1845-1855",
+		description: "The Great Famine drives over a million Irish immigrants to America, many arriving destitute and desperate for work. They fill the lowest-paying jobs: domestic service, construction, factory work. Irish workers face discrimination and are used as cheap labor, driving down wages and creating tensions with native-born workers. Their presence transforms the American labor force.",
+		era: "market-revolution"
+	},
+	{
+		id: "market-revolution-6",
+		title: "Fugitive Slave Act",
+		date: "1850",
+		description: "The Fugitive Slave Act requires all citizens to assist in capturing escaped slaves, even in free states. The law intensifies the conflict between free and slave labor, as free workers see slave labor as a threat to their wages and rights. The act makes clear that the distinction between free and slave labor is fundamental to American society.",
+		era: "market-revolution"
+	},
+	{
+		id: "market-revolution-7",
+		title: "Civil War",
+		date: "1861-1865",
+		description: "The Civil War transforms American labor. In the North, the war accelerates industrialization as factories produce war materiel. Women enter factories in large numbers. In the South, the war disrupts the slave labor system. The war's end brings emancipation, fundamentally changing the labor system and setting the stage for new forms of exploitation and organizing.",
+		era: "market-revolution"
+	},
+	{
+		id: "market-revolution-8",
+		title: "Transcontinental Railroad Completed",
+		date: "May 10, 1869",
+		description: "The completion of the transcontinental railroad marks the triumph of industrial capitalism. Built largely by Chinese and Irish immigrant labor under brutal conditions, the railroad transforms transportation and enables the growth of national markets. The project demonstrates the power of capital to organize massive labor forces and the expendability of immigrant workers.",
+		era: "market-revolution"
 	},
 	// Industrial Era
 	{

@@ -40,6 +40,14 @@ export const eras: Era[] = [
 		primarySources: ["Crèvecœur's Letters from an American Farmer", "John & Abigail Adams letters"]
 	},
 	{
+		id: "market-revolution",
+		name: "Market Revolution Era",
+		years: "1820–1880",
+		description: "Transition from artisan to factory work, rise of wage labor, and early industrialization",
+		context: "The Market Revolution transforms work: artisans become wage workers, factories replace workshops, and the distinction between free and slave labor intensifies",
+		primarySources: ["Lowell Mill Girls letters and writings", "Frederick Douglass's narratives on labor", "Alexis de Tocqueville's Democracy in America", "Early labor newspapers and organizing documents"]
+	},
+	{
 		id: "industrial",
 		name: "Industrial Era",
 		years: "1880–1910",
@@ -209,6 +217,167 @@ export const jobs: Job[] = [
 			race: 'black',
 			minAge: 18,
 			maxAge: 30,
+			education: 'none',
+			experience: 'none',
+			maritalStatus: 'any'
+		}
+	},
+	// Market Revolution Era (1820-1880)
+	{
+		id: "market-revolution-1",
+		title: "Textile Mill Worker - Women Preferred",
+		company: "Lowell Manufacturing Company",
+		location: "Lowell, Massachusetts",
+		type: "Full-time",
+		salary: "$3-5 per week (Room & Board Deducted)",
+		description: "Seeking YOUNG WOMEN for textile mill work. This is 'respectable' work for women - better than domestic service, but still women's work. We prefer young, single women from New England farms. They're more docile, more reliable than men. Daily duties: Work 12-14 hour shifts, 6 days per week. Operate power looms - the noise is deafening, you'll go half-deaf. Stand all day, your feet will swell. Watch threads constantly - one break and the whole machine stops. You'll be fined for mistakes. The air is filled with cotton dust - you'll cough constantly, your lungs will be damaged. Work in hot, humid conditions - windows stay closed to maintain humidity. Company boarding house has strict rules: curfew at 10 PM, church on Sunday mandatory, no men visitors, no alcohol. Your wages are docked for room and board - you'll save little. But it's better than farm work, and you have independence. Many women work a few years, save what they can, then return home to marry. We prefer women because they're cheaper, more compliant, and we can control their lives through the boarding house system. Men are too independent, too likely to organize.",
+		requirements: [
+			"Women only - men need not apply",
+			"Age 15-30, preferably 18-25",
+			"Single women preferred - married women expected to stay home",
+			"Must be from 'respectable' New England families",
+			"Willingness to live in company boarding house",
+			"Acceptance of strict moral codes and curfews",
+			"Physical stamina - must stand 12-14 hours",
+			"No prior experience necessary - we'll train you",
+			"Must attend church on Sundays",
+			"Willingness to work 6 days per week"
+		],
+		postedDate: "March 15, 1840",
+		era: "market-revolution",
+		filters: {
+			gender: 'female',
+			race: 'white',
+			minAge: 15,
+			maxAge: 30,
+			education: 'elementary',
+			experience: 'none',
+			maritalStatus: 'single'
+		}
+	},
+	{
+		id: "market-revolution-2",
+		title: "Journeyman Shoemaker - Apprenticeship Required",
+		company: "Artisan Workshop",
+		location: "Boston, Massachusetts",
+		type: "Skilled Trade",
+		salary: "$8-12 per week (Piece Rate)",
+		description: "Seeking experienced journeyman shoemaker. The trade is changing - factories are replacing workshops, but skilled craftsmen still needed for quality work. This is MEN'S WORK - requires strength and skill. Daily duties: Cut leather by hand - your hands will be calloused and stained. Stitch soles to uppers - precise work, your back will ache from bending. Fit shoes to customers - measure feet, make lasts. Work 10-12 hour days, 6 days per week. The master owns the shop, you're a journeyman - better than an apprentice, but still dependent. You get paid by the piece - work fast or starve. Competition from factory-made shoes is driving down prices - you must work harder for less. Many shoemakers are organizing - joining unions, striking for better wages. But the master doesn't like that. If you join a union, you'll be blacklisted. Free white men only - this is skilled work requiring education and freedom. Slaves cannot be apprenticed to skilled trades. You must have completed apprenticeship - 7 years of training. The old ways are dying - factories will replace us all, but for now, skilled craftsmen are still needed.",
+		requirements: [
+			"Men only - this is men's work",
+			"Free white men only - slaves cannot be apprenticed",
+			"Completed apprenticeship required - 7 years training",
+			"Age 21-40, experienced journeymen",
+			"Physical strength and manual dexterity",
+			"Ability to work 10-12 hour days, 6 days per week",
+			"Willingness to work piece-rate - pay depends on speed",
+			"No union membership - union members will be blacklisted",
+			"Must provide own tools",
+			"Acceptance that factories may replace this work"
+		],
+		postedDate: "August 20, 1850",
+		era: "market-revolution",
+		filters: {
+			gender: 'male',
+			race: 'white',
+			minAge: 21,
+			maxAge: 40,
+			education: 'elementary',
+			experience: 'experienced',
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "market-revolution-3",
+		title: "Slave - Skilled Craftsman",
+		company: "Urban Workshop",
+		location: "Richmond, Virginia",
+		type: "Enslaved Labor",
+		salary: "Room, Board, Clothing (Owner Keeps Wages)",
+		description: "Seeking skilled NEGRO SLAVE for hire-out work. This slave will be hired to work in a workshop, but wages go to owner, not slave. Skilled slaves are valuable - they earn more for the owner. But they're also dangerous - skilled slaves have more freedom, more contact with free workers, more opportunity to run away. Daily duties: Work as skilled craftsman - carpentry, blacksmithing, or similar. Work 10-12 hour days, 6 days per week. Your owner receives your wages - you get nothing but room and board. You may be allowed to keep small portion if you work extra, but that's at owner's discretion. You have more freedom than field hands - can move around city, interact with free workers. But you're still property. Your owner can sell you at any time, separate you from family. If you run away, you'll be hunted, whipped, maybe killed. Skilled slaves are in high demand - owners can hire them out for good wages. But you're still a slave - not free, not paid, not human in the eyes of the law. Free workers don't like competing with slave labor - it drives down wages. But owners prefer slaves - they're cheaper, can't quit, and wages go to owner.",
+		requirements: [
+			"Negro slaves only - must be enslaved",
+			"Skilled craftsman - carpentry, blacksmithing, or similar",
+			"Age 20-35, strong and healthy",
+			"Must be 'trustworthy' - less likely to run away",
+			"Owner must be willing to hire out",
+			"Acceptance that wages go to owner, not slave",
+			"Must work 10-12 hour days, 6 days per week",
+			"Can be sold, separated from family at any time",
+			"No rights, no freedom, no pay",
+			"Slave labor preferred - cheaper than free workers"
+		],
+		postedDate: "May 10, 1855",
+		era: "market-revolution",
+		filters: {
+			gender: 'male',
+			race: 'black',
+			minAge: 20,
+			maxAge: 35,
+			education: 'none',
+			experience: 'experienced',
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "market-revolution-4",
+		title: "Domestic Servant - Irish Women Preferred",
+		company: "Private Household",
+		location: "New York City, New York",
+		type: "Live-in Service",
+		salary: "$2-4 per month (Room & Board Included)",
+		description: "Seeking domestic servant for wealthy household. Irish women preferred - they're cheap, desperate, and speak English (unlike Germans). This is WOMEN'S WORK - cleaning, cooking, childcare. Daily duties: Rise at 5 AM. Light fires, prepare breakfast. Clean entire house - scrubbing floors on hands and knees, your back will break. Wash clothes by hand - your hands will be raw and cracked. Cook meals - three meals a day for family and guests. Care for children - you're a nanny, teacher, and servant. Work until 9 PM, sometimes later. Sleep in attic or basement - cramped, cold, no privacy. You're on call 24 hours - family needs something? You do it. No days off - work 7 days per week. Your employer controls your life - where you go, who you see, what you wear. Irish women are preferred because they're Catholic (less threatening than Protestant servants), cheap, and desperate enough to accept terrible conditions. Many Irish women come alone, send money home to starving families in Ireland. You'll be treated as inferior - 'Bridget' is a slur for Irish servants. But it's work, and it's better than starving. Free labor - you can quit, but then you're homeless, jobless, with no references.",
+		requirements: [
+			"Women only - this is women's work",
+			"Irish women preferred - cheap and desperate",
+			"Age 16-35, preferably 18-25",
+			"Single women - no husbands or children",
+			"Must be willing to live in employer's home",
+			"Willingness to work 7 days per week, 16+ hour days",
+			"Acceptance of employer's control over your life",
+			"No prior experience necessary",
+			"Must be 'respectable' - good moral character",
+			"Willingness to send wages home to family"
+		],
+		postedDate: "September 5, 1850",
+		era: "market-revolution",
+		filters: {
+			gender: 'female',
+			race: 'white',
+			minAge: 16,
+			maxAge: 35,
+			education: 'none',
+			experience: 'none',
+			maritalStatus: 'single'
+		}
+	},
+	{
+		id: "market-revolution-5",
+		title: "Railroad Worker - Track Layer",
+		company: "Railroad Construction",
+		location: "Westward Expansion",
+		type: "Manual Labor",
+		salary: "$1.00-$1.50 per day (Dangerous Work)",
+		description: "Seeking strong men for railroad construction. This is BRUTAL work - building the railroads that will transform America. Irish and Chinese immigrants preferred - they work cheap, work hard, and can't complain. Daily duties: Rise before dawn. Carry 100-pound rails on your shoulders - your back will be destroyed. Lay track in all weather - rain, snow, blazing sun. Swing sledgehammers to drive spikes - your arms will shake with exhaustion. Work 12-14 hour days, 6-7 days per week. Live in tent camps - filthy, crowded, disease-ridden. Food is poor quality - you'll be malnourished. Accidents are constant - crushed by rails, run over by trains, explosions from blasting. Many workers die. No safety regulations - if you're injured, you're fired. If you die, they hire another. Irish workers are preferred for track laying - they're strong, desperate, and work for less than native-born workers. Chinese workers are preferred for blasting and tunneling - they're considered expendable. This is free labor, but it's worse than slavery in many ways - at least slaves are valuable property, you're disposable. But it's work, and for immigrants with no other options, it's better than starving.",
+		requirements: [
+			"Men only - this is men's work requiring strength",
+			"Irish or Chinese immigrants preferred - work cheap",
+			"Age 18-45, strong and healthy",
+			"Physical strength - must carry 100-pound rails",
+			"Willingness to work 12-14 hour days, 6-7 days per week",
+			"Acceptance of dangerous work - accidents are your fault",
+			"Must be willing to live in tent camps",
+			"No prior experience necessary",
+			"Willingness to work in all weather conditions",
+			"Immigrants preferred - native workers demand higher wages"
+		],
+		postedDate: "June 20, 1865",
+		era: "market-revolution",
+		filters: {
+			gender: 'male',
+			race: 'any',
+			minAge: 18,
+			maxAge: 45,
 			education: 'none',
 			experience: 'none',
 			maritalStatus: 'any'
