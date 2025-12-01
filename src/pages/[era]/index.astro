@@ -586,29 +586,69 @@ if (!eraData) {
 	});
 
 	// Tab switching functionality
+	function switchTab(tabName) {
+		const tabButtons = document.querySelectorAll('.tab-button');
+		const tabContents = document.querySelectorAll('.tab-content');
+
+		// Update active states
+		tabButtons.forEach(btn => {
+			if (btn.getAttribute('data-tab') === tabName) {
+				btn.classList.add('active');
+			} else {
+				btn.classList.remove('active');
+			}
+		});
+
+		tabContents.forEach(content => {
+			if (content.id === `tab-content-${tabName}`) {
+				content.classList.add('active');
+				content.style.display = 'block';
+			} else {
+				content.classList.remove('active');
+				content.style.display = 'none';
+			}
+		});
+
+		// Update URL hash
+		const hash = tabName === 'feed' ? 'community' : tabName;
+		if (window.location.hash !== `#${hash}`) {
+			window.history.replaceState(null, '', `#${hash}`);
+		}
+	}
+
+	function getTabFromHash() {
+		const hash = window.location.hash.slice(1); // Remove the #
+		if (hash === 'community' || hash === 'feed') {
+			return 'feed';
+		}
+		if (hash === 'jobs') {
+			return 'jobs';
+		}
+		return null; // Default to jobs if no hash
+	}
+
 	document.addEventListener('DOMContentLoaded', () => {
 		const tabButtons = document.querySelectorAll('.tab-button');
 		const tabContents = document.querySelectorAll('.tab-content');
 		const tabJobsCount = document.getElementById('tab-jobs-count');
 
+		// Check URL hash on page load
+		const initialTab = getTabFromHash() || 'jobs';
+		switchTab(initialTab);
+
 		tabButtons.forEach(button => {
 			button.addEventListener('click', () => {
 				const targetTab = button.getAttribute('data-tab');
-
-				// Update active states
-				tabButtons.forEach(btn => btn.classList.remove('active'));
-				tabContents.forEach(content => {
-					content.classList.remove('active');
-					content.style.display = 'none';
-				});
-
-				button.classList.add('active');
-				const targetContent = document.getElementById(`tab-content-${targetTab}`);
-				if (targetContent) {
-					targetContent.classList.add('active');
-					targetContent.style.display = 'block';
-				}
+				switchTab(targetTab);
 			});
+		});
+
+		// Listen for hash changes (back/forward buttons)
+		window.addEventListener('hashchange', () => {
+			const tabFromHash = getTabFromHash();
+			if (tabFromHash) {
+				switchTab(tabFromHash);
+			}
 		});
 
 		// Update jobs count in tab when filters change
