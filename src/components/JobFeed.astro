@@ -1,0 +1,88 @@
+---
+import type { Job } from '../data/jobs';
+import JobCard from './JobCard.astro';
+
+interface Props {
+	jobs: Job[];
+}
+
+const { jobs } = Astro.props;
+---
+
+<div class="job-feed" id="job-feed">
+	<div class="feed-timeline">
+		{jobs.map((job, index) => (
+			<div class="feed-item" data-job-id={job.id}>
+				<div class="timeline-marker"></div>
+				<div class="feed-item-content">
+					<JobCard job={job} />
+				</div>
+			</div>
+		))}
+	</div>
+</div>
+
+<style>
+	.job-feed {
+		position: relative;
+	}
+
+	.feed-timeline {
+		position: relative;
+		padding-left: 2rem;
+	}
+
+	.feed-timeline::before {
+		content: '';
+		position: absolute;
+		left: 0.5rem;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background: #000;
+	}
+
+	.feed-item {
+		position: relative;
+		margin-bottom: 1rem;
+		opacity: 1;
+		transition: opacity 0.3s ease;
+	}
+
+	.feed-item[data-hidden="true"] {
+		opacity: 0.3;
+		pointer-events: none;
+	}
+
+	.feed-item[style*="display: none"] {
+		display: none !important;
+	}
+
+	.timeline-marker {
+		position: absolute;
+		left: -1.75rem;
+		top: 1rem;
+		width: 12px;
+		height: 12px;
+		background: #000;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		box-shadow: 0 0 0 2px #000;
+		z-index: 2;
+	}
+
+	.feed-item-content {
+		position: relative;
+	}
+
+	@media (max-width: 768px) {
+		.feed-timeline {
+			padding-left: 1.5rem;
+		}
+
+		.timeline-marker {
+			left: -1.25rem;
+		}
+	}
+</style>
+

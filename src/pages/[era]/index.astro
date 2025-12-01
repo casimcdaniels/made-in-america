@@ -1,8 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import JobCard from '../../components/JobCard.astro';
 import Feed from '../../components/Feed.astro';
-import { getJobsByEra, getEraById, eras } from '../../data/jobs';
+import JobFilter from '../../components/JobFilter.astro';
+import JobFeed from '../../components/JobFeed.astro';
+import { getJobsByEra, getEraById, eras, type Job } from '../../data/jobs';
 import { getFeedPostsByEra, getEraTheme } from '../../data/feed';
 
 export async function getStaticPaths() {
@@ -43,26 +44,45 @@ if (!eraData) {
 		</div>
 
 		<div class="content-layout">
+			<aside class="sidebar">
+				<JobFilter />
+			</aside>
+			
 			<div class="main-content">
-				<Feed posts={feedPosts} eraId={era} />
-				
-				<div class="jobs-container">
-					<div class="jobs-header">
-						<h2>💼 Available Positions</h2>
-						<span class="jobs-count">{jobs.length} {jobs.length === 1 ? 'job' : 'jobs'} available</span>
+				<div class="tabs-container">
+					<div class="tabs-header">
+						<button class="tab-button active" data-tab="jobs" id="tab-jobs">
+							Available Positions
+							<span class="tab-count" id="tab-jobs-count">{jobs.length}</span>
+						</button>
+						<button class="tab-button" data-tab="feed" id="tab-feed">
+							Community Feed
+							<span class="tab-count">{feedPosts.length}</span>
+						</button>
 					</div>
 
-					<div class="jobs-grid">
-						{jobs.map((job, index) => (
-							<JobCard job={job} />
-						))}
-					</div>
+					<div class="tab-content active" id="tab-content-jobs">
+						<div class="jobs-container">
+							<div class="jobs-header">
+								<div class="jobs-stats" id="jobs-stats">
+									<span class="jobs-count" id="jobs-count">{jobs.length} {jobs.length === 1 ? 'job' : 'jobs'} available</span>
+									<span class="jobs-excluded" id="jobs-excluded" style="display: none;"></span>
+								</div>
+							</div>
 
-					{jobs.length === 0 && (
-						<div class="no-jobs">
-							<p>No job listings available for this era.</p>
+							<JobFeed jobs={jobs} />
+
+							<div class="no-jobs" id="no-jobs" style="display: none;">
+								<p>No job listings match your filters.</p>
+							</div>
 						</div>
-					)}
+					</div>
+
+					<div class="tab-content" id="tab-content-feed" style="display: none;">
+						<div class="feed-section">
+							<Feed posts={feedPosts} eraId={era} />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -71,17 +91,17 @@ if (!eraData) {
 
 <style>
 	.era-page {
-		max-width: 1200px;
+		max-width: 1600px;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 1.5rem;
 	}
 
 	.era-banner {
 		background: #fff;
 		color: #000;
 		border-radius: 0;
-		padding: 2rem;
-		margin-bottom: 2rem;
+		padding: 1.25rem 1.5rem;
+		margin-bottom: 1.5rem;
 		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 		position: relative;
 		overflow: hidden;
@@ -107,14 +127,14 @@ if (!eraData) {
 	}
 
 	.era-banner-content h1 {
-		margin: 0 0 0.5rem 0;
-		font-size: 3rem;
+		margin: 0 0 0.25rem 0;
+		font-size: 2.25rem;
 		font-weight: 700;
 		font-family: 'Old Standard TT', 'Times New Roman', serif;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		border-bottom: 4px solid #000;
-		padding-bottom: 0.5rem;
+		border-bottom: 3px solid #000;
+		padding-bottom: 0.25rem;
 		line-height: 1.1;
 	}
 
@@ -138,21 +158,21 @@ if (!eraData) {
 	}
 
 	.era-banner-description {
-		font-size: 1rem;
-		margin: 1rem 0;
+		font-size: 0.9rem;
+		margin: 0.75rem 0;
 		color: #333;
-		line-height: 1.7;
+		line-height: 1.6;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 		text-align: justify;
 	}
 
 	.era-banner-context {
-		font-size: 0.9rem;
+		font-size: 0.85rem;
 		color: #666;
-		line-height: 1.6;
-		margin-top: 1rem;
-		padding-top: 1rem;
-		border-top: 2px solid #000;
+		line-height: 1.5;
+		margin-top: 0.75rem;
+		padding-top: 0.75rem;
+		border-top: 1px solid #000;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 		text-align: justify;
 	}
@@ -162,26 +182,113 @@ if (!eraData) {
 	}
 
 	.content-layout {
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
+		display: grid;
+		grid-template-columns: 280px 1fr;
+		gap: 1.5rem;
+		align-items: start;
+	}
+
+	.sidebar {
+		position: sticky;
+		top: 1rem;
+		max-height: calc(100vh - 2rem);
+		overflow-y: auto;
 	}
 
 	.main-content {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 1.5rem;
+		min-width: 0;
+	}
+
+	.tabs-container {
+		background: #fff;
+		border: 1px solid #000;
+		border-top: 3px solid #000;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.tabs-header {
+		display: flex;
+		border-bottom: 2px solid #000;
+		background: #fff;
+	}
+
+	.tab-button {
+		flex: 1;
+		padding: 1rem 1.5rem;
+		background: #fff;
+		border: none;
+		border-right: 1px solid #000;
+		border-bottom: 3px solid transparent;
+		cursor: pointer;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		font-size: 1rem;
+		font-weight: 600;
+		color: #666;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		transition: all 0.2s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		position: relative;
+	}
+
+	.tab-button:last-child {
+		border-right: none;
+	}
+
+	.tab-button:hover {
+		background: #f8f8f8;
+		color: #000;
+	}
+
+	.tab-button.active {
+		color: #000;
+		border-bottom-color: #000;
+		background: #fff;
+		font-weight: 700;
+	}
+
+	.tab-count {
+		background: #000;
+		color: #fff;
+		padding: 0.15rem 0.5rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		border-radius: 0;
+		min-width: 1.5rem;
+		text-align: center;
+	}
+
+	.tab-button.active .tab-count {
+		background: #000;
+	}
+
+	.tab-content {
+		display: none;
+		animation: fadeIn 0.3s ease-out;
+	}
+
+	.tab-content.active {
+		display: block;
+	}
+
+	.feed-section {
+		padding: 1.25rem;
 	}
 
 	.jobs-container {
-		background: #fff;
+		background: transparent;
+		border: none;
 		border-radius: 0;
-		padding: 2rem;
-		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
-		animation: fadeIn 0.6s ease-out 0.2s both;
-		border: 1px solid #000;
+		padding: 1.25rem;
+		box-shadow: none;
+		animation: none;
 		position: relative;
-		border-top: 3px solid #000;
 	}
 
 	@keyframes fadeIn {
@@ -195,58 +302,36 @@ if (!eraData) {
 
 	.jobs-header {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
-		margin-bottom: 2rem;
-		padding-bottom: 1rem;
-		border-bottom: 3px solid #000;
+		margin-bottom: 1rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 1px solid #ccc;
 	}
 
-	.jobs-header h2 {
-		margin: 0;
-		font-size: 2rem;
-		font-weight: 700;
-		color: #000;
-		font-family: 'Old Standard TT', 'Times New Roman', serif;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		border-bottom: 2px solid #000;
-		padding-bottom: 0.5rem;
-		display: inline-block;
+	.jobs-stats {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.25rem;
 	}
 
 	.jobs-count {
-		color: #666;
-		font-size: 0.8rem;
+		color: #000;
+		font-size: 0.9rem;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
+		font-weight: 600;
 	}
 
-	.jobs-grid {
-		display: grid;
-		gap: 1.5rem;
-	}
-
-	.jobs-grid > * {
-		animation: fadeInUp 0.5s ease-out both;
-	}
-
-	.jobs-grid > *:nth-child(1) { animation-delay: 0.1s; }
-	.jobs-grid > *:nth-child(2) { animation-delay: 0.2s; }
-	.jobs-grid > *:nth-child(3) { animation-delay: 0.3s; }
-	.jobs-grid > *:nth-child(4) { animation-delay: 0.4s; }
-	.jobs-grid > *:nth-child(5) { animation-delay: 0.5s; }
-
-	@keyframes fadeInUp {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
+	.jobs-excluded {
+		color: #666;
+		font-size: 0.75rem;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-style: italic;
 	}
 
 	.no-jobs {
@@ -255,9 +340,24 @@ if (!eraData) {
 		color: #666;
 	}
 
+	@media (max-width: 1024px) {
+		.content-layout {
+			grid-template-columns: 1fr;
+		}
+
+		.sidebar {
+			position: static;
+			max-height: none;
+		}
+	}
+
 	@media (max-width: 768px) {
+		.era-page {
+			padding: 1rem;
+		}
+
 		.era-banner {
-			padding: 2rem;
+			padding: 1rem;
 		}
 
 		.era-banner-content h1 {
@@ -269,6 +369,193 @@ if (!eraData) {
 			align-items: flex-start;
 			gap: 0.5rem;
 		}
+
+		.content-layout {
+			gap: 1rem;
+		}
+
+		.main-content {
+			gap: 1rem;
+		}
 	}
 </style>
+
+<script define:vars={{ jobs }}>
+	const allJobs = jobs;
+	const jobFeed = document.getElementById('job-feed');
+	const jobsCount = document.getElementById('jobs-count');
+	const jobsExcluded = document.getElementById('jobs-excluded');
+	const noJobs = document.getElementById('no-jobs');
+
+	function matchesFilter(job, filters) {
+		if (!job.filters) return true;
+
+		const jobFilters = job.filters;
+
+		// Gender filter
+		if (filters.gender !== undefined && filters.gender !== 'any') {
+			if (jobFilters.gender !== 'any' && jobFilters.gender !== filters.gender) {
+				return false;
+			}
+		}
+
+		// Race filter
+		if (filters.race !== undefined && filters.race !== 'any') {
+			if (jobFilters.race !== 'any' && jobFilters.race !== filters.race) {
+				return false;
+			}
+		}
+
+		// Age filter
+		if (filters.minAge !== undefined) {
+			if (jobFilters.maxAge === undefined || jobFilters.maxAge < filters.minAge) {
+				return false;
+			}
+		}
+		if (filters.maxAge !== undefined) {
+			if (jobFilters.minAge === undefined || jobFilters.minAge > filters.maxAge) {
+				return false;
+			}
+		}
+
+		// Education filter
+		if (filters.education !== undefined && filters.education !== 'any') {
+			const eduLevels = {
+				'none': 0,
+				'elementary': 1,
+				'highschool': 2,
+				'college': 3,
+				'graduate': 4
+			};
+			const filterLevel = eduLevels[filters.education] || 0;
+			const jobLevel = eduLevels[jobFilters.education || 'none'] || 0;
+			if (jobLevel < filterLevel) {
+				return false;
+			}
+		}
+
+		// Experience filter
+		if (filters.experience !== undefined && filters.experience !== 'any') {
+			const expLevels = {
+				'none': 0,
+				'some': 1,
+				'experienced': 2
+			};
+			const filterLevel = expLevels[filters.experience] || 0;
+			const jobLevel = expLevels[jobFilters.experience || 'none'] || 0;
+			if (jobLevel < filterLevel) {
+				return false;
+			}
+		}
+
+		// Union filter
+		if (filters.union !== null && filters.union !== undefined) {
+			if (jobFilters.union !== filters.union) {
+				return false;
+			}
+		}
+
+		// Marital status filter
+		if (filters.maritalStatus !== undefined && filters.maritalStatus !== 'any') {
+			if (jobFilters.maritalStatus !== 'any' && jobFilters.maritalStatus !== filters.maritalStatus) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	function hasActiveFilters(filters) {
+		return Object.keys(filters).some(key => {
+			const value = filters[key];
+			return value !== undefined && value !== null && value !== '';
+		});
+	}
+
+	function filterJobs(filters) {
+		if (!jobFeed || !jobsCount || !jobsExcluded || !noJobs) return;
+
+		const filteredJobs = allJobs.filter(job => matchesFilter(job, filters));
+		const excludedCount = allJobs.length - filteredJobs.length;
+		
+		// Update job feed items visibility
+		const feedItems = jobFeed.querySelectorAll('.feed-item');
+		feedItems.forEach((item) => {
+			const jobId = item.getAttribute('data-job-id');
+			const job = allJobs.find(j => j.id === jobId);
+			if (job && matchesFilter(job, filters)) {
+				item.style.display = '';
+				item.removeAttribute('data-hidden');
+			} else {
+				item.style.display = 'none';
+				item.setAttribute('data-hidden', 'true');
+			}
+		});
+
+		// Update counts
+		const count = filteredJobs.length;
+		if (jobsCount) {
+			jobsCount.textContent = `${count} ${count === 1 ? 'job' : 'jobs'} available`;
+		}
+
+		// Show excluded count if filters are active
+		if (hasActiveFilters(filters) && excludedCount > 0) {
+			if (jobsExcluded) {
+				jobsExcluded.style.display = 'block';
+				jobsExcluded.textContent = `${excludedCount} ${excludedCount === 1 ? 'job excluded' : 'jobs excluded'}`;
+			}
+		} else {
+			if (jobsExcluded) {
+				jobsExcluded.style.display = 'none';
+			}
+		}
+
+		// Show/hide no jobs message
+		if (count === 0) {
+			noJobs.style.display = 'block';
+		} else {
+			noJobs.style.display = 'none';
+		}
+	}
+
+	// Listen for filter changes
+	document.addEventListener('filterChange', (e) => {
+		filterJobs(e.detail);
+	});
+
+	// Tab switching functionality
+	document.addEventListener('DOMContentLoaded', () => {
+		const tabButtons = document.querySelectorAll('.tab-button');
+		const tabContents = document.querySelectorAll('.tab-content');
+		const tabJobsCount = document.getElementById('tab-jobs-count');
+
+		tabButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				const targetTab = button.getAttribute('data-tab');
+
+				// Update active states
+				tabButtons.forEach(btn => btn.classList.remove('active'));
+				tabContents.forEach(content => {
+					content.classList.remove('active');
+					content.style.display = 'none';
+				});
+
+				button.classList.add('active');
+				const targetContent = document.getElementById(`tab-content-${targetTab}`);
+				if (targetContent) {
+					targetContent.classList.add('active');
+					targetContent.style.display = 'block';
+				}
+			});
+		});
+
+		// Update jobs count in tab when filters change
+		document.addEventListener('filterChange', (e) => {
+			if (tabJobsCount) {
+				const filteredCount = allJobs.filter(job => matchesFilter(job, e.detail)).length;
+				tabJobsCount.textContent = filteredCount;
+			}
+		});
+	});
+</script>
 

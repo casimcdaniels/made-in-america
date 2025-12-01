@@ -9,6 +9,16 @@ export interface Job {
 	requirements: string[];
 	postedDate: string;
 	era: string;
+	filters?: {
+		gender?: 'male' | 'female' | 'any';
+		race?: 'white' | 'black' | 'any';
+		minAge?: number;
+		maxAge?: number;
+		education?: 'none' | 'elementary' | 'highschool' | 'college' | 'graduate';
+		experience?: 'none' | 'some' | 'experienced';
+		union?: boolean;
+		maritalStatus?: 'single' | 'married' | 'any';
+	};
 }
 
 export interface Era {
@@ -83,7 +93,16 @@ export const jobs: Job[] = [
 			"Acceptance of dangerous conditions - accidents common"
 		],
 		postedDate: "March 15, 1785",
-		era: "agrarian"
+		era: "agrarian",
+		filters: {
+			gender: 'male',
+			race: 'white',
+			minAge: 16,
+			maxAge: 50,
+			education: 'none',
+			experience: 'some',
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "agrarian-2",
@@ -104,7 +123,16 @@ export const jobs: Job[] = [
 			"Must work 16-hour days, 6.5 days per week"
 		],
 		postedDate: "January 8, 1776",
-		era: "agrarian"
+		era: "agrarian",
+		filters: {
+			gender: 'female',
+			race: 'white',
+			minAge: 16,
+			maxAge: 35,
+			education: 'elementary',
+			experience: 'some',
+			maritalStatus: 'single'
+		}
 	},
 	{
 		id: "agrarian-3",
@@ -124,7 +152,16 @@ export const jobs: Job[] = [
 			"No girls or women accepted"
 		],
 		postedDate: "May 20, 1790",
-		era: "agrarian"
+		era: "agrarian",
+		filters: {
+			gender: 'male',
+			race: 'white',
+			minAge: 12,
+			maxAge: 16,
+			education: 'elementary',
+			experience: 'none',
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "agrarian-4",
@@ -144,7 +181,16 @@ export const jobs: Job[] = [
 			"Must survive dangerous ocean voyage"
 		],
 		postedDate: "April 10, 1770",
-		era: "agrarian"
+		era: "agrarian",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 16,
+			maxAge: 25,
+			education: 'none',
+			experience: 'none',
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "agrarian-5",
@@ -165,7 +211,16 @@ export const jobs: Job[] = [
 			"Slaves preferred - free labor can quit, slaves cannot"
 		],
 		postedDate: "June 15, 1800",
-		era: "agrarian"
+		era: "agrarian",
+		filters: {
+			gender: 'any',
+			race: 'black',
+			minAge: 18,
+			maxAge: 30,
+			education: 'none',
+			experience: 'none',
+			maritalStatus: 'any'
+		}
 	},
 	// Industrial Era
 	{
@@ -187,7 +242,17 @@ export const jobs: Job[] = [
 			"No union membership - union members will be fired"
 		],
 		postedDate: "June 3, 1906",
-		era: "industrial"
+		era: "industrial",
+		filters: {
+			gender: 'male',
+			race: 'any',
+			minAge: 18,
+			maxAge: 50,
+			education: 'none',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "industrial-2",
@@ -208,7 +273,17 @@ export const jobs: Job[] = [
 			"Must accept risk of death or dismemberment"
 		],
 		postedDate: "March 12, 1890",
-		era: "industrial"
+		era: "industrial",
+		filters: {
+			gender: 'male',
+			race: 'white',
+			minAge: 18,
+			maxAge: 45,
+			education: 'elementary',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "industrial-3",
@@ -229,7 +304,17 @@ export const jobs: Job[] = [
 			"Small fingers preferred for thread work"
 		],
 		postedDate: "April 7, 1885",
-		era: "industrial"
+		era: "industrial",
+		filters: {
+			gender: 'female',
+			race: 'white',
+			minAge: 15,
+			maxAge: 30,
+			education: 'elementary',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'single'
+		}
 	},
 	{
 		id: "industrial-4",
@@ -249,7 +334,17 @@ export const jobs: Job[] = [
 			"Acceptance of dangerous conditions - accidents common"
 		],
 		postedDate: "January 15, 1895",
-		era: "industrial"
+		era: "industrial",
+		filters: {
+			gender: 'male',
+			race: 'any',
+			minAge: 8,
+			maxAge: 14,
+			education: 'none',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "industrial-5",
@@ -270,7 +365,17 @@ export const jobs: Job[] = [
 			"Acceptance of dangerous street conditions"
 		],
 		postedDate: "March 20, 1900",
-		era: "industrial"
+		era: "industrial",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 8,
+			maxAge: 14,
+			education: 'none',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "industrial-6",
@@ -291,7 +396,17 @@ export const jobs: Job[] = [
 			"No days off except half-day Sunday"
 		],
 		postedDate: "August 10, 1905",
-		era: "industrial"
+		era: "industrial",
+		filters: {
+			gender: 'female',
+			race: 'black',
+			minAge: 18,
+			maxAge: 50,
+			education: 'none',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	// Early Automation Era
 	{
@@ -313,7 +428,17 @@ export const jobs: Job[] = [
 			"Must accept responsibility for dangerous equipment"
 		],
 		postedDate: "August 15, 1955",
-		era: "automation"
+		era: "automation",
+		filters: {
+			gender: 'male',
+			race: 'white',
+			minAge: 21,
+			maxAge: 50,
+			education: 'highschool',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "automation-2",
@@ -334,7 +459,17 @@ export const jobs: Job[] = [
 			"No colored men or women - supervisory positions white only"
 		],
 		postedDate: "February 22, 1962",
-		era: "automation"
+		era: "automation",
+		filters: {
+			gender: 'male',
+			race: 'white',
+			minAge: 25,
+			maxAge: 50,
+			education: 'highschool',
+			experience: 'experienced',
+			union: true,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "automation-3",
@@ -355,7 +490,17 @@ export const jobs: Job[] = [
 			"No known communist or subversive affiliations"
 		],
 		postedDate: "November 10, 1968",
-		era: "automation"
+		era: "automation",
+		filters: {
+			gender: 'any',
+			race: 'white',
+			minAge: 18,
+			maxAge: 50,
+			education: 'highschool',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "automation-4",
@@ -377,7 +522,17 @@ export const jobs: Job[] = [
 			"Must accept low pay with no advancement opportunities"
 		],
 		postedDate: "June 5, 1960",
-		era: "automation"
+		era: "automation",
+		filters: {
+			gender: 'female',
+			race: 'white',
+			minAge: 18,
+			maxAge: 30,
+			education: 'highschool',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'single'
+		}
 	},
 	{
 		id: "automation-5",
@@ -398,7 +553,17 @@ export const jobs: Job[] = [
 			"Must accept low pay and harsh working conditions"
 		],
 		postedDate: "March 15, 1958",
-		era: "automation"
+		era: "automation",
+		filters: {
+			gender: 'female',
+			race: 'white',
+			minAge: 21,
+			maxAge: 35,
+			education: 'college',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'single'
+		}
 	},
 	// Digital Computing Era
 	{
@@ -419,7 +584,17 @@ export const jobs: Job[] = [
 			"Must accept that men advance faster in technical roles"
 		],
 		postedDate: "May 5, 1975",
-		era: "digital"
+		era: "digital",
+		filters: {
+			gender: 'male',
+			race: 'any',
+			minAge: 22,
+			maxAge: 40,
+			education: 'college',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "digital-2",
@@ -439,7 +614,17 @@ export const jobs: Job[] = [
 			"No men - this position is for women only"
 		],
 		postedDate: "September 18, 1980",
-		era: "digital"
+		era: "digital",
+		filters: {
+			gender: 'female',
+			race: 'any',
+			minAge: 18,
+			maxAge: 40,
+			education: 'highschool',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "digital-3",
@@ -459,7 +644,17 @@ export const jobs: Job[] = [
 			"Passion for technology"
 		],
 		postedDate: "March 12, 1990",
-		era: "digital"
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 22,
+			maxAge: 30,
+			education: 'college',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "digital-4",
@@ -480,7 +675,17 @@ export const jobs: Job[] = [
 			"Must accept disrupted sleep schedule and isolation"
 		],
 		postedDate: "January 20, 1985",
-		era: "digital"
+		era: "digital",
+		filters: {
+			gender: 'male',
+			race: 'any',
+			minAge: 21,
+			maxAge: 45,
+			education: 'highschool',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	// AI Era
 	{
@@ -502,7 +707,17 @@ export const jobs: Job[] = [
 			"Must accept that most applicants are rejected"
 		],
 		postedDate: "January 15, 2020",
-		era: "ai"
+		era: "ai",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 25,
+			maxAge: 45,
+			education: 'graduate',
+			experience: 'experienced',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "ai-2",
@@ -522,7 +737,17 @@ export const jobs: Job[] = [
 			"Must work as 1099 contractor"
 		],
 		postedDate: "March 8, 2024",
-		era: "ai"
+		era: "ai",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 22,
+			maxAge: 50,
+			education: 'college',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "ai-3",
@@ -542,7 +767,17 @@ export const jobs: Job[] = [
 			"No candidates without PhD will be considered"
 		],
 		postedDate: "November 20, 2023",
-		era: "ai"
+		era: "ai",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 28,
+			maxAge: 50,
+			education: 'graduate',
+			experience: 'experienced',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "ai-4",
@@ -562,7 +797,17 @@ export const jobs: Job[] = [
 			"Strong analytical and communication skills"
 		],
 		postedDate: "February 14, 2025",
-		era: "ai"
+		era: "ai",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 25,
+			maxAge: 40,
+			education: 'college',
+			experience: 'experienced',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "ai-5",
@@ -584,7 +829,17 @@ export const jobs: Job[] = [
 			"Acceptance that this work will damage your mental health"
 		],
 		postedDate: "March 1, 2024",
-		era: "ai"
+		era: "ai",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 18,
+			maxAge: 50,
+			education: 'highschool',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
 	},
 	{
 		id: "ai-6",
@@ -606,12 +861,72 @@ export const jobs: Job[] = [
 			"Competition with workers worldwide drives pay down"
 		],
 		postedDate: "January 10, 2024",
-		era: "ai"
+		era: "ai",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 18,
+			maxAge: 70,
+			education: 'none',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
 	}
 ];
 
 export function getJobsByEra(eraId: string): Job[] {
-	return jobs.filter(job => job.era === eraId);
+	const eraJobs = jobs.filter(job => job.era === eraId);
+	// Sort chronologically by postedDate
+	return eraJobs.sort((a, b) => {
+		// Parse dates - handle various formats
+		const dateA = parseDate(a.postedDate);
+		const dateB = parseDate(b.postedDate);
+		return dateA.getTime() - dateB.getTime();
+	});
+}
+
+function parseDate(dateStr: string): Date {
+	// Handle formats like "March 15, 1785", "January 15, 2020", etc.
+	const months: Record<string, number> = {
+		'january': 0, 'jan': 0,
+		'february': 1, 'feb': 1,
+		'march': 2, 'mar': 2,
+		'april': 3, 'apr': 3,
+		'may': 4,
+		'june': 5, 'jun': 5,
+		'july': 6, 'jul': 6,
+		'august': 7, 'aug': 7,
+		'september': 8, 'sep': 8, 'sept': 8,
+		'october': 9, 'oct': 9,
+		'november': 10, 'nov': 10,
+		'december': 11, 'dec': 11
+	};
+	
+	// Clean the date string
+	const cleaned = dateStr.trim().toLowerCase().replace(/,/g, '');
+	const parts = cleaned.split(/\s+/);
+	
+	if (parts.length >= 3) {
+		const monthName = parts[0];
+		const day = parseInt(parts[1]) || 1;
+		const year = parseInt(parts[2]) || 1800;
+		const month = months[monthName] ?? 0;
+		
+		// Create date with year, month, day
+		return new Date(year, month, day);
+	}
+	
+	// Try to parse as ISO date or other formats
+	const parsed = Date.parse(dateStr);
+	if (!isNaN(parsed)) {
+		return new Date(parsed);
+	}
+	
+	// Fallback: return a date based on era if we can't parse
+	// This shouldn't happen with our data, but just in case
+	console.warn(`Could not parse date: ${dateStr}`);
+	return new Date(1800, 0, 1);
 }
 
 export function getEraById(eraId: string): Era | undefined {

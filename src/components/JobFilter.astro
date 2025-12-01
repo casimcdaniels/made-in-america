@@ -1,0 +1,352 @@
+---
+export interface Props {
+	onFilterChange?: (filters: FilterState) => void;
+}
+
+export interface FilterState {
+	gender?: 'male' | 'female' | 'any';
+	race?: 'white' | 'black' | 'any';
+	minAge?: number;
+	maxAge?: number;
+	education?: 'none' | 'elementary' | 'highschool' | 'college' | 'graduate' | 'any';
+	experience?: 'none' | 'some' | 'experienced' | 'any';
+	union?: boolean | null;
+	maritalStatus?: 'single' | 'married' | 'any';
+}
+
+let filterState: FilterState = {
+	gender: undefined,
+	race: undefined,
+	minAge: undefined,
+	maxAge: undefined,
+	education: undefined,
+	experience: undefined,
+	union: null,
+	maritalStatus: undefined
+};
+---
+
+<div class="job-filter" id="job-filter">
+	<div class="filter-header">
+		<h3>Filter Jobs</h3>
+		<button class="clear-filters" id="clear-filters">Clear All</button>
+	</div>
+	
+	<div class="filter-section">
+		<label class="filter-label">Gender</label>
+		<select class="filter-select" id="filter-gender">
+			<option value="">Any</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="any">Any Gender</option>
+		</select>
+	</div>
+
+	<div class="filter-section">
+		<label class="filter-label">Race</label>
+		<select class="filter-select" id="filter-race">
+			<option value="">Any</option>
+			<option value="white">White</option>
+			<option value="black">Black</option>
+			<option value="any">Any Race</option>
+		</select>
+	</div>
+
+	<div class="filter-section">
+		<label class="filter-label">Age Range</label>
+		<div class="age-inputs">
+			<input 
+				type="number" 
+				class="filter-input" 
+				id="filter-min-age" 
+				placeholder="Min" 
+				min="0" 
+				max="100"
+			/>
+			<span class="age-separator">to</span>
+			<input 
+				type="number" 
+				class="filter-input" 
+				id="filter-max-age" 
+				placeholder="Max" 
+				min="0" 
+				max="100"
+			/>
+		</div>
+	</div>
+
+	<div class="filter-section">
+		<label class="filter-label">Education</label>
+		<select class="filter-select" id="filter-education">
+			<option value="">Any</option>
+			<option value="none">No Education</option>
+			<option value="elementary">Elementary</option>
+			<option value="highschool">High School</option>
+			<option value="college">College</option>
+			<option value="graduate">Graduate</option>
+		</select>
+	</div>
+
+	<div class="filter-section">
+		<label class="filter-label">Experience</label>
+		<select class="filter-select" id="filter-experience">
+			<option value="">Any</option>
+			<option value="none">No Experience</option>
+			<option value="some">Some Experience</option>
+			<option value="experienced">Experienced</option>
+		</select>
+	</div>
+
+	<div class="filter-section">
+		<label class="filter-label">Union</label>
+		<select class="filter-select" id="filter-union">
+			<option value="">Any</option>
+			<option value="true">Union Required</option>
+			<option value="false">No Union</option>
+		</select>
+	</div>
+
+	<div class="filter-section">
+		<label class="filter-label">Marital Status</label>
+		<select class="filter-select" id="filter-marital">
+			<option value="">Any</option>
+			<option value="single">Single</option>
+			<option value="married">Married</option>
+			<option value="any">Any Status</option>
+		</select>
+	</div>
+</div>
+
+<script>
+	let currentFilters = {};
+
+	function getFilters() {
+		const genderEl = document.getElementById('filter-gender');
+		const raceEl = document.getElementById('filter-race');
+		const minAgeEl = document.getElementById('filter-min-age');
+		const maxAgeEl = document.getElementById('filter-max-age');
+		const educationEl = document.getElementById('filter-education');
+		const experienceEl = document.getElementById('filter-experience');
+		const unionEl = document.getElementById('filter-union');
+		const maritalEl = document.getElementById('filter-marital');
+
+		const filters = {};
+		
+		if (genderEl?.value) filters.gender = genderEl.value;
+		if (raceEl?.value) filters.race = raceEl.value;
+		if (minAgeEl?.value) filters.minAge = parseInt(minAgeEl.value);
+		if (maxAgeEl?.value) filters.maxAge = parseInt(maxAgeEl.value);
+		if (educationEl?.value) filters.education = educationEl.value;
+		if (experienceEl?.value) filters.experience = experienceEl.value;
+		if (unionEl?.value) filters.union = unionEl.value === 'true';
+		if (maritalEl?.value) filters.maritalStatus = maritalEl.value;
+
+		return filters;
+	}
+
+	function applyFilters() {
+		currentFilters = getFilters();
+		const event = new CustomEvent('filterChange', { detail: currentFilters });
+		document.dispatchEvent(event);
+	}
+
+	function clearFilters() {
+		const genderEl = document.getElementById('filter-gender');
+		const raceEl = document.getElementById('filter-race');
+		const minAgeEl = document.getElementById('filter-min-age');
+		const maxAgeEl = document.getElementById('filter-max-age');
+		const educationEl = document.getElementById('filter-education');
+		const experienceEl = document.getElementById('filter-experience');
+		const unionEl = document.getElementById('filter-union');
+		const maritalEl = document.getElementById('filter-marital');
+
+		if (genderEl) genderEl.value = '';
+		if (raceEl) raceEl.value = '';
+		if (minAgeEl) minAgeEl.value = '';
+		if (maxAgeEl) maxAgeEl.value = '';
+		if (educationEl) educationEl.value = '';
+		if (experienceEl) experienceEl.value = '';
+		if (unionEl) unionEl.value = '';
+		if (maritalEl) maritalEl.value = '';
+
+		currentFilters = {};
+		applyFilters();
+	}
+
+	// Set up event listeners
+	document.addEventListener('DOMContentLoaded', () => {
+		const genderEl = document.getElementById('filter-gender');
+		const raceEl = document.getElementById('filter-race');
+		const minAgeEl = document.getElementById('filter-min-age');
+		const maxAgeEl = document.getElementById('filter-max-age');
+		const educationEl = document.getElementById('filter-education');
+		const experienceEl = document.getElementById('filter-experience');
+		const unionEl = document.getElementById('filter-union');
+		const maritalEl = document.getElementById('filter-marital');
+		const clearBtn = document.getElementById('clear-filters');
+
+		[genderEl, raceEl, minAgeEl, maxAgeEl, educationEl, experienceEl, unionEl, maritalEl].forEach(el => {
+			if (el) {
+				el.addEventListener('change', applyFilters);
+				if (el instanceof HTMLInputElement) {
+					el.addEventListener('input', applyFilters);
+				}
+			}
+		});
+
+		if (clearBtn) {
+			clearBtn.addEventListener('click', clearFilters);
+		}
+	});
+</script>
+
+<style>
+	.job-filter {
+		background: #fff;
+		border: 2px solid #000;
+		border-left: 5px solid #000;
+		border-radius: 0;
+		padding: 1rem;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+		position: relative;
+		font-family: 'Old Standard TT', serif;
+	}
+
+	.job-filter::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='aged' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='30' cy='30' r='0.5' fill='%23000' opacity='0.05'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='60' height='60' fill='url(%23aged)'/%3E%3C/svg%3E");
+		pointer-events: none;
+		opacity: 0.4;
+	}
+
+	.filter-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 2px solid #000;
+		position: relative;
+		z-index: 1;
+	}
+
+	.filter-header h3 {
+		margin: 0;
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: #000;
+		font-family: 'Newsreader', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.clear-filters {
+		background: #fff;
+		border: 1px solid #000;
+		border-radius: 0;
+		padding: 0.35rem 0.75rem;
+		font-family: 'Old Standard TT', serif;
+		font-size: 0.75rem;
+		color: #000;
+		cursor: pointer;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		transition: all 0.2s;
+		white-space: nowrap;
+	}
+
+	.clear-filters:hover {
+		background: #000;
+		color: #fff;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+	}
+
+	.filter-section {
+		margin-bottom: 0.9rem;
+		position: relative;
+		z-index: 1;
+	}
+
+	.filter-label {
+		display: block;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: #000;
+		margin-bottom: 0.4rem;
+		font-family: 'Newsreader', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.filter-select,
+	.filter-input {
+		width: 100%;
+		padding: 0.45rem;
+		border: 1px solid #000;
+		border-radius: 0;
+		background: #fff;
+		font-family: 'Old Standard TT', serif;
+		font-size: 0.85rem;
+		color: #000;
+		appearance: none;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%23000' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right 0.45rem center;
+		padding-right: 2rem;
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.filter-select:hover,
+	.filter-input:hover {
+		background-color: #f8f8f8;
+	}
+
+	.filter-select:focus,
+	.filter-input:focus {
+		outline: none;
+		border-color: #333;
+		box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+	}
+
+	.age-inputs {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.age-inputs .filter-input {
+		flex: 1;
+		padding-right: 0.6rem;
+		background-image: none;
+	}
+
+	.age-separator {
+		font-size: 0.9rem;
+		color: #666;
+		font-family: 'Old Standard TT', serif;
+		font-style: italic;
+	}
+
+	@media (max-width: 768px) {
+		.job-filter {
+			padding: 1.25rem;
+		}
+
+		.filter-header {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
+		}
+
+		.clear-filters {
+			width: 100%;
+		}
+	}
+</style>
+

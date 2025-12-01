@@ -68,50 +68,6 @@ export const feedPosts: FeedPost[] = [
 		comments: 7,
 		reactions: ["🇺🇸", "💪", "🏠"]
 	},
-	{
-		id: "agrarian-6",
-		author: "Olaudah Equiano",
-		authorRole: "Formerly Enslaved, Author",
-		content: "From The Interesting Narrative: I was torn from my family at eleven years old. The work on the plantation was endless - from sunup to sundown, in the fields, in the house, wherever the master commanded. We were beaten for the smallest infraction. We were not people to them - we were property, tools, animals. But we are human beings. We feel, we love, we dream of freedom. I write this so the world may know our suffering, and so that others may never know this bondage.",
-		timestamp: "1789",
-		era: "agrarian",
-		likes: 45,
-		comments: 12,
-		reactions: ["💔", "✊"]
-	},
-	{
-		id: "agrarian-7",
-		author: "Phyllis Wheatley",
-		authorRole: "Enslaved Poet & Writer",
-		content: "They say I cannot write because I am Black, because I am a woman, because I am enslaved. But I have written poems that have been published in London. I have corresponded with great minds. Yet I remain in bondage. My mind is free, but my body is not. I write to prove that we are capable, that we are human, that we deserve freedom. The work of the mind knows no chains.",
-		timestamp: "1773",
-		era: "agrarian",
-		likes: 38,
-		comments: 9,
-		reactions: ["✍️", "💪"]
-	},
-	{
-		id: "agrarian-8",
-		author: "Sarah, Enslaved Woman",
-		authorRole: "Field Worker, Virginia Plantation",
-		content: "I work from before dawn until after dark. The overseer watches us constantly. If we slow down, we are whipped. If we try to rest, we are beaten. We are given the worst food, the worst clothing, the worst shelter. Our children can be sold away from us at any moment. There is no rest, no peace, no hope. But we survive. We find ways to help each other, to preserve our humanity, to remember who we are. We are not what they say we are.",
-		timestamp: "1785",
-		era: "agrarian",
-		likes: 52,
-		comments: 15,
-		reactions: ["💔", "✊"]
-	},
-	{
-		id: "agrarian-9",
-		author: "Mercy Otis Warren",
-		authorRole: "Writer & Political Activist",
-		content: "As a woman, I am told I have no place in politics, no voice in public affairs. But I write plays, pamphlets, and letters that influence the course of this revolution. My brother James may speak in public, but my words reach just as many. Women's work is often invisible - managing households, raising children, supporting men - but it is essential. We may not vote, but we think, we write, we shape the future through our children and our influence.",
-		timestamp: "1776",
-		era: "agrarian",
-		likes: 28,
-		comments: 8,
-		reactions: ["✍️", "💪"]
-	},
 	// Industrial Era - Based on The Jungle and 1906 House Report
 	{
 		id: "industrial-1",
@@ -179,83 +135,6 @@ export const feedPosts: FeedPost[] = [
 		comments: 67,
 		reactions: ["✊", "🔥", "🇺🇸"]
 	},
-	{
-		id: "industrial-7",
-		author: "Haymarket Witness",
-		authorRole: "Worker, Chicago",
-		content: "May 4, 1886 - Haymarket Square. We gathered peacefully to demand an eight-hour workday. Thousands of us - workers, families, children. Then the police came. Someone threw a bomb. Chaos. Gunfire. I saw men fall, blood everywhere. Seven police officers dead, dozens of workers killed or wounded. Now they're rounding up our leaders, charging them with murder. This is what happens when workers demand their rights. But we will not be silenced.",
-		timestamp: "May 5, 1886",
-		era: "industrial",
-		likes: 189,
-		comments: 34,
-		reactions: ["😢", "✊", "🔥"]
-	},
-	{
-		id: "industrial-8",
-		author: "Homestead Strike Participant",
-		authorRole: "Steel Worker, Carnegie Plant",
-		content: "July 6, 1892 - The Pinkertons came up the river in barges, armed with rifles. We were ready. We fought them off with whatever we could find - rocks, guns, our bare hands. The battle lasted all day. Men died on both sides. Carnegie and Frick brought in the state militia, broke our union, cut our wages in half. We lost everything. But we showed them - we are not slaves. We will fight for our dignity, our families, our right to a fair wage.",
-		timestamp: "July 7, 1892",
-		era: "industrial",
-		likes: 267,
-		comments: 56,
-		reactions: ["✊", "🔥", "💪"]
-	},
-	{
-		id: "industrial-9",
-		author: "Mary, Mill Worker",
-		authorRole: "Textile Worker, Lawrence",
-		content: "The Bread and Roses Strike - January 1912. We walked out - 20,000 of us, mostly women and children. 'We want bread, and roses too!' We want fair wages, yes, but also dignity, respect, time to live. The mill owners called us ungrateful, said we should be happy to have work. But we work 56 hours a week for starvation wages. They sent the militia, they beat us, they arrested our leaders. But we held strong. After two months, we won. We showed them that women workers have power too.",
-		timestamp: "March 12, 1912",
-		era: "industrial",
-		likes: 234,
-		comments: 45,
-		reactions: ["✊", "🌹", "💪"]
-	},
-	{
-		id: "industrial-10",
-		author: "Triangle Shirtwaist Fire Survivor",
-		authorRole: "Garment Worker, New York",
-		content: "March 25, 1911. The fire started on the eighth floor. The doors were locked - the owners said we would steal if they weren't. The fire escapes collapsed. The elevators stopped working. 146 of us died - mostly young women, immigrants, girls as young as 14. We jumped from windows to escape the flames. I survived by pure luck. They locked us in like animals, and we died like animals. This is what happens when profit matters more than human life. We must organize, we must fight, we must never forget.",
-		timestamp: "March 26, 1911",
-		era: "industrial",
-		likes: 456,
-		comments: 89,
-		reactions: ["😢", "💔", "✊"]
-	},
-	{
-		id: "industrial-11",
-		author: "Ludlow Massacre Survivor",
-		authorRole: "Coal Miner's Wife, Colorado",
-		content: "April 20, 1914. The Colorado National Guard opened fire on our tent colony. We were striking for better conditions, union recognition. They set our tents on fire. Eleven children and two women burned to death in the tent where we hid. My husband was shot. The company guards and militia killed at least 20 of us that day. Rockefeller's company called us 'anarchists' and 'troublemakers.' We were just workers asking for a living wage, safe conditions, the right to organize. They killed our children. We will never forget.",
-		timestamp: "April 21, 1914",
-		era: "industrial",
-		likes: 389,
-		comments: 78,
-		reactions: ["💔", "😢", "✊"]
-	},
-	{
-		id: "industrial-12",
-		author: "Ida B. Wells",
-		authorRole: "Journalist & Civil Rights Activist",
-		content: "As a Black woman journalist, I face threats daily. I write about lynching, about the violence against our people, about the exploitation of Black workers. The factories hire us last, fire us first, pay us least. We work the most dangerous jobs - in the stockyards, the foundries, the mines. When we try to organize, they use violence. When we demand rights, they lynch us. But I will not be silent. The truth must be told, no matter the cost.",
-		timestamp: "1895",
-		era: "industrial",
-		likes: 178,
-		comments: 34,
-		reactions: ["✊", "✍️", "💪"]
-	},
-	{
-		id: "industrial-13",
-		author: "Emma Goldman",
-		authorRole: "Anarchist & Labor Organizer",
-		content: "They call us radicals, anarchists, troublemakers. We are workers demanding our rights. The system is rigged - the owners get rich while we starve. The government sides with capital, sends troops to break our strikes, jails our leaders. But we will not be silenced. Every strike, every protest, every act of resistance builds the movement. The workers will rise. The people will take back what is rightfully theirs.",
-		timestamp: "1901",
-		era: "industrial",
-		likes: 223,
-		comments: 56,
-		reactions: ["✊", "🔥"]
-	},
 	// Automation Era - Based on oral histories and BLS reports
 	{
 		id: "automation-1",
@@ -311,39 +190,6 @@ export const feedPosts: FeedPost[] = [
 		likes: 56,
 		comments: 12,
 		reactions: ["👍", "💪"]
-	},
-	{
-		id: "automation-6",
-		author: "Detroit Auto Worker",
-		authorRole: "Assembly Line Worker",
-		content: "July 1967 - The riots started when police raided a blind pig in a Black neighborhood. But the real cause? Decades of discrimination, redlining, job discrimination. Black workers get the worst jobs, the worst pay, the worst treatment. When automation came, we were the first to go. The factories moved to the suburbs, left us behind. We're tired of being second-class citizens in our own city. The rebellion isn't just about one incident - it's about justice, dignity, the right to work and live with respect.",
-		timestamp: "July 24, 1967",
-		era: "automation",
-		likes: 189,
-		comments: 45,
-		reactions: ["✊", "🔥"]
-	},
-	{
-		id: "automation-7",
-		author: "Rosie, Factory Worker",
-		authorRole: "Former 'Rosie the Riveter', Now Unemployed",
-		content: "During the war, they needed us. 'Rosie the Riveter' - we built the planes, the ships, the tanks. We proved women could do 'men's work.' But when the men came back, we were fired. 'Go back to the kitchen,' they said. Now automation is taking even more jobs. They say technology creates new opportunities, but for who? Not for us. We're pushed out, told our skills don't matter. But we built this country. We deserve our place in it.",
-		timestamp: "1965",
-		era: "automation",
-		likes: 145,
-		comments: 34,
-		reactions: ["💪", "✊"]
-	},
-	{
-		id: "automation-8",
-		author: "Cesar Chavez",
-		authorRole: "Farm Worker Organizer",
-		content: "The machines are coming to the fields. They say it will make farming more efficient. But what about the workers? We already work for starvation wages, in dangerous conditions, with no rights. Now they want to replace us with machines. We must organize. We must demand fair wages, safe conditions, dignity. The Delano grape strike shows that when workers unite, we have power. La causa - the cause - is justice for all workers, human and machine alike.",
-		timestamp: "September 8, 1965",
-		era: "automation",
-		likes: 267,
-		comments: 67,
-		reactions: ["✊", "🌾"]
 	},
 	// Digital Era - Based on Hidden Figures and women in tech studies
 	{
@@ -411,28 +257,6 @@ export const feedPosts: FeedPost[] = [
 		likes: 234,
 		comments: 56,
 		reactions: ["👩‍💻", "💪", "🌍"]
-	},
-	{
-		id: "digital-7",
-		author: "Joy Buolamwini",
-		authorRole: "AI Researcher & Algorithmic Justice Activist",
-		content: "I discovered that facial recognition systems couldn't detect my face because I'm a Black woman. The algorithms were trained on mostly white, male faces. This isn't just a technical problem - it's a social justice issue. When AI systems are biased, they perpetuate discrimination. Women, people of color, marginalized communities - we're being excluded from the technology that's shaping our future. We need to fight for algorithmic justice, for AI that works for everyone, not just the privileged few.",
-		timestamp: "2018",
-		era: "digital",
-		likes: 567,
-		comments: 123,
-		reactions: ["✊", "💭", "🌍"]
-	},
-	{
-		id: "digital-8",
-		author: "Tech Worker, Anonymous",
-		authorRole: "Software Engineer, Silicon Valley",
-		content: "The tech industry talks about 'meritocracy' and 'diversity,' but the reality is different. I'm one of the few women engineers at my company. I'm paid less than my male colleagues doing the same work. I'm passed over for promotions. When I speak up about harassment, I'm told I'm 'too sensitive' or 'not a team player.' The 'bro culture' is real, and it's exhausting. We need to change this industry from the inside, but it's hard when you're fighting every day just to be heard.",
-		timestamp: "1995",
-		era: "digital",
-		likes: 234,
-		comments: 67,
-		reactions: ["💪", "😤"]
 	},
 	// AI Era - Based on Autor and Wiener
 	{
@@ -511,50 +335,6 @@ export const feedPosts: FeedPost[] = [
 		likes: 789,
 		comments: 145,
 		reactions: ["📚", "💭", "🎯"]
-	},
-	{
-		id: "ai-8",
-		author: "Gig Worker, Anonymous",
-		authorRole: "Delivery Driver & Former Office Worker",
-		content: "I lost my office job to automation. Now I drive for a delivery app. No benefits, no security, no future. The algorithm decides if I get work. One bad rating and I'm done. I work 12-hour days just to make ends meet. This is the 'gig economy' - it's not freedom, it's exploitation. The tech companies get rich while we struggle. They call us 'independent contractors' so they don't have to pay us fairly or give us rights. This is the new industrial revolution, and we're the new industrial workers.",
-		timestamp: "2023",
-		era: "ai",
-		likes: 456,
-		comments: 123,
-		reactions: ["😤", "✊"]
-	},
-	{
-		id: "ai-9",
-		author: "Content Moderator",
-		authorRole: "AI Content Reviewer",
-		content: "My job is to train AI systems by reviewing the worst content on the internet - violence, hate speech, child abuse. I see hundreds of horrific images every day. The pay is low, the psychological toll is high. The companies don't provide adequate mental health support. They say AI will eventually do this work, but until then, we're disposable. We're the human cost of 'progress.' When AI replaces us, who will remember what we sacrificed?",
-		timestamp: "2024",
-		era: "ai",
-		likes: 234,
-		comments: 67,
-		reactions: ["😢", "💔"]
-	},
-	{
-		id: "ai-10",
-		author: "Writer, Anonymous",
-		authorRole: "Freelance Writer",
-		content: "AI can write articles now. Not great articles, but good enough for many clients. My rates have dropped. Clients want 'AI-assisted' content - meaning I edit what the machine wrote for pennies. The quality of writing is declining, but the demand for human writers is too. We're being squeezed out. Writing was supposed to be safe from automation - it requires creativity, nuance, human understanding. But here we are. What happens to all the writers, journalists, content creators?",
-		timestamp: "2024",
-		era: "ai",
-		likes: 345,
-		comments: 89,
-		reactions: ["✍️", "😤"]
-	},
-	{
-		id: "ai-11",
-		author: "Tech Worker Organizer",
-		authorRole: "Software Engineer & Union Organizer",
-		content: "Tech workers are finally organizing. We're forming unions, going on strike, demanding better conditions. The industry that promised 'changing the world' has become just another exploitative corporation. Layoffs, low pay for many, terrible working conditions, surveillance. The AI revolution is making it worse - automating our jobs, increasing surveillance, creating new forms of exploitation. But we're fighting back. Workers united will never be defeated.",
-		timestamp: "2024",
-		era: "ai",
-		likes: 567,
-		comments: 145,
-		reactions: ["✊", "💪", "🔥"]
 	}
 ];
 
