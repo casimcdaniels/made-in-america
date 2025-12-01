@@ -794,44 +794,72 @@ export const historicalEvents: HistoricalEvent[] = [
 	// Digital Era
 	{
 		id: "digital-1",
-		title: "Personal Computer Revolution",
-		date: "1970s-1980s",
-		description: "The introduction of personal computers transforms work and creates new industries. Software development becomes a viable career path, though women who were early programmers face increasing exclusion as the field becomes more prestigious.",
+		title: "Dot-Com Bubble Burst",
+		date: "2000-2002",
+		description: "The collapse of the dot-com bubble leads to massive layoffs in the tech industry. Thousands of web developers, programmers, and tech workers lose their jobs as internet startups fail. The crash exposes the precarious nature of tech employment and the volatility of the digital economy.",
 		era: "digital"
 	},
 	{
 		id: "digital-2",
-		title: "Telephone Operators Transition",
-		date: "1970s-1980s",
-		description: "Automated switching systems eliminate most telephone operator jobs. Many women operators transition to programming and data entry roles, representing one of the largest workforce transitions in American history.",
+		title: "Rise of Social Media Platforms",
+		date: "2004-2010",
+		description: "Facebook (2004), YouTube (2005), Twitter (2006), and Instagram (2010) launch, creating entirely new job categories: social media managers, content creators, influencers, and community managers. These platforms transform marketing, communication, and entertainment, while creating new forms of precarious gig work.",
+		era: "digital"
+	},
+	{
+		id: "digital-3",
+		title: "iPhone Launch and Mobile Revolution",
+		date: "2007",
+		description: "Apple's iPhone launch marks the beginning of the mobile computing era. Mobile app development becomes a major industry, creating millions of jobs for iOS and Android developers. The smartphone revolution enables remote work, gig economy platforms, and 24/7 connectivity, fundamentally changing work-life boundaries.",
 		era: "digital"
 	},
 	{
 		id: "digital-4",
-		title: "AT&T Strike",
-		date: "1983",
-		description: "675,000 AT&T workers strike for 22 days over job security concerns as the company prepares for divestiture. The strike highlights worker anxiety about technological change and corporate restructuring in the telecommunications industry.",
+		title: "Cloud Computing Revolution",
+		date: "2006-2010",
+		description: "Amazon Web Services (2006) and other cloud platforms make scalable computing infrastructure accessible to businesses of all sizes. Cloud computing creates new roles for DevOps engineers, cloud architects, and infrastructure specialists while enabling remote work and distributed teams.",
 		era: "digital"
 	},
 	{
 		id: "digital-5",
-		title: "Word Processor Revolution",
-		date: "1970s",
-		description: "Word processing machines replace typewriters in offices, eliminating many typist positions while creating new roles for word processor operators. This technology shift disproportionately affects women office workers and reshapes secretarial work.",
+		title: "Great Recession and Tech Recovery",
+		date: "2008-2012",
+		description: "The financial crisis leads to massive job losses across industries, but tech companies recover faster than traditional sectors. Many workers retrain for tech careers, while others turn to gig economy platforms like Uber and TaskRabbit for income. The recession accelerates the shift to digital services and remote work.",
 		era: "digital"
 	},
 	{
 		id: "digital-6",
-		title: "IBM PC Launch",
-		date: "August 1981",
-		description: "IBM introduces the personal computer, making computing accessible to businesses and individuals. This creates massive demand for software developers and technical support workers while reducing the need for traditional data processing clerks.",
+		title: "Gig Economy Expansion",
+		date: "2010s",
+		description: "Platforms like Uber (2009), Airbnb (2008), and DoorDash (2013) create millions of gig economy jobs. Workers classified as 'independent contractors' lack traditional employment protections, sparking debates about worker rights, benefits, and the future of work. The gig economy model spreads to knowledge work through platforms like Upwork and Fiverr.",
 		era: "digital"
 	},
 	{
 		id: "digital-7",
-		title: "Printers' Strike",
-		date: "1983",
-		description: "Newspaper printers strike against automation that threatens their jobs. The conflict represents a broader struggle as computer typesetting replaces traditional printing skills, forcing workers to adapt or face unemployment.",
+		title: "Remote Work Revolution",
+		date: "2020-2021",
+		description: "The COVID-19 pandemic forces millions of workers to work from home, accelerating the remote work trend. Companies invest in cloud infrastructure, collaboration tools, and digital workflows. Many workers discover they prefer remote work, leading to permanent shifts in workplace culture and the geography of employment.",
+		era: "digital"
+	},
+	{
+		id: "digital-8",
+		title: "Creator Economy Boom",
+		date: "2020s",
+		description: "Platforms like TikTok, YouTube, and Substack enable content creators to monetize their work directly. Millions of people become full-time or part-time creators, influencers, and online educators. However, income is highly unequal, with most creators earning very little while a small percentage capture most of the revenue.",
+		era: "digital"
+	},
+	{
+		id: "digital-9",
+		title: "ChatGPT and Generative AI",
+		date: "2022-2024",
+		description: "The release of ChatGPT and similar generative AI tools sparks widespread discussion about automation in knowledge work. Writers, coders, designers, and other professionals grapple with how AI will change their work. New roles emerge (prompt engineers, AI trainers) while concerns grow about job displacement and the future of creative and technical work.",
+		era: "digital"
+	},
+	{
+		id: "digital-10",
+		title: "Writers Guild and SAG-AFTRA Strikes",
+		date: "2023",
+		description: "Hollywood writers and actors strike for months, demanding protections against AI replacing their work. The strikes result in restrictions on AI-generated scripts and digital replicas, establishing precedents for other creative industries. The conflict highlights growing worker resistance to AI automation across knowledge work sectors.",
 		era: "digital"
 	},
 	// AI Era
@@ -961,56 +989,6 @@ export const historicalEvents: HistoricalEvent[] = [
 		date: "1961",
 		description: "General Motors installs the first industrial robot, the Unimate, at a New Jersey plant. This marks the beginning of robotic automation in manufacturing, creating new maintenance and programming jobs while reducing the need for assembly line workers.",
 		era: "post-industrial"
-	},
-	// Digital Computing Era
-	{
-		id: "digital-1",
-		title: "Apollo 11 Moon Landing",
-		date: "July 20, 1969",
-		description: "The successful moon landing showcases the power of computing and software engineering. The mission relied on computers and programming, demonstrating that software could accomplish previously impossible tasks and creating new career paths.",
-		era: "digital"
-	},
-	{
-		id: "digital-2",
-		title: "Personal Computer Revolution",
-		date: "1970s-1980s",
-		description: "The introduction of personal computers transforms work and creates new industries. Software development becomes a viable career path, though women who were early programmers face increasing exclusion as the field becomes more prestigious.",
-		era: "digital"
-	},
-	{
-		id: "digital-3",
-		title: "Telephone Operators Transition",
-		date: "1970s-1980s",
-		description: "Automated switching systems eliminate most telephone operator jobs. Many women operators transition to programming and data entry roles, representing one of the largest workforce transitions in American history.",
-		era: "digital"
-	},
-	{
-		id: "digital-4",
-		title: "AT&T Strike",
-		date: "1983",
-		description: "675,000 AT&T workers strike for 22 days over job security concerns as the company prepares for divestiture. The strike highlights worker anxiety about technological change and corporate restructuring in the telecommunications industry.",
-		era: "digital"
-	},
-	{
-		id: "digital-5",
-		title: "Word Processor Revolution",
-		date: "1970s",
-		description: "Word processing machines replace typewriters in offices, eliminating many typist positions while creating new roles for word processor operators. This technology shift disproportionately affects women office workers and reshapes secretarial work.",
-		era: "digital"
-	},
-	{
-		id: "digital-6",
-		title: "IBM PC Launch",
-		date: "August 1981",
-		description: "IBM introduces the personal computer, making computing accessible to businesses and individuals. This creates massive demand for software developers and technical support workers while reducing the need for traditional data processing clerks.",
-		era: "digital"
-	},
-	{
-		id: "digital-7",
-		title: "Printers' Strike",
-		date: "1983",
-		description: "Newspaper printers strike against automation that threatens their jobs. The conflict represents a broader struggle as computer typesetting replaces traditional printing skills, forcing workers to adapt or face unemployment.",
-		era: "digital"
 	},
 	// AI Era
 	{

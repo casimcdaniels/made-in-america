@@ -68,8 +68,8 @@ export const eras: Era[] = [
 		name: "Digital Era",
 		years: "2000–present",
 		description: "Robotics, AI, and automation replacing human work",
-		context: "Robotics, AI, and automation replacing human work across industries",
-		primarySources: ["H. David Autor's 'Why Are There Still So Many Jobs?'", "Norbert Wiener's The Human Use of Human Beings"]
+		context: "The rise of cloud computing, social media platforms, and mobile technology transforms how people work and connect. Gig economy platforms (Uber, Airbnb, TaskRabbit) create new forms of precarious employment. AI and machine learning automate knowledge work, while social media creates new job categories (influencers, content creators, community managers) and transforms marketing and communication. Remote work becomes mainstream, enabled by cloud infrastructure and collaboration tools. Automation accelerates across industries, from manufacturing to service sectors, raising questions about the future of work and economic inequality.",
+		primarySources: ["H. David Autor's 'Why Are There Still So Many Jobs?'", "Norbert Wiener's The Human Use of Human Beings", "Studies on gig economy and platform work", "Research on AI and automation impacts"]
 	}
 ];
 
@@ -1284,6 +1284,325 @@ export const jobs: Job[] = [
 			race: 'any',
 			minAge: 18,
 			maxAge: 70,
+			education: 'none',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-7",
+		title: "Social Media Manager - 24/7 Availability Required",
+		company: "Digital Marketing Agency",
+		location: "Remote",
+		type: "Full-time",
+		salary: "$35,000 - $45,000 per year",
+		description: "Manage social media accounts for multiple clients. Free labor - this is 'entry-level' marketing work, so pay is low. Must be available 24/7 - social media never sleeps. Daily duties: Wake up at 6 AM, check notifications immediately. Post content across Instagram, Twitter, Facebook, TikTok, LinkedIn - 20+ posts per day. Respond to comments, DMs, mentions - customers expect instant replies. Monitor trends, hashtags, competitors - always be 'on.' Create content - photos, videos, graphics - but you're not a designer, so quality suffers. Write captions, schedule posts, analyze metrics. Work evenings, weekends, holidays - if something goes viral at 2 AM, you must respond. Deal with angry customers, trolls, negative reviews - you're the public face. Must maintain 'personal brand' on your own accounts too - employers check. Burnout is constant - you're always 'on,' always performing. $35-45k sounds okay but you work 60+ hour weeks, so it's really $11-14 per hour. No overtime pay - you're 'salaried.' Must be young, trendy, understand 'Gen Z culture' - if you're over 30, you're 'out of touch.'",
+		requirements: [
+			"Bachelor's degree in marketing, communications, or related field",
+			"2+ years social media experience - but entry-level pay",
+			"Must be available 24/7 - social media never sleeps",
+			"Strong writing and communication skills",
+			"Understanding of all major platforms - Instagram, TikTok, Twitter, Facebook, LinkedIn",
+			"Must be young, trendy, understand current culture",
+			"Willingness to work evenings, weekends, holidays",
+			"Must maintain active personal social media presence",
+			"Acceptance of low pay for high workload"
+		],
+		postedDate: "February 5, 2023",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 22,
+			maxAge: 35,
+			education: 'college',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-8",
+		title: "Cloud Infrastructure Engineer",
+		company: "Amazon Web Services",
+		location: "Seattle, Washington",
+		type: "Full-time",
+		salary: "$130,000 - $180,000 per year",
+		description: "Design and maintain cloud infrastructure on AWS. Free labor - requires elite technical skills and constant learning. Daily duties: Arrive at 9 AM (or work from home). Design cloud architectures - servers, databases, networking, security. Write infrastructure-as-code - Terraform, CloudFormation, your fingers will ache. Monitor systems 24/7 - if something breaks at 3 AM, you're paged. Deploy updates, manage scaling, optimize costs - one mistake costs company thousands. Learn new AWS services constantly - they release new features weekly, you must stay current. Deal with on-call rotations - sleep with phone nearby, ready to fix production issues. Work with DevOps tools - Docker, Kubernetes, CI/CD pipelines. Must understand networking, security, databases, everything. High stress - production outages are your fault. Must pass rigorous technical interviews - system design, coding, AWS certifications. Relocation to Seattle required - expensive city, but pay is good. Work 50+ hour weeks - 'passion' means working weekends.",
+		requirements: [
+			"Bachelor's degree in Computer Science or related field",
+			"3+ years cloud infrastructure experience",
+			"AWS certifications required - Solutions Architect, DevOps Engineer",
+			"Experience with Terraform, Kubernetes, Docker",
+			"Strong Linux and networking knowledge",
+			"Must pass rigorous technical interviews",
+			"Willingness to work on-call rotations and 50+ hour weeks",
+			"Must relocate to Seattle - no remote option",
+			"Constant learning required - AWS releases new services weekly"
+		],
+		postedDate: "March 15, 2022",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 25,
+			maxAge: 45,
+			education: 'college',
+			experience: 'experienced',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-9",
+		title: "Mobile App Developer - iOS/Android",
+		company: "Startup Tech Company",
+		location: "Austin, Texas",
+		type: "Full-time",
+		salary: "$90,000 - $130,000 per year",
+		description: "Develop mobile applications for iOS and Android. Free labor - requires technical skills but pay is lower than web development. Daily duties: Arrive at 9 AM. Write code in Swift (iOS) or Kotlin (Android) - learn both platforms, double the work. Design app interfaces - but you're not a designer, so UI suffers. Debug on multiple devices - iPhone 12, iPhone 13, Samsung Galaxy, Pixel - each has different bugs. Test on physical devices - buy your own phones, company won't provide. Deal with App Store/Play Store rejections - arbitrary rules, resubmit 5 times. Work with APIs, databases, authentication - full-stack work but mobile pay. Must learn new frameworks constantly - React Native, Flutter, SwiftUI - everything changes. Work 50+ hour weeks - startups expect 'passion.' Stock options that will probably be worthless. Must relocate to Austin - 'cool' city but expensive now. Age 22-35 preferred - older developers are 'out of touch' with mobile trends.",
+		requirements: [
+			"Bachelor's degree in Computer Science or related field",
+			"2+ years mobile development experience",
+			"Proficiency in Swift (iOS) or Kotlin (Android) - both preferred",
+			"Experience with React Native or Flutter",
+			"Portfolio of published apps",
+			"Age 22-35 preferred",
+			"Willingness to work 50+ hour weeks",
+			"Must relocate to Austin",
+			"Startup experience preferred"
+		],
+		postedDate: "June 10, 2023",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 22,
+			maxAge: 35,
+			education: 'college',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-10",
+		title: "E-Commerce Manager",
+		company: "Online Retailer",
+		location: "Remote",
+		type: "Full-time",
+		salary: "$50,000 - $65,000 per year",
+		description: "Manage online store operations and digital marketing. Free labor - this is 'marketing' work, so pay is moderate. Daily duties: Arrive at 8 AM (or log in from home). Manage product listings - write descriptions, upload photos, set prices. Optimize for search engines - SEO, keywords, meta tags, your eyes will strain. Run digital ads - Google Ads, Facebook Ads, Instagram Ads - spend company money, hope it converts. Analyze sales data - Google Analytics, conversion rates, customer behavior. Manage inventory - coordinate with warehouse, handle out-of-stock items. Write email campaigns - subject lines, content, A/B testing. Deal with customer service - angry customers, returns, complaints. Must understand web analytics, digital marketing, e-commerce platforms (Shopify, WooCommerce). Work evenings and weekends - online sales happen 24/7. Must be data-driven - everything is metrics, KPIs, ROI. $50-65k sounds okay but you're managing millions in sales, so pay is low relative to responsibility.",
+		requirements: [
+			"Bachelor's degree in marketing, business, or related field",
+			"3+ years e-commerce experience",
+			"Experience with Shopify, WooCommerce, or similar platforms",
+			"Strong analytical skills - Google Analytics, Excel",
+			"Digital marketing experience - SEO, SEM, social media ads",
+			"Must be data-driven and metrics-focused",
+			"Willingness to work evenings and weekends",
+			"Strong communication and customer service skills"
+		],
+		postedDate: "April 20, 2023",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 25,
+			maxAge: 45,
+			education: 'college',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-11",
+		title: "Rideshare Driver - Independent Contractor",
+		company: "Uber/Lyft",
+		location: "Los Angeles, California",
+		type: "Gig",
+		salary: "$15-25 per hour (before expenses)",
+		description: "Drive passengers using rideshare app. Free labor - you're an 'independent contractor' so no minimum wage, no benefits, no rights. Daily duties: Wake up at 5 AM to beat traffic. Log into app - accept ride requests, drive passengers around city. Work 10-12 hour shifts - your back will ache, your legs will cramp. Deal with drunk passengers, rude customers, dangerous situations - you're alone in car. Pay for gas, car maintenance, insurance - expenses eat 30-40% of earnings. Platform takes 25% commission - you get 75% of fare. Must maintain high rating (4.8+) or you're deactivated - one bad passenger can ruin you. Work peak hours (rush hour, weekends, nights) to make money - but that's when traffic is worst. No benefits, no health insurance, no paid time off - you're a 'contractor.' If you get in accident, you're on your own. If you get sick, you don't work, you don't get paid. $15-25 per hour sounds okay but after expenses, it's $8-15 per hour. But you need the money, so you keep driving.",
+		requirements: [
+			"Must be 21 or older",
+			"Valid driver's license and clean driving record",
+			"Own vehicle (2005 or newer) - you pay for it",
+			"Must pass background check",
+			"Smartphone with data plan - you pay for it",
+			"Must maintain 4.8+ rating or be deactivated",
+			"Willingness to work 10-12 hour shifts",
+			"Must work as independent contractor - no employee protections",
+			"Acceptance of low pay after expenses",
+			"No benefits, no job security, no rights"
+		],
+		postedDate: "May 1, 2023",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 21,
+			maxAge: 70,
+			education: 'none',
+			experience: 'none',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-12",
+		title: "Data Analyst - Excel Expert Required",
+		company: "Corporate Analytics",
+		location: "Chicago, Illinois",
+		type: "Full-time",
+		salary: "$55,000 - $70,000 per year",
+		description: "Analyze data and create reports for business decisions. Free labor - this is 'analytics' work, requires some skills but pay is moderate. Daily duties: Arrive at 8 AM. Open Excel - spend entire day in spreadsheets, your eyes will strain. Pull data from databases - SQL queries, but you're not a developer, so queries are slow. Clean data - remove duplicates, fix errors, format properly - tedious, mind-numbing work. Create pivot tables, charts, dashboards - make data 'pretty' for executives. Write reports - explain what data means, make recommendations. Present findings to managers - but they don't understand data, so you simplify everything. Work with messy data - incomplete, incorrect, inconsistent - spend hours fixing. Must learn new tools constantly - Tableau, Power BI, Python, R - but company won't train you. Work evenings and weekends - reports are always 'urgent.' Must be detail-oriented - one mistake and entire analysis is wrong. $55-70k sounds okay but you're doing data science work for analyst pay.",
+		requirements: [
+			"Bachelor's degree in statistics, mathematics, business, or related field",
+			"2+ years data analysis experience",
+			"Advanced Excel skills required - pivot tables, VLOOKUP, macros",
+			"SQL knowledge preferred",
+			"Experience with Tableau, Power BI, or similar tools",
+			"Strong analytical and problem-solving skills",
+			"Attention to detail - one mistake ruins analysis",
+			"Willingness to work evenings and weekends for urgent reports"
+		],
+		postedDate: "July 15, 2023",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 24,
+			maxAge: 45,
+			education: 'college',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-13",
+		title: "Cybersecurity Analyst",
+		company: "Financial Services",
+		location: "New York, New York",
+		type: "Full-time",
+		salary: "$85,000 - $120,000 per year",
+		description: "Monitor and protect company networks from cyber threats. Free labor - requires technical skills and certifications. Daily duties: Arrive at 8 AM. Monitor security dashboards - watch for threats, alerts, anomalies. Investigate security incidents - malware, phishing, breaches - high stress, high stakes. Analyze logs, network traffic, system events - find the needle in haystack. Respond to incidents - contain threats, investigate root causes, document everything. Work with firewalls, intrusion detection systems, security tools - must know everything. Must stay current on threats - new attacks daily, you must learn constantly. On-call rotations - if breach happens at 2 AM, you're called. High stress - one mistake and company loses millions, you're fired. Must pass security clearance - background check, drug test, credit check. Work 50+ hour weeks - security never sleeps. Must have certifications - CISSP, CEH, Security+ - expensive, you pay for them. Relocation to NYC required - expensive city, but pay is good.",
+		requirements: [
+			"Bachelor's degree in Computer Science, Cybersecurity, or related field",
+			"3+ years cybersecurity experience",
+			"Security certifications required - CISSP, CEH, Security+, or similar",
+			"Experience with SIEM tools, firewalls, intrusion detection",
+			"Must pass security clearance and background check",
+			"Willingness to work on-call rotations and 50+ hour weeks",
+			"Must relocate to NYC",
+			"Constant learning required - new threats daily"
+		],
+		postedDate: "August 10, 2023",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 25,
+			maxAge: 50,
+			education: 'college',
+			experience: 'experienced',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-14",
+		title: "Web Developer - Full Stack",
+		company: "Digital Agency",
+		location: "Portland, Oregon",
+		type: "Full-time",
+		salary: "$75,000 - $100,000 per year",
+		description: "Develop websites and web applications. Free labor - requires technical skills but pay varies widely. Daily duties: Arrive at 9 AM. Write code in JavaScript, HTML, CSS - frontend work, make it look good. Write backend code - Node.js, Python, PHP - make it work. Work with databases - MySQL, MongoDB, PostgreSQL - store and retrieve data. Debug across browsers - Chrome, Firefox, Safari, Edge - each has different bugs. Test on mobile devices - responsive design, your eyes will strain. Work with designers - they create pretty mockups, you make them work. Deal with client requests - 'can you make this pop more?' 'can you add this feature?' Constant changes, tight deadlines. Must learn new frameworks constantly - React, Vue, Angular - everything changes. Work evenings and weekends - projects are always 'urgent.' Must be full-stack - frontend, backend, database, DevOps - but pay is for one role. $75-100k sounds okay but you're doing multiple jobs.",
+		requirements: [
+			"Bachelor's degree in Computer Science or related field (or bootcamp certificate)",
+			"2+ years web development experience",
+			"Proficiency in JavaScript, HTML, CSS",
+			"Experience with React, Vue, or Angular",
+			"Backend experience - Node.js, Python, or PHP",
+			"Database experience - SQL or NoSQL",
+			"Portfolio of web projects",
+			"Willingness to work evenings and weekends for urgent projects"
+		],
+		postedDate: "September 5, 2023",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 22,
+			maxAge: 45,
+			education: 'college',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-15",
+		title: "UX/UI Designer - Portfolio Required",
+		company: "Tech Startup",
+		location: "San Francisco, California",
+		type: "Full-time",
+		salary: "$80,000 - $110,000 per year",
+		description: "Design user interfaces and user experiences for digital products. Free labor - requires design skills and creativity, but pay is lower than engineering. Daily duties: Arrive at 10 AM (designers work 'creative hours'). Open Figma - spend entire day designing screens, your wrists will ache. Research users - interviews, surveys, usability testing - understand what people want. Create wireframes, mockups, prototypes - iterate, iterate, iterate. Work with developers - they say 'this is impossible,' you simplify. Deal with feedback - 'make it pop more,' 'can you try a different color?' Constant revisions. Must understand psychology, accessibility, usability - but you're not a researcher. Must stay current on design trends - Material Design, iOS guidelines, everything changes. Work evenings and weekends - projects are always 'urgent.' Must have portfolio - years of work, but you're judged on it. Age 22-35 preferred - older designers are 'out of touch.' Must relocate to SF - expensive city, but that's where design jobs are.",
+		requirements: [
+			"Bachelor's degree in Design, HCI, or related field (or bootcamp certificate)",
+			"3+ years UX/UI design experience",
+			"Strong portfolio required - years of work",
+			"Proficiency in Figma, Sketch, or Adobe XD",
+			"Understanding of user research and usability testing",
+			"Age 22-35 preferred",
+			"Willingness to work evenings and weekends",
+			"Must relocate to San Francisco",
+			"Startup experience preferred"
+		],
+		postedDate: "October 12, 2023",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 22,
+			maxAge: 35,
+			education: 'college',
+			experience: 'some',
+			union: false,
+			maritalStatus: 'any'
+		}
+	},
+	{
+		id: "digital-16",
+		title: "Content Creator - Social Media Influencer",
+		company: "Self-Employed",
+		location: "Remote",
+		type: "Gig",
+		salary: "Variable - $0-$50,000+ per year (unpredictable)",
+		description: "Create content for social media platforms. Free labor - you're 'self-employed' so no benefits, no security, no guaranteed income. Daily duties: Wake up at 6 AM. Film content - TikTok videos, Instagram posts, YouTube videos - perform constantly. Edit videos - hours in editing software, your eyes will strain. Write captions, hashtags, engage with followers - social media is 24/7. Post multiple times per day - algorithm demands constant content. Deal with hate comments, trolls, negative feedback - you're public, everyone judges. Must maintain 'authentic' brand - but it's all performance, all fake. Work with brands - sponsored posts, but you're competing with thousands. Income is unpredictable - one viral video, you make $1000. Next month, nothing. Most creators earn $0-500 per month - but you see the 1% making millions. Must invest in equipment - camera, lighting, editing software - you pay for it. No benefits, no retirement, no job security - if algorithm changes, you're done. Age 18-25 preferred - younger is better for social media. Must be attractive, charismatic, perform constantly - this is exhausting.",
+		requirements: [
+			"Must be 18 or older",
+			"Strong social media presence - thousands of followers",
+			"Content creation skills - video editing, photography, writing",
+			"Understanding of social media algorithms",
+			"Must maintain 'authentic' personal brand",
+			"Age 18-25 preferred",
+			"Must be attractive, charismatic, perform constantly",
+			"Willingness to work 24/7 - social media never sleeps",
+			"Must invest in own equipment - camera, lighting, software",
+			"Acceptance of unpredictable, unstable income",
+			"No benefits, no job security, no rights"
+		],
+		postedDate: "November 20, 2023",
+		era: "digital",
+		filters: {
+			gender: 'any',
+			race: 'any',
+			minAge: 18,
+			maxAge: 25,
 			education: 'none',
 			experience: 'none',
 			union: false,
