@@ -1,0 +1,10 @@
+---
+id: market-revolution-5
+author: William Heighton
+authorRole: Labor Organizer, Philadelphia
+timestamp: "1828"
+era: market-revolution
+likes: 78
+comments: 19
+---
+From The Mechanics' Free Press: Artisans! The factory system is destroying our trade. Master craftsmen become factory owners, journeymen become wage workers, apprentices become factory hands. We lose our independence, our skill, our dignity. We must organize! Join the Mechanics' Union! We demand shorter hours, better wages, the right to organize. The factory owners have capital, but we have numbers. Together, we can resist the degradation of our craft.

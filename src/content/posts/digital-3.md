@@ -1,0 +1,11 @@
+---
+id: digital-3
+author: Dorothy Vaughan
+authorRole: NASA Supervisor & Programmer
+timestamp: December 1, 1961
+era: post-industrial
+likes: 198
+comments: 45
+reactions: ["💪","👏","🚀"]
+---
+I started as a 'computer' - doing calculations by hand. When NASA got the IBM 7090, I taught myself FORTRAN. They were going to replace us with machines, but I showed them - we could program the machines. I became the first Black supervisor at NASA. Now I'm training other women to code. The machines don't replace us - they amplify our abilities. But you have to adapt, learn new skills, or you'll be left behind.

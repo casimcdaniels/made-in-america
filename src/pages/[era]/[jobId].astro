@@ -1,10 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import JobDetail from '../../components/JobDetail.astro';
-import { jobs, getEraById } from '../../data/jobs';
+import { getAllJobs, getEraById } from '../../data/jobs';
 
 export async function getStaticPaths() {
-	return jobs.map((job) => ({
+	const allJobs = await getAllJobs();
+	return allJobs.map((job) => ({
 		params: { era: job.era, jobId: job.id },
 	}));
 }
@@ -15,7 +16,8 @@ if (!era || !jobId) {
 	return Astro.redirect('/');
 }
 
-const job = jobs.find(j => j.id === jobId && j.era === era);
+const allJobs = await getAllJobs();
+const job = allJobs.find(j => j.id === jobId && j.era === era);
 const eraData = getEraById(era);
 
 if (!job || !eraData) {

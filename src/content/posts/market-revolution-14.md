@@ -1,0 +1,12 @@
+---
+id: market-revolution-14
+author: Chinese Railroad Worker
+authorRole: Railroad Construction, Sierra Nevada
+timestamp: "1867"
+era: market-revolution
+likes: 78
+comments: 19
+translation: We came from China, thinking America was the land of opportunity. But we found railroad construction - dangerous work, 12-14 hours a day, $1 a day. We live in tent camps - crowded, filthy, disease-ridden. Food is poor quality - we'll be malnourished. White workers get $1.50 per day, we get $1.00. White workers get better food, better housing. We get the worst. Accidents are constant - crushed by rocks, explosions, falls. If we're injured, we're fired. If we die, they hire another. Chinese workers are considered expendable - cheaper than white workers, more desperate, easier to control. You can't speak English? Doesn't matter, just work. You can't organize? Good - we don't want unions. We're isolated, discriminated against, exploited. But it's work, and for immigrants with no other options, it's better than starving.
+language: zh
+---
+我们从中国来，以为美国是机会之地。但我们找到了铁路建设——危险的工作，每天12-14小时，每天1美元。我们住在帐篷营地里——拥挤、肮脏、疾病肆虐。食物质量很差——我们会营养不良。白人工人每天1.50美元，我们只有1.00美元。白人工人有更好的食物，更好的住房。我们得到最差的。事故不断——被岩石压碎，爆炸，坠落。如果我们受伤，我们被解雇。如果我们死了，他们雇佣另一个。中国工人被认为是可消耗的——比白人工人便宜，更绝望，更容易控制。你不会说英语？没关系，只要工作。你不能组织？好——我们不想要工会。我们被孤立，被歧视，被剥削。但这是工作，对于没有其他选择的移民来说，这比饿死要好。

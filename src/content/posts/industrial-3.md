@@ -1,0 +1,11 @@
+---
+id: industrial-3
+author: Sarah O'Brien
+authorRole: Textile Mill Worker, Lowell
+timestamp: August 15, 1890
+era: industrial
+likes: 67
+comments: 8
+reactions: ["🏭","👷"]
+---
+The looms never stop. The noise is deafening - you can't hear yourself think. We work from 5 AM to 7 PM, six days a week. The company boarding house has strict rules: no men visitors, lights out at 10, church on Sunday. But I earn $1.25 a day - more than I could ever make on the farm. I'm saving to send money home. The work is hard, but here I have independence.

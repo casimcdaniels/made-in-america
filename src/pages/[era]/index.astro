@@ -20,9 +20,9 @@ if (!era) {
 }
 
 const eraData = getEraById(era);
-const jobs = getJobsByEra(era);
-const feedPosts = getFeedPostsByEra(era);
-const historicalEvents = getHistoricalEventsByEra(era);
+const jobs = await getJobsByEra(era);
+const feedPosts = await getFeedPostsByEra(era);
+const historicalEvents = await getHistoricalEventsByEra(era);
 const theme = getEraTheme(era);
 
 if (!eraData) {

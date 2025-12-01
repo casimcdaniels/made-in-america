@@ -1,0 +1,11 @@
+---
+id: ai-3
+author: Dr. Emily Watson
+authorRole: AI Ethics Researcher, MIT
+timestamp: January 8, 2025
+era: digital
+likes: 567
+comments: 98
+reactions: ["🤔","💭","🌍"]
+---
+We're automating knowledge work now - lawyers, doctors, writers, coders. AI can do parts of all these jobs. But Autor's research shows something interesting: when technology automates routine tasks, it often increases demand for non-routine work - creative problem-solving, human interaction, judgment. We need to redefine work, not just replace it. The future is collaborative, not competitive.

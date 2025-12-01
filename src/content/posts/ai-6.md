@@ -1,0 +1,11 @@
+---
+id: ai-6
+author: Jordan, Former Copywriter
+authorRole: "Now: AI Content Strategist"
+timestamp: December 10, 2024
+era: digital
+likes: 456
+comments: 78
+reactions: ["✍️","💡","💰"]
+---
+I thought AI would replace me. Instead, it amplified my work. I used to write 5 articles a week. Now I write 20 - AI helps with research, drafts, editing. I focus on strategy, creativity, human connection. My income doubled. But I had to learn new skills - prompt engineering, AI tooling, workflow optimization. The writers who adapted are thriving. Those who didn't... they're struggling. History repeats itself.

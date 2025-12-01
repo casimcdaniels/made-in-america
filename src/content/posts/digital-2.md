@@ -1,0 +1,11 @@
+---
+id: digital-2
+author: Katherine Johnson
+authorRole: NASA Mathematician & Computer
+timestamp: July 20, 1969
+era: post-industrial
+likes: 289
+comments: 67
+reactions: ["🌙","⭐","👏"]
+---
+From Hidden Figures: They said women couldn't do this work. They said we weren't smart enough, that math was for men. But here we are - Dorothy Vaughan, Mary Jackson, and I - calculating trajectories for space missions. We were 'computers' before machines took that name. The electronic computers are powerful, but they need us to program them, to verify their calculations, to think through the problems. The real power is in the human mind.

@@ -1,0 +1,11 @@
+---
+id: digital-4
+author: Susan, Former Telephone Operator
+authorRole: "Now: Computer Programmer"
+timestamp: March 20, 1980
+era: post-industrial
+likes: 87
+comments: 18
+reactions: ["📞","💻","💡"]
+---
+I was a telephone operator for 10 years - connecting calls, routing messages. When AT&T started automating, I thought I'd lose my job. Instead, they trained us to program the switching systems. Now I write code for telephone networks. The skills transferred - attention to detail, logical thinking, problem-solving. Many of my colleagues couldn't make the transition, but those of us who did found better-paying, more interesting work. Technology doesn't have to eliminate jobs - it can transform them.
