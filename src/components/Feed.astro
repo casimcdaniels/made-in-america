@@ -1,0 +1,53 @@
+---
+import type { FeedPost } from '../data/feed';
+import FeedPostComponent from './FeedPost.astro';
+import { getEraTheme } from '../data/feed';
+
+interface Props {
+	posts: FeedPost[];
+	eraId?: string;
+}
+
+const { posts, eraId } = Astro.props;
+const theme = eraId ? getEraTheme(eraId) : null;
+---
+
+<section class="feed-container" style={theme ? `--feed-accent: ${theme.accent};` : ''}>
+	<div class="feed-posts">
+		{posts.map((post, index) => (
+			<FeedPostComponent post={post} />
+		))}
+	</div>
+	
+	{posts.length === 0 && (
+		<div class="no-posts">
+			<p>No posts yet. Be the first to share your thoughts!</p>
+		</div>
+	)}
+</section>
+
+<style>
+	.feed-container {
+		background: transparent;
+		border-radius: 0;
+		padding: 0;
+		margin-bottom: 0;
+		box-shadow: none;
+		border: none;
+		position: relative;
+	}
+
+	.feed-posts {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.no-posts {
+		text-align: center;
+		padding: 3rem 2rem;
+		color: #999;
+		font-style: italic;
+	}
+</style>
+

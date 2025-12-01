@@ -97,8 +97,8 @@ if (!eraData) {
 	}
 
 	.era-banner {
-		background: #fff;
-		color: #000;
+		background: #fefcf8;
+		color: #2c2416;
 		border-radius: 0;
 		padding: 1.25rem 1.5rem;
 		margin-bottom: 1.5rem;
@@ -106,8 +106,11 @@ if (!eraData) {
 		position: relative;
 		overflow: hidden;
 		animation: slideInDown 0.6s ease-out;
-		border: 2px solid #000;
-		border-top: 4px solid #000;
+		border: 2px solid #8b7355;
+		border-top: 4px solid #8b4a4a;
+		border-left: 4px solid #4a5568;
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='paper' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='20' cy='20' r='0.5' fill='%23d4c4a8' opacity='0.2'/%3E%3Ccircle cx='80' cy='40' r='0.5' fill='%23d4c4a8' opacity='0.15'/%3E%3Ccircle cx='40' cy='80' r='0.5' fill='%23d4c4a8' opacity='0.18'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23paper)'/%3E%3C/svg%3E");
 	}
 
 	@keyframes slideInDown {
@@ -133,9 +136,10 @@ if (!eraData) {
 		font-family: 'Old Standard TT', 'Times New Roman', serif;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		border-bottom: 3px solid #000;
+		border-bottom: 3px solid #8b4a4a;
 		padding-bottom: 0.25rem;
 		line-height: 1.1;
+		color: #4a5568;
 	}
 
 	.era-banner-meta {
@@ -144,9 +148,8 @@ if (!eraData) {
 
 	.era-years {
 		font-size: 0.9rem;
-		color: #333;
-		background: #000;
 		color: #fff;
+		background: #4a5568;
 		padding: 0.5rem 1rem;
 		border-radius: 0;
 		display: inline-block;
@@ -155,6 +158,8 @@ if (!eraData) {
 		letter-spacing: 0.15em;
 		font-weight: 700;
 		margin-top: 0.5rem;
+		border: 1px solid #8b7355;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 	}
 
 	.era-banner-description {
@@ -203,30 +208,32 @@ if (!eraData) {
 	}
 
 	.tabs-container {
-		background: #fff;
-		border: 1px solid #000;
-		border-top: 3px solid #000;
+		background: #fefcf8;
+		border: 1px solid #8b7355;
+		border-top: 3px solid #8b4a4a;
 		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='aged' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='30' cy='30' r='0.5' fill='%238b7355' opacity='0.05'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='60' height='60' fill='url(%23aged)'/%3E%3C/svg%3E");
 	}
 
 	.tabs-header {
 		display: flex;
-		border-bottom: 2px solid #000;
-		background: #fff;
+		border-bottom: 2px solid #8b7355;
+		background: #fefcf8;
 	}
 
 	.tab-button {
 		flex: 1;
 		padding: 1rem 1.5rem;
-		background: #fff;
+		background: transparent;
 		border: none;
-		border-right: 1px solid #000;
+		border-right: 1px solid #d4c4a8;
 		border-bottom: 3px solid transparent;
 		cursor: pointer;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 		font-size: 1rem;
 		font-weight: 600;
-		color: #666;
+		color: #4a5568;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		transition: all 0.2s;
@@ -242,19 +249,19 @@ if (!eraData) {
 	}
 
 	.tab-button:hover {
-		background: #f8f8f8;
-		color: #000;
+		background: rgba(139, 74, 74, 0.08);
+		color: #8b4a4a;
 	}
 
 	.tab-button.active {
-		color: #000;
-		border-bottom-color: #000;
-		background: #fff;
+		color: #8b4a4a;
+		border-bottom-color: #8b4a4a;
+		background: #fefcf8;
 		font-weight: 700;
 	}
 
 	.tab-count {
-		background: #000;
+		background: #4a5568;
 		color: #fff;
 		padding: 0.15rem 0.5rem;
 		font-size: 0.75rem;
@@ -265,7 +272,7 @@ if (!eraData) {
 	}
 
 	.tab-button.active .tab-count {
-		background: #000;
+		background: #8b4a4a;
 	}
 
 	.tab-content {

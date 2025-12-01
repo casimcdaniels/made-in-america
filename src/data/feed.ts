@@ -338,8 +338,43 @@ export const feedPosts: FeedPost[] = [
 	}
 ];
 
+function parseFeedDate(dateString: string): Date {
+	// Handle formats like "March 15, 1776", "May 1, 1886", etc.
+	// Also handle special formats like "1950 (quoted 2024)" - use the first year
+	const cleaned = dateString.replace(/\(.*\)/g, '').trim();
+	const parts = cleaned.split(' ');
+	
+	if (parts.length >= 3) {
+		const [month, day, year] = parts;
+		const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
+			'July', 'August', 'September', 'October', 'November', 'December'];
+		const monthIndex = monthNames.findIndex(m => m.toLowerCase().startsWith(month.toLowerCase()));
+		const dayNum = parseInt(day.replace(',', ''));
+		const yearNum = parseInt(year);
+		
+		if (monthIndex >= 0 && !isNaN(dayNum) && !isNaN(yearNum)) {
+			return new Date(yearNum, monthIndex, dayNum);
+		}
+	}
+	
+	// Fallback: try to extract year from string
+	const yearMatch = cleaned.match(/\d{4}/);
+	if (yearMatch) {
+		return new Date(parseInt(yearMatch[0]), 0, 1);
+	}
+	
+	// Last resort: return epoch date
+	return new Date(0);
+}
+
 export function getFeedPostsByEra(eraId: string): FeedPost[] {
-	return feedPosts.filter(post => post.era === eraId);
+	return feedPosts
+		.filter(post => post.era === eraId)
+		.sort((a, b) => {
+			const dateA = parseFeedDate(a.timestamp);
+			const dateB = parseFeedDate(b.timestamp);
+			return dateA.getTime() - dateB.getTime();
+		});
 }
 
 export function getEraTheme(eraId: string) {

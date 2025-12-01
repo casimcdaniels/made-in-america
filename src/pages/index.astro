@@ -1,197 +1,509 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { eras } from '../data/jobs';
+import { eras, jobs } from '../data/jobs';
+
+const totalJobs = jobs.length;
+const totalEras = eras.length;
 ---
 
-<Layout title="Made in America - Job Boards Through History">
+<Layout title="Made in America - History of Work in America">
 	<div class="homepage">
 		<section class="hero">
-			<h1>Made in America</h1>
-			<p class="hero-subtitle">Job Boards Through History</p>
-			<p class="hero-tagline">Explore how work has evolved across American history</p>
-			<p class="hero-description">
-				From colonial farms to AI-powered workplaces, discover job listings from five distinct eras 
-				that shaped the American workforce. Each board reflects the work, wages, and workplace 
-				conditions of its time.
-			</p>
-			<div class="hero-emoji">
-				<span>📋</span>
-				<span>💼</span>
-				<span>🏭</span>
-				<span>💻</span>
-				<span>🤖</span>
+			<div class="hero-masthead">
+				<div class="masthead-border-top"></div>
+				<div class="hero-subtitle-container">
+					<span class="hero-subtitle">Jobs Through History</span>
+				</div>
+				<div class="masthead-border-bottom"></div>
+			</div>
+			
+			<div class="hero-content">
+				<div class="hero-description">
+					<p class="lead-paragraph">
+						<strong>From colonial farms to AI-powered workplaces</strong>—discover authentic job listings 
+						from five distinct eras that shaped the American workforce. Each board reflects the work, 
+						wages, and workplace conditions of its time, preserved as historical documents.
+					</p>
+					<p>
+						Explore how discrimination, labor rights, technological change, and economic forces 
+						transformed who could work, what work meant, and how workers were treated across 
+						American history.
+					</p>
+				</div>
+
+				<div class="hero-stats">
+					<div class="stat-item">
+						<div class="stat-number">{totalEras}</div>
+						<div class="stat-label">Historical Eras</div>
+					</div>
+					<div class="stat-divider"></div>
+					<div class="stat-item">
+						<div class="stat-number">{totalJobs}</div>
+						<div class="stat-label">Job Listings</div>
+					</div>
+					<div class="stat-divider"></div>
+					<div class="stat-item">
+						<div class="stat-number">250+</div>
+						<div class="stat-label">Years of History</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<section class="eras-grid">
-			{eras.map(era => (
-				<a href={`/${era.id}`} class="era-card">
-					<div class="era-header">
-						<h2>{era.name}</h2>
-						<span class="era-years">{era.years}</span>
-					</div>
-					<p class="era-description">{era.description}</p>
-					<div class="era-context">
-						<strong>Context:</strong> {era.context}
-					</div>
-					<div class="era-sources">
-						<strong>Primary Sources:</strong>
-						<ul>
-							{era.primarySources.map(source => (
-								<li>{source}</li>
-							))}
-						</ul>
-					</div>
-					<div class="era-link">View Jobs →</div>
-				</a>
-			))}
+		<section class="featured-quote">
+			<blockquote>
+				"The history of American work is the history of American struggle—for freedom, for dignity, for a fair wage."
+			</blockquote>
+			<cite>— Historical Labor Archives</cite>
+		</section>
+
+		<section class="eras-section">
+			<div class="section-header">
+				<h2>Explore Historical Eras</h2>
+				<p class="section-subtitle">Click any era to view authentic job listings and community posts</p>
+			</div>
+			
+			<div class="eras-grid">
+				{eras.map((era, index) => (
+					<a href={`/${era.id}`} class="era-card">
+						<div class="era-card-number">{String(index + 1).padStart(2, '0')}</div>
+						<div class="era-header">
+							<h2>{era.name}</h2>
+							<span class="era-years">{era.years}</span>
+						</div>
+						<p class="era-description">{era.description}</p>
+						<div class="era-context">
+							<strong>Historical Context:</strong> {era.context}
+						</div>
+						<div class="era-sources">
+							<strong>Primary Sources:</strong>
+							<ul>
+								{era.primarySources.map(source => (
+									<li>{source}</li>
+								))}
+							</ul>
+						</div>
+						<div class="era-link">
+							<span>View Jobs & Feed</span>
+							<span class="arrow">→</span>
+						</div>
+					</a>
+				))}
+			</div>
 		</section>
 	</div>
 </Layout>
 
 <style>
 	.homepage {
-		max-width: 1200px;
+		max-width: 1400px;
 		margin: 0 auto;
-		padding: 2rem;
-		background: #fff;
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-		border-left: 1px solid #000;
-		border-right: 1px solid #000;
+		padding: 0;
+		background: #f5f1e8;
 		min-height: 100vh;
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='paper' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='20' cy='20' r='0.5' fill='%23d4c4a8' opacity='0.3'/%3E%3Ccircle cx='80' cy='40' r='0.5' fill='%23d4c4a8' opacity='0.2'/%3E%3Ccircle cx='40' cy='80' r='0.5' fill='%23d4c4a8' opacity='0.25'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23paper)'/%3E%3C/svg%3E"),
+			repeating-linear-gradient(
+				0deg,
+				transparent,
+				transparent 2px,
+				rgba(139, 115, 85, 0.03) 2px,
+				rgba(139, 115, 85, 0.03) 4px
+			);
 	}
 
 	.hero {
-		text-align: center;
-		padding: 3rem 2rem 2rem;
-		margin-bottom: 3rem;
-		border-bottom: 4px double #000;
+		background: #fefcf8;
+		border: 2px dashed #8b7355;
+		border-top: 4px solid #8b4a4a;
+		border-left: 4px solid #4a5568;
+		margin: 2rem;
+		padding: 3rem 2.5rem;
+		box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
 		position: relative;
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='paper' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='20' cy='20' r='0.5' fill='%23d4c4a8' opacity='0.2'/%3E%3Ccircle cx='80' cy='40' r='0.5' fill='%23d4c4a8' opacity='0.15'/%3E%3Ccircle cx='40' cy='80' r='0.5' fill='%23d4c4a8' opacity='0.18'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23paper)'/%3E%3C/svg%3E");
 	}
-	
+
 	.hero::before {
 		content: '';
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
+		top: -2px;
+		right: -2px;
+		width: 30px;
+		height: 30px;
+		border-top: 3px solid #8b4a4a;
+		border-right: 3px solid #8b4a4a;
+	}
+
+	.hero::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: -2px;
+		width: 30px;
+		height: 30px;
+		border-bottom: 3px solid #4a5568;
+		border-left: 3px solid #4a5568;
+	}
+
+	.hero-masthead {
+		text-align: center;
+		margin-bottom: 2.5rem;
+		position: relative;
+	}
+
+	.masthead-border-top,
+	.masthead-border-bottom {
 		height: 1px;
-		background: repeating-linear-gradient(
-			to right,
-			#000 0px,
-			#000 10px,
-			transparent 10px,
-			transparent 20px
-		);
+		background: transparent;
+		margin: 0.75rem 0;
+		position: relative;
+		border-top: 1px dashed #d4c4a8;
+		border-bottom: 1px dashed #d4c4a8;
 	}
 
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
+	.masthead-border-top::before,
+	.masthead-border-bottom::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 1px;
+		background: #8b4a4a;
+		top: 0;
 	}
 
-	.hero h1 {
-		font-size: 4.5rem;
-		font-weight: 700;
-		margin: 0 0 0.5rem 0;
-		color: #000;
-		font-family: 'Old Standard TT', 'Times New Roman', serif;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		line-height: 1;
-		border-bottom: 4px solid #000;
-		padding-bottom: 0.5rem;
-		display: inline-block;
+	.masthead-border-top::after,
+	.masthead-border-bottom::after {
+		content: '◆';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		color: #8b4a4a;
+		font-size: 0.6rem;
+		top: -0.3rem;
+		background: #fefcf8;
+		padding: 0 0.5rem;
+	}
+
+	.hero-subtitle-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	.hero-subtitle {
-		font-size: 1.2rem;
-		color: #333;
-		margin: 1rem 0 0.5rem 0;
-		font-weight: 600;
+		font-size: 2rem;
+		color: #8b4a4a;
+		font-weight: 700;
 		font-family: 'Newsreader', 'Times New Roman', serif;
-		font-style: normal;
 		text-transform: uppercase;
-		letter-spacing: 0.15em;
+		letter-spacing: 0.2em;
+		position: relative;
 	}
-	
-	.hero-tagline {
+
+	.hero-date {
 		font-size: 0.9rem;
-		color: #666;
-		margin: 0.5rem 0 1.5rem 0;
-		font-weight: 400;
+		color: #4a5568;
 		font-family: 'Newsreader', 'Times New Roman', serif;
-		font-style: normal;
+		font-style: italic;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 	}
 
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.hero-stats {
+		display: flex;
+		flex-direction: row;
+		gap: 2rem;
+		padding: 1.5rem;
+		border: 2px solid #8b7355;
+		border-top: 4px solid #4a5568;
+		background: #faf8f3;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.stat-item {
+		text-align: center;
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #8b4a4a;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+		line-height: 1;
+		margin-bottom: 0.25rem;
+	}
+
+	.stat-label {
+		font-size: 0.75rem;
+		color: #4a5568;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 600;
+	}
+
+	.stat-divider {
+		width: 1px;
+		height: 60px;
+		background: transparent;
+		border-left: 1px dashed #d4c4a8;
+		margin: 0 0.5rem;
+		position: relative;
+		flex-shrink: 0;
+	}
+
+	.stat-divider::before {
+		content: '•';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #8b4a4a;
+		background: #faf8f3;
+		padding: 0.5rem 0;
+		font-size: 0.8rem;
+	}
+
 	.hero-description {
-		font-size: 1rem;
-		color: #1a1a1a;
-		max-width: 800px;
-		margin: 1.5rem auto 0;
-		line-height: 1.7;
+		font-size: 1.05rem;
+		color: #2c2416;
+		line-height: 1.8;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 		text-align: justify;
 	}
 
-	.hero-emoji {
+	.hero-description .lead-paragraph {
+		font-size: 1.15rem;
+		margin-bottom: 1rem;
+		text-indent: 1.5em;
+	}
+
+	.hero-description .lead-paragraph strong {
+		color: #4a5568;
+		font-weight: 700;
+	}
+
+	.hero-description p {
+		margin: 0;
+		text-indent: 1.5em;
+	}
+
+	.featured-quote {
+		background: #fefcf8;
+		border: 2px dashed #8b7355;
+		border-left: 5px solid #8b4a4a;
+		margin: 2rem;
+		padding: 2rem;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+		position: relative;
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='aged' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='30' cy='30' r='0.5' fill='%238b7355' opacity='0.05'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='60' height='60' fill='url(%23aged)'/%3E%3C/svg%3E");
+	}
+
+	.featured-quote::before {
+		content: '';
+		position: absolute;
+		top: -2px;
+		right: -2px;
+		width: 20px;
+		height: 20px;
+		border-top: 2px solid #8b4a4a;
+		border-right: 2px solid #8b4a4a;
+	}
+
+	.featured-quote::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: -2px;
+		width: 20px;
+		height: 20px;
+		border-bottom: 2px solid #8b4a4a;
+		border-left: 2px solid #8b4a4a;
+	}
+
+	.featured-quote blockquote {
+		margin: 0 0 1rem 0;
+		font-size: 1.25rem;
+		font-style: italic;
+		color: #2c2416;
+		line-height: 1.7;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-align: center;
+		position: relative;
+		padding: 0 2rem;
+	}
+
+	.featured-quote blockquote::before,
+	.featured-quote blockquote::after {
+		content: '"';
+		font-size: 3rem;
+		color: #8b4a4a;
+		position: absolute;
+		opacity: 0.3;
+		font-family: 'Old Standard TT', serif;
+	}
+
+	.featured-quote blockquote::before {
+		left: 0;
+		top: -0.5rem;
+	}
+
+	.featured-quote blockquote::after {
+		right: 0;
+		bottom: -1.5rem;
+	}
+
+	.featured-quote cite {
+		display: block;
+		text-align: right;
+		font-size: 0.9rem;
+		color: #4a5568;
+		font-style: normal;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-top: 1rem;
+		padding-top: 1rem;
+		position: relative;
+	}
+
+	.featured-quote cite::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100px;
+		height: 1px;
+		border-top: 1px dotted #d4c4a8;
+	}
+
+	.eras-section {
+		margin: 2rem;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 2.5rem;
+		padding-bottom: 1.5rem;
+		position: relative;
+	}
+
+	.section-header::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 200px;
+		height: 2px;
+		background: linear-gradient(to right, transparent, #8b7355 20%, #8b7355 80%, transparent);
+	}
+
+	.section-header::before {
+		content: '';
+		position: absolute;
+		bottom: -1px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100px;
+		height: 1px;
+		border-top: 1px dashed #d4c4a8;
+	}
+
+	.section-header h2 {
 		font-size: 2.5rem;
-		margin-top: 2rem;
-		display: flex;
-		justify-content: center;
-		gap: 1rem;
-		flex-wrap: wrap;
-	}
-
-	.hero-emoji span {
+		font-weight: 700;
+		color: #4a5568;
+		margin: 0 0 0.5rem 0;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		border-bottom: 2px dotted #8b4a4a;
+		padding-bottom: 0.5rem;
 		display: inline-block;
-		animation: float 3s ease-in-out infinite;
+		position: relative;
 	}
 
-	.hero-emoji span:nth-child(1) { animation-delay: 0s; }
-	.hero-emoji span:nth-child(2) { animation-delay: 0.2s; }
-	.hero-emoji span:nth-child(3) { animation-delay: 0.4s; }
-	.hero-emoji span:nth-child(4) { animation-delay: 0.6s; }
-	.hero-emoji span:nth-child(5) { animation-delay: 0.8s; }
+	.section-header h2::before,
+	.section-header h2::after {
+		content: '◇';
+		color: #8b4a4a;
+		font-size: 0.8rem;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0.5;
+	}
 
-	@keyframes float {
-		0%, 100% {
-			transform: translateY(0px) rotate(0deg);
-		}
-		50% {
-			transform: translateY(-20px) rotate(5deg);
-		}
+	.section-header h2::before {
+		left: -1.5rem;
+	}
+
+	.section-header h2::after {
+		right: -1.5rem;
+	}
+
+	.section-subtitle {
+		font-size: 1rem;
+		color: #666;
+		margin: 0.5rem 0 0 0;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-style: italic;
 	}
 
 	.eras-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-		gap: 1.5rem;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
 		margin-bottom: 3rem;
-		column-rule: 1px solid #000;
 	}
 
 	.era-card {
-		background: #fff;
-		border: 1px solid #000;
+		background: #fefcf8;
+		border: 2px solid #8b7355;
+		border-top: 4px solid #8b4a4a;
+		border-left: 4px solid #4a5568;
 		border-radius: 0;
-		padding: 1.5rem;
+		padding: 2rem;
 		text-decoration: none;
 		color: inherit;
-		transition: all 0.2s;
+		transition: all 0.3s;
 		display: flex;
 		flex-direction: column;
 		cursor: pointer;
 		position: relative;
 		overflow: hidden;
 		animation: fadeInUp 0.6s ease-out both;
-		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+		box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='aged' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='30' cy='30' r='0.5' fill='%238b7355' opacity='0.08'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='60' height='60' fill='url(%23aged)'/%3E%3C/svg%3E");
+	}
+
+	.era-card-number {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 3rem;
+		font-weight: 700;
+		color: rgba(139, 74, 74, 0.15);
+		font-family: 'Old Standard TT', serif;
+		line-height: 1;
+		z-index: 0;
 	}
 
 	.era-card:nth-child(1) { animation-delay: 0.1s; }
@@ -212,10 +524,10 @@ import { eras } from '../data/jobs';
 	}
 
 	.era-card:hover {
-		border-color: #000;
-		box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-		transform: translate(-2px, -2px);
-		background: #fafafa;
+		border-color: #8b4a4a;
+		box-shadow: 5px 5px 0px rgba(139, 74, 74, 0.2);
+		transform: translate(-3px, -3px);
+		background: #faf8f3;
 	}
 
 	.era-header {
@@ -224,108 +536,229 @@ import { eras } from '../data/jobs';
 		align-items: flex-start;
 		margin-bottom: 1rem;
 		gap: 1rem;
+		position: relative;
+		z-index: 1;
 	}
 
 	.era-header h2 {
 		margin: 0;
-		font-size: 1.5rem;
+		font-size: 1.75rem;
 		font-weight: 700;
-		color: #000;
+		color: #4a5568;
 		flex: 1;
 		font-family: 'Old Standard TT', 'Times New Roman', serif;
-		position: relative;
-		z-index: 1;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		line-height: 1.2;
-		border-bottom: 2px solid #000;
+		border-bottom: 2px dotted #8b4a4a;
 		padding-bottom: 0.5rem;
 		margin-bottom: 0.75rem;
+		position: relative;
+	}
+
+	.era-header h2::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 30%;
+		height: 1px;
+		background: #8b4a4a;
 	}
 
 	.era-years {
-		font-size: 0.75rem;
-		color: #333;
-		background: #000;
+		font-size: 0.8rem;
 		color: #fff;
-		padding: 0.25rem 0.5rem;
-		border: none;
+		background: #4a5568;
+		padding: 0.35rem 0.75rem;
+		border: 1px solid #8b7355;
 		border-radius: 0;
 		white-space: nowrap;
 		font-weight: 700;
 		font-family: 'Newsreader', 'Times New Roman', serif;
-		position: relative;
-		z-index: 1;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 	}
 
 	.era-description {
 		font-size: 1rem;
-		color: #555;
+		color: #2c2416;
 		margin: 0 0 1rem 0;
-		line-height: 1.6;
+		line-height: 1.7;
 		font-weight: 500;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		position: relative;
+		z-index: 1;
 	}
 
 	.era-context {
 		font-size: 0.9rem;
-		color: #666;
+		color: #2c2416;
 		margin-bottom: 1rem;
 		line-height: 1.6;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		position: relative;
+		z-index: 1;
+		padding-left: 1rem;
+		border-left: 2px dashed #d4c4a8;
+	}
+
+	.era-context::before {
+		content: '│';
+		position: absolute;
+		left: -0.5rem;
+		top: 0;
+		color: #8b4a4a;
+		font-size: 1.2rem;
+		opacity: 0.4;
 	}
 
 	.era-context strong {
-		color: #333;
+		color: #4a5568;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
 
 	.era-sources {
 		font-size: 0.85rem;
-		color: #666;
+		color: #2c2416;
 		margin-bottom: 1.5rem;
 		flex: 1;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		position: relative;
+		z-index: 1;
 	}
 
 	.era-sources strong {
-		color: #333;
+		color: #4a5568;
 		display: block;
 		margin-bottom: 0.5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
 
 	.era-sources ul {
 		margin: 0;
-		padding-left: 1.25rem;
-		line-height: 1.6;
+		padding-left: 1.5rem;
+		line-height: 1.7;
+		list-style: none;
 	}
 
 	.era-sources li {
-		margin-bottom: 0.25rem;
+		margin-bottom: 0.4rem;
+		position: relative;
+	}
+
+	.era-sources li::before {
+		content: "—";
+		position: absolute;
+		left: -1rem;
+		color: #8b4a4a;
 	}
 
 	.era-link {
-		color: #0a66c2;
-		font-weight: 600;
+		color: #8b4a4a;
+		font-weight: 700;
 		font-size: 1rem;
 		margin-top: auto;
 		padding-top: 1rem;
-		border-top: 1px solid #f0f0f0;
+		border-top: 1px dashed #d4c4a8;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		position: relative;
+		z-index: 1;
+	}
+
+	.era-link::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 1px;
+		background: #8b4a4a;
+	}
+
+	.era-link .arrow {
+		font-size: 1.25rem;
+		transition: transform 0.2s;
 	}
 
 	.era-card:hover .era-link {
-		text-decoration: underline;
+		color: #4a5568;
+	}
+
+	.era-card:hover .era-link .arrow {
+		transform: translateX(5px);
+	}
+
+	@media (max-width: 1024px) {
+		.hero-stats {
+			flex-wrap: wrap;
+			gap: 1.5rem;
+		}
+
+		.stat-divider {
+			height: 50px;
+		}
 	}
 
 	@media (max-width: 768px) {
-		.hero h1 {
-			font-size: 2rem;
+		.homepage {
+			margin: 0;
+		}
+
+		.hero,
+		.featured-quote,
+		.eras-section {
+			margin: 1rem;
+		}
+
+		.hero {
+			padding: 2rem 1.5rem;
 		}
 
 		.hero-subtitle {
-			font-size: 1.25rem;
+			font-size: 1.5rem;
+		}
+
+		.hero-stats {
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.stat-divider {
+			width: auto;
+			height: 1px;
+			margin: 0.5rem 0;
+		}
+
+		.hero-description {
+			font-size: 0.95rem;
+		}
+
+		.hero-description .lead-paragraph {
+			font-size: 1rem;
+		}
+
+		.section-header h2 {
+			font-size: 1.75rem;
 		}
 
 		.eras-grid {
 			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.era-card {
+			padding: 1.5rem;
 		}
 	}
 </style>

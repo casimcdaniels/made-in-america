@@ -24,14 +24,6 @@ const { post } = Astro.props;
 		{post.content}
 	</div>
 	
-	{post.reactions && post.reactions.length > 0 && (
-		<div class="post-reactions">
-			{post.reactions.map(reaction => (
-				<span class="reaction">{reaction}</span>
-			))}
-		</div>
-	)}
-	
 	<div class="post-actions">
 		<button class="action-button like-button" data-post-id={post.id}>
 			<span class="action-icon">👍</span>
@@ -182,7 +174,7 @@ const { post } = Astro.props;
 
 	.post-content {
 		color: #1a1a1a;
-		line-height: 1.7;
+		line-height: 1.6;
 		font-size: 1rem;
 		margin-bottom: 1rem;
 		white-space: pre-wrap;
@@ -191,24 +183,6 @@ const { post } = Astro.props;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 		text-align: justify;
 		text-justify: inter-word;
-	}
-
-	.post-reactions {
-		display: flex;
-		gap: 0.5rem;
-		margin-bottom: 1rem;
-		padding-top: 1rem;
-		border-top: 1px solid #f0f0f0;
-	}
-
-	.reaction {
-		font-size: 1.25rem;
-		cursor: pointer;
-		transition: transform 0.2s;
-	}
-
-	.reaction:hover {
-		transform: scale(1.3);
 	}
 
 	.post-actions {
