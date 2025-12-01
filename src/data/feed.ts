@@ -862,56 +862,6 @@ export const historicalEvents: HistoricalEvent[] = [
 		description: "Hollywood writers and actors strike for months, demanding protections against AI replacing their work. The strikes result in restrictions on AI-generated scripts and digital replicas, establishing precedents for other creative industries. The conflict highlights growing worker resistance to AI automation across knowledge work sectors.",
 		era: "digital"
 	},
-	// AI Era
-	{
-		id: "ai-1",
-		title: "Rise of the Internet",
-		date: "1990s-2000s",
-		description: "The World Wide Web creates entirely new industries and transforms existing ones. E-commerce, digital services, and remote work become possible, fundamentally changing where and how people work.",
-		era: "ai"
-	},
-	{
-		id: "ai-2",
-		title: "Financial Crisis",
-		date: "2008",
-		description: "The Great Recession leads to massive job losses and economic uncertainty. Many workers face long-term unemployment, while others pivot to new careers in technology and services. The crisis accelerates automation as companies seek efficiency.",
-		era: "ai"
-	},
-	{
-		id: "ai-3",
-		title: "ChatGPT and AI Tools",
-		date: "2022-2024",
-		description: "The release of ChatGPT and similar AI tools sparks widespread discussion about automation in knowledge work. Writers, coders, and other professionals grapple with how AI will change their work, echoing concerns from previous automation waves.",
-		era: "ai"
-	},
-	{
-		id: "ai-4",
-		title: "Writers Guild Strike",
-		date: "2023",
-		description: "Hollywood writers strike for 148 days, demanding protections against AI replacing their work. The strike results in restrictions on AI-generated scripts and establishes that AI cannot replace human writers, setting precedents for other creative industries.",
-		era: "ai"
-	},
-	{
-		id: "ai-5",
-		title: "Amazon Warehouse Automation",
-		date: "2010s-2020s",
-		description: "Amazon introduces Kiva robots and automated fulfillment systems, reducing the need for human warehouse workers while creating new roles for robot maintenance technicians. This represents the largest-scale automation of logistics work in history.",
-		era: "ai"
-	},
-	{
-		id: "ai-6",
-		title: "Uber/Lyft Driver Protests",
-		date: "2019-2024",
-		description: "Ride-share drivers organize strikes and protests demanding better pay, benefits, and job security. The gig economy model challenges traditional employment relationships, sparking debates about worker classification and the future of work.",
-		era: "ai"
-	},
-	{
-		id: "ai-7",
-		title: "AI Code Generation Tools",
-		date: "2021-2024",
-		description: "GitHub Copilot and similar AI coding assistants become widespread, raising questions about the future of software development jobs. Some developers embrace the tools as productivity enhancers, while others fear displacement of entry-level programming work.",
-		era: "ai"
-	},
 	// Post-Industrial Era
 	{
 		id: "post-industrial-1",
@@ -989,63 +939,6 @@ export const historicalEvents: HistoricalEvent[] = [
 		date: "1961",
 		description: "General Motors installs the first industrial robot, the Unimate, at a New Jersey plant. This marks the beginning of robotic automation in manufacturing, creating new maintenance and programming jobs while reducing the need for assembly line workers.",
 		era: "post-industrial"
-	},
-	// AI Era
-	{
-		id: "ai-1",
-		title: "Rise of the Internet",
-		date: "1990s-2000s",
-		description: "The World Wide Web creates entirely new industries and transforms existing ones. E-commerce, digital services, and remote work become possible, fundamentally changing where and how people work.",
-		era: "ai"
-	},
-	{
-		id: "ai-2",
-		title: "Financial Crisis",
-		date: "2008",
-		description: "The Great Recession leads to massive job losses and economic uncertainty. Many workers face long-term unemployment, while others pivot to new careers in technology and services. The crisis accelerates automation as companies seek efficiency.",
-		era: "ai"
-	},
-	{
-		id: "ai-3",
-		title: "ChatGPT and AI Tools",
-		date: "2022-2024",
-		description: "The release of ChatGPT and similar AI tools sparks widespread discussion about automation in knowledge work. Writers, coders, and other professionals grapple with how AI will change their work, echoing concerns from previous automation waves.",
-		era: "ai"
-	},
-	{
-		id: "ai-4",
-		title: "Writers Guild Strike",
-		date: "2023",
-		description: "Hollywood writers strike for 148 days, demanding protections against AI replacing their work. The strike results in restrictions on AI-generated scripts and establishes that AI cannot replace human writers, setting precedents for other creative industries.",
-		era: "ai"
-	},
-	{
-		id: "ai-5",
-		title: "Amazon Warehouse Automation",
-		date: "2010s-2020s",
-		description: "Amazon introduces Kiva robots and automated fulfillment systems, reducing the need for human warehouse workers while creating new roles for robot maintenance technicians. This represents the largest-scale automation of logistics work in history.",
-		era: "ai"
-	},
-	{
-		id: "ai-6",
-		title: "Uber/Lyft Driver Protests",
-		date: "2019-2024",
-		description: "Ride-share drivers organize strikes and protests demanding better pay, benefits, and job security. The gig economy model challenges traditional employment relationships, sparking debates about worker classification and the future of work.",
-		era: "ai"
-	},
-	{
-		id: "ai-7",
-		title: "AI Code Generation Tools",
-		date: "2021-2024",
-		description: "GitHub Copilot and similar AI coding assistants become widespread, raising questions about the future of software development jobs. Some developers embrace the tools as productivity enhancers, while others fear displacement of entry-level programming work.",
-		era: "ai"
-	},
-	{
-		id: "ai-8",
-		title: "Starbucks Unionization Wave",
-		date: "2021-2024",
-		description: "Hundreds of Starbucks locations unionize, representing one of the largest organizing drives in service sector history. Workers demand better wages, scheduling, and working conditions, challenging the company's anti-union stance and inspiring other service workers.",
-		era: "ai"
 	}
 ];
 
