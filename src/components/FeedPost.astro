@@ -41,6 +41,11 @@ const { post } = Astro.props;
 				))}
 			</div>
 		)}
+		{post.source && (
+			<div class="post-source">
+				<em>Source: {post.sourceTitle ? `"${post.sourceTitle}"` : ''}{post.sourceTitle && post.source ? ' — ' : ''}{post.source}</em>
+			</div>
+		)}
 	</div>
 	
 	<div class="post-actions">
@@ -348,6 +353,21 @@ const { post } = Astro.props;
 	}
 
 	.image-citation em {
+		font-style: normal;
+	}
+
+	.post-source {
+		margin-top: 1rem;
+		padding-top: 0.75rem;
+		border-top: 1px solid #e0e0e0;
+		font-size: 0.75rem;
+		color: #666;
+		font-style: italic;
+		line-height: 1.4;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+	}
+
+	.post-source em {
 		font-style: normal;
 	}
 

@@ -39,6 +39,8 @@ const postsCollection = defineCollection({
 		reactions: z.array(z.string()).optional(),
 		translation: z.string().optional(),
 		language: z.string().optional(),
+		source: z.string().optional(), // Citation for the quote/source material
+		sourceTitle: z.string().optional(), // Title of the source document/book
 		images: z.array(z.object({
 			url: z.string(),
 			alt: z.string(),

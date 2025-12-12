@@ -17,7 +17,7 @@ const base = import.meta.env.BASE_URL;
 			<div class="job-detail-meta">
 				<span class="job-detail-location">📍 {job.location}</span>
 				<span class="job-detail-type">{job.type}</span>
-				{job.salary && <span class="job-detail-salary">💰 {job.salary}</span>}
+				{job.salary && <span class="job-detail-salary">{job.salary}</span>}
 			</div>
 		</div>
 		<a href={`${base}${job.era}`} class="back-link">← Back to Listings</a>

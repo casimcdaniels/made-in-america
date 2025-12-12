@@ -11,6 +11,8 @@ export interface FeedPost {
 	reactions?: string[];
 	translation?: string; // English translation for non-English posts
 	language?: string; // Language code (e.g., 'ga' for Irish, 'de' for German, 'zh' for Chinese)
+	source?: string; // Citation for the quote/source material
+	sourceTitle?: string; // Title of the source document/book
 	images?: Array<{
 		url: string;
 		alt: string;
@@ -65,6 +67,8 @@ export async function getFeedPostsByEra(eraId: string): Promise<FeedPost[]> {
 			reactions: entry.data.reactions,
 			translation: entry.data.translation,
 			language: entry.data.language,
+			source: entry.data.source,
+			sourceTitle: entry.data.sourceTitle,
 			images: entry.data.images,
 		}));
 	
