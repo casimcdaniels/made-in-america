@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CitationLink from '../components/CitationLink.astro';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -18,10 +19,14 @@ const base = import.meta.env.BASE_URL;
 				<h2 class="era-title">Agrarian Era (1600 - 1820)</h2>
 				<ul class="citation-list">
 					<li>
-						<cite>Crèvecœur, J. Hector St. John.</cite> <em>Letters from an American Farmer.</em> 1782. Observations on colonial farming and American identity.
+						<CitationLink href="https://avalon.law.yale.edu/subject_menus/letters.asp" ariaLabel="Available online at Project Gutenberg">
+							<cite>Crèvecœur, J. Hector St. John.</cite> <em>Letters from an American Farmer.</em> 1782. Observations on colonial farming and American identity.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>Adams, John & Abigail.</cite> Personal letters. 1770s-1780s. Farm life, household labor, and colonial work.
+						<CitationLink href="https://www.masshist.org/digitaladams/archive/" ariaLabel="Available online at Massachusetts Historical Society">
+							<cite>Adams, John & Abigail.</cite> Personal letters. 1770s-1780s. Farm life, household labor, and colonial work.
+						</CitationLink>
 					</li>
 				</ul>
 			</div>
@@ -30,22 +35,31 @@ const base = import.meta.env.BASE_URL;
 				<h2 class="era-title">Market Revolution Era (1820–1880)</h2>
 				<ul class="citation-list">
 					<li>
-						<cite>Lowell Mill Girls.</cite> Letters and writings. 1830s–1840s. Factory work, strikes, and organizing.
+						<CitationLink href="https://libguides.uml.edu/lowell_mill_girl_letters" ariaLabel="Available online at Library of Congress">
+							<cite>Lowell Mill Girls.</cite> Letters and writings. 1830s–1840s. Factory work, strikes, and organizing.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>Robinson, Harriet Hanson.</cite> <em>Loom and Spindle: Or Life Among the Early Mill Girls.</em> 1898. Memoir of Lowell mill work and labor organizing.
+						<CitationLink href="https://www.gutenberg.org/cache/epub/72757/pg72757-images.html" ariaLabel="Available online at Project Gutenberg">
+							<cite>Robinson, Harriet Hanson.</cite> <em>Loom and Spindle: Or Life Among the Early Mill Girls.</em> 1898. Memoir of Lowell mill work and labor organizing.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>Douglass, Frederick.</cite> <em>Narrative of the Life of Frederick Douglass, an American Slave.</em> 1845. Slave labor, skilled trades, and free vs. slave labor.
+						<CitationLink href="https://www.gutenberg.org/files/23/23-h/23-h.htm" ariaLabel="Available online at Project Gutenberg">
+							<cite>Douglass, Frederick.</cite> <em>Narrative of the Life of Frederick Douglass, an American Slave.</em> 1845. Slave labor, skilled trades, and free vs. slave labor.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>Northup, Solomon.</cite> <em>Twelve Years a Slave: Narrative of Solomon Northup, a Citizen of New-York, Kidnapped in Washington City in 1841, and Rescued in 1853.</em> 1853. Free Black man kidnapped into slavery; skilled labor under slavery.
+						<CitationLink href="https://www.gutenberg.org/files/45631/45631-h/45631-h.htm" ariaLabel="Available online at Project Gutenberg">
+							<cite>Northup, Solomon.</cite> <em>Twelve Years a Slave: Narrative of Solomon Northup, a Citizen of New-York, Kidnapped in Washington City in 1841, and Rescued in 1853.</em> 1853. Free Black man kidnapped into slavery; skilled labor under slavery.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>de Tocqueville, Alexis.</cite> <em>Democracy in America.</em> 1835. Observations on manufacturing and class relations.
+						<CitationLink href="https://www.gutenberg.org/files/815/815-h/815-h.htm" ariaLabel="Available online at Project Gutenberg">
+							<cite>de Tocqueville, Alexis.</cite> <em>Democracy in America.</em> 1835. Observations on manufacturing and class relations.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>Heighton, William.</cite> <em>The Mechanics' Free Press.</em> 1820s. Artisan organizing and early labor newspapers.
 					</li>
 				</ul>
 			</div>
@@ -54,13 +68,19 @@ const base = import.meta.env.BASE_URL;
 				<h2 class="era-title">Industrial Era (1880–1970)</h2>
 				<ul class="citation-list">
 					<li>
-						<cite>Sinclair, Upton.</cite> <em>The Jungle.</em> 1906. Meatpacking conditions in Chicago.
+						<CitationLink href="https://www.gutenberg.org/files/140/140-h/140-h.htm" ariaLabel="Available online at Project Gutenberg">
+							<cite>Sinclair, Upton.</cite> <em>The Jungle.</em> 1906. Meatpacking conditions in Chicago.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>United States House of Representatives.</cite> <em>Report on Chicago Stockyards.</em> 1906. Congressional investigation of meatpacking conditions.
+						<CitationLink href="https://history.house.gov/Records-and-Research/Listing/c_042/" ariaLabel="Available online at Library of Congress">
+							<cite>United States House of Representatives.</cite> <em>Report on Chicago Stockyards.</em> 1906. Congressional investigation of meatpacking conditions.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>Oral histories of Texas oil technicians.</cite> Worker experiences with automation and industrial machinery.
+						<CitationLink href="https://digitalcollections.briscoecenter.org/collection/885?page=1&display=list" ariaLabel="Available online at Briscoe Center for American History">
+							<cite>Oral histories of Texas oil technicians.</cite> Worker experiences with automation and industrial machinery.
+						</CitationLink>
 					</li>
 				</ul>
 			</div>
@@ -69,43 +89,40 @@ const base = import.meta.env.BASE_URL;
 				<h2 class="era-title">Post-Industrial Era (1970–2000)</h2>
 				<ul class="citation-list">
 					<li>
-						<cite>NASA "Hidden Figures" accounts.</cite> Accounts of Katherine Johnson, Dorothy Vaughan, Mary Jackson. Women in computing and mathematics.
+						<CitationLink href="https://www.nasa.gov/from-hidden-to-modern-figures/" ariaLabel="Available online at NASA">
+							<cite>NASA "Hidden Figures" accounts.</cite> Accounts of Katherine Johnson, Dorothy Vaughan, Mary Jackson. Women in computing and mathematics.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>Hopper, Grace.</cite> Computer scientist and Rear Admiral. Early programming and women in computing.
+						<CitationLink href="https://president.yale.edu/biography-grace-murray-hopper" ariaLabel="Available online at Yale University">
+							<cite>Hopper, Grace.</cite> Computer scientist and Rear Admiral. Early programming and women in computing.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>Borg, Anita.</cite> Computer scientist. Women's exclusion from tech as it became more prestigious.
-					</li>
-				</ul>
-			</div>
-
-			<div class="era-section">
-				<h2 class="era-title">Digital Era (2000–present)</h2>
-				<ul class="citation-list">
-					<li>
-						<cite>Autor, David H.</cite> "Why Are There Still So Many Jobs? The History and Future of Workplace Automation." <em>Journal of Economic Perspectives,</em> vol. 29, no. 3, 2015, pp. 3–30. Labor economics and automation.
-					</li>
-					<li>
-						<cite>Wiener, Norbert.</cite> <em>The Human Use of Human Beings: Cybernetics and Society.</em> 1950. Cybernetics, automation, and human-machine relationships.
-					</li>
-					<li>
-						<cite>Frey, Carl Benedikt, and Michael A. Osborne.</cite> "The Future of Employment: How Susceptible Are Jobs to Computerisation?" <em>Technological Forecasting and Social Change,</em> vol. 114, 2017, pp. 254–280. Study on automation and job displacement.
+						<CitationLink href="https://legacy.anitab.org/blog/anitas-quilt/anita-borg-life-and-legacy/" ariaLabel="Available online at AnitaB.org">
+							<cite>Borg, Anita.</cite> Computer scientist. Women's exclusion from tech as it became more prestigious.
+						</CitationLink>
 					</li>
 				</ul>
 			</div>
 
 			<div class="era-section">
-				<h2 class="era-title">Government & Institutional Sources</h2>
+				<h2 class="era-title">Digital Era (2000-present)</h2>
 				<ul class="citation-list">
 					<li>
-						<cite>Bureau of Labor Statistics.</cite> Bulletins on automation. 1950s–1970s.
+						<CitationLink href="https://www.aeaweb.org/articles?id=10.1257/jep.29.3.3" ariaLabel="Available online at AEAweb">
+							<cite>Autor, David H.</cite> "Why Are There Still So Many Jobs? The History and Future of Workplace Automation." <em>Journal of Economic Perspectives,</em> vol. 29, no. 3, 2015, pp. 3–30. Labor economics and automation.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>Bureau of Labor Statistics.</cite> Reports on service sector growth. 1970s–2000.
+						<CitationLink href="https://archive.org/details/humanuseofhumanb00wien" ariaLabel="Available online at Archive.org">
+							<cite>Wiener, Norbert.</cite> <em>The Human Use of Human Beings: Cybernetics and Society.</em> 1950. Cybernetics, automation, and human-machine relationships.
+						</CitationLink>
 					</li>
 					<li>
-						<cite>United States House of Representatives.</cite> <em>Report on Chicago Stockyards.</em> 1906. Congressional investigation.
+						<CitationLink href="https://www.sciencedirect.com/science/article/abs/pii/S0040162516302244" ariaLabel="Available online at Oxford Martin School">
+							<cite>Frey, Carl Benedikt, and Michael A. Osborne.</cite> "The Future of Employment: How Susceptible Are Jobs to Computerisation?" <em>Technological Forecasting and Social Change,</em> vol. 114, 2017, pp. 254-280. Study on automation and job displacement.
+						</CitationLink>
 					</li>
 				</ul>
 			</div>
@@ -212,6 +229,50 @@ const base = import.meta.env.BASE_URL;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 	}
 
+	.citation-list .citation-link {
+		color: inherit;
+		text-decoration: none;
+		display: block;
+		transition: color 0.2s ease;
+	}
+
+	.citation-list .citation-link:hover {
+		color: #8b4a4a;
+		text-decoration: none;
+	}
+
+	.citation-list .citation-link:visited {
+		text-decoration: none;
+	}
+
+	.citation-list .citation-link:active {
+		text-decoration: none;
+	}
+
+	.citation-list .citation-link:hover .link-icon {
+		transform: translate(2px, -2px);
+	}
+
+	.citation-list .link-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: middle;
+		margin-left: 0.5rem;
+		color: #8b4a4a;
+		transition: color 0.2s ease, transform 0.2s ease;
+	}
+
+	.citation-list .citation-link:hover .link-icon {
+		color: #6b2e2e;
+	}
+
+	.citation-list .link-icon svg {
+		width: 14px;
+		height: 14px;
+		display: block;
+	}
+
 	.references-footer {
 		margin-top: 3rem;
 		padding-top: 2rem;
@@ -276,4 +337,5 @@ const base = import.meta.env.BASE_URL;
 		}
 	}
 </style>
+
 
