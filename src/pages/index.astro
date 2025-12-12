@@ -330,7 +330,8 @@ const slideshowImages = [
 		position: relative;
 		width: 100%;
 		max-width: 100%;
-		max-height: 500px;
+		height: 500px;
+		min-height: 500px;
 		overflow: hidden;
 		margin-bottom: 2rem;
 		background: #2c2416;
@@ -338,42 +339,53 @@ const slideshowImages = [
 	}
 
 	.splash-image :global(.slideshow-container) {
-		width: 100% !important;
-		max-width: 100% !important;
-		max-height: 500px;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		min-height: 500px;
 		box-sizing: border-box;
 	}
 
 	.splash-image :global(.react-slideshow-container) {
-		width: 100% !important;
-		max-width: 100% !important;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		min-height: 500px;
 		box-sizing: border-box;
 	}
 
 	.splash-image :global(.react-slideshow-container .images-wrap) {
-		width: 100% !important;
-		max-width: 100% !important;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		min-height: 500px;
 		box-sizing: border-box;
 	}
 
 	.splash-image :global(.react-slideshow-container .images-wrap > div) {
-		width: 100% !important;
-		max-width: 100% !important;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		min-height: 500px;
 		box-sizing: border-box;
 	}
 
 	.splash-image :global(.slide) {
-		width: 100% !important;
-		max-width: 100% !important;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		min-height: 500px;
 		box-sizing: border-box;
 	}
 
 	.splash-image img {
-		width: 100% !important;
-		max-width: 100% !important;
-		height: auto;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		min-height: 500px;
 		display: block;
 		object-fit: cover;
+		object-position: center;
 		filter: sepia(20%) contrast(1.1) brightness(0.95);
 		box-sizing: border-box;
 	}
