@@ -17,5 +17,11 @@ requirements:
   - Acceptance of dangerous conditions - accidents common
 filters: {"gender":"male","race":"any","minAge":8,"maxAge":14,"education":"none","experience":"none","union":false,"maritalStatus":"any"}
 ---
-Boys needed to separate slate from coal. Child labor preferred - small hands work better, and we pay them less than men. Work in coal breakers - dark, dusty, dangerous. Daily duties: Arrive at 6 AM (your parents wake you). Work in breaker building - dark, windowless, filled with coal dust. Sit on wooden bench for 10 hours. Pick through moving coal on conveyor belt. Separate slate from coal with your bare hands - coal is sharp, your fingers will bleed. Breathe coal dust all day - your lungs will be black by age 12. Many boys develop 'black lung' disease. The noise is constant - machinery never stops. If you slow down, foreman beats you. Lunch: 15 minutes, eat the food you brought (usually just bread). Work until 6 PM. Walk home covered in black dust, exhausted. Your back aches from sitting hunched over all day. Your eyes strain in the dim light - many boys go blind. Accidents are common - boys lose fingers, hands, even lives when caught in machinery. Boys as young as 8 accepted - the younger, the better (smaller hands, cheaper pay). No girls - this is boys' work. Your family needs the money - 50 cents a day helps put food on the table.
+WANTED: Boys for Coal Breaker Work. The Anthracite Coal Company seeks boys, between the ages of 8 and 14 years, to work in the coal breakers separating slate from coal. Boys are preferred for this work, as their small hands are better suited to picking through coal.
+
+The work consists of sitting on a wooden bench for 10 hours per day, picking through moving coal on a conveyor belt and separating slate from coal by hand. Boys must work in a dark, windowless building filled with coal dust. The work is noisy, and boys must work in conditions where coal dust is constantly present. The work is dangerous, and accidents, including loss of fingers or hands when caught in machinery, are not uncommon.
+
+Wages range from 50 cents to $1.00 per day, depending on age and ability. Boys must bring their own lunch and are allowed 15 minutes to eat. Hours are from 6 o'clock in the morning until 6 o'clock in the evening, six days per week. Parental consent is required for minors.
+
+Boys as young as 8 years of age are accepted. The work is arduous and requires boys to sit hunched over for the entire shift. No girls need apply, as this work is suitable only for boys.
 

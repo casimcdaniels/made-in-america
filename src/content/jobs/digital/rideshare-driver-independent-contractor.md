@@ -20,5 +20,28 @@ requirements:
   - No benefits, no job security, no rights
 filters: {"gender":"any","race":"any","minAge":21,"maxAge":70,"education":"none","experience":"none","union":false,"maritalStatus":"any"}
 ---
-Drive passengers using rideshare app. Free labor - you're an 'independent contractor' so no minimum wage, no benefits, no rights. Daily duties: Wake up at 5 AM to beat traffic. Log into app - accept ride requests, drive passengers around city. Work 10-12 hour shifts - your back will ache, your legs will cramp. Deal with drunk passengers, rude customers, dangerous situations - you're alone in car. Pay for gas, car maintenance, insurance - expenses eat 30-40% of earnings. Platform takes 25% commission - you get 75% of fare. Must maintain high rating (4.8+) or you're deactivated - one bad passenger can ruin you. Work peak hours (rush hour, weekends, nights) to make money - but that's when traffic is worst. No benefits, no health insurance, no paid time off - you're a 'contractor.' If you get in accident, you're on your own. If you get sick, you don't work, you don't get paid. $15-25 per hour sounds okay but after expenses, it's $8-15 per hour. But you need the money, so you keep driving.
+**Become Your Own Boss!** Drive with Uber/Lyft and set your own schedule. Work when you want, where you want. Perfect for students, retirees, or anyone looking for flexible income.
+
+**What You'll Do:**
+- Accept ride requests through our app
+- Provide safe, friendly transportation to passengers
+- Maintain a clean, comfortable vehicle
+- Work during peak hours to maximize earnings
+
+**Requirements:**
+- Must be 21 or older
+- Valid driver's license and clean driving record
+- Own vehicle (2005 or newer)
+- Must pass background check
+- Smartphone with data plan
+- Maintain 4.8+ rating
+
+**Earnings:** $15-25 per hour (before expenses)
+
+**Benefits:**
+- Flexible schedule - work when you want
+- Be your own boss
+- No boss, no schedule, complete freedom!
+
+*Note: This is an independent contractor position. You are responsible for your own vehicle, gas, insurance, and maintenance. Earnings vary based on hours worked, location, and demand.*
 

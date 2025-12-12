@@ -18,5 +18,35 @@ requirements:
   - Willingness to work evenings and weekends for urgent reports
 filters: {"gender":"any","race":"any","minAge":24,"maxAge":45,"education":"college","experience":"some","union":false,"maritalStatus":"any"}
 ---
-Analyze data and create reports for business decisions. Free labor - this is 'analytics' work, requires some skills but pay is moderate. Daily duties: Arrive at 8 AM. Open Excel - spend entire day in spreadsheets, your eyes will strain. Pull data from databases - SQL queries, but you're not a developer, so queries are slow. Clean data - remove duplicates, fix errors, format properly - tedious, mind-numbing work. Create pivot tables, charts, dashboards - make data 'pretty' for executives. Write reports - explain what data means, make recommendations. Present findings to managers - but they don't understand data, so you simplify everything. Work with messy data - incomplete, incorrect, inconsistent - spend hours fixing. Must learn new tools constantly - Tableau, Power BI, Python, R - but company won't train you. Work evenings and weekends - reports are always 'urgent.' Must be detail-oriented - one mistake and entire analysis is wrong. $55-70k sounds okay but you're doing data science work for analyst pay.
+**Data Analyst**
+
+Join our analytics team and help drive data-driven business decisions! We're looking for an Excel expert to analyze data and create actionable insights.
+
+**What You'll Do:**
+- Analyze data and create reports for business decisions
+- Pull data from databases using SQL
+- Clean and prepare data for analysis
+- Create pivot tables, charts, and dashboards
+- Write reports explaining findings and recommendations
+- Present findings to management
+- Work with Tableau, Power BI, and other analytics tools
+
+**Requirements:**
+- Bachelor's degree in statistics, mathematics, business, or related field
+- 2+ years data analysis experience
+- Advanced Excel skills required (pivot tables, VLOOKUP, macros)
+- SQL knowledge preferred
+- Experience with Tableau, Power BI, or similar tools
+- Strong analytical and problem-solving skills
+- Attention to detail
+- Willingness to work evenings and weekends for urgent reports
+
+**Compensation:** $55,000 - $70,000 per year
+
+**Benefits:**
+- Health insurance
+- 401(k) matching
+- Professional development opportunities
+
+*Fast-paced environment with tight deadlines. Must be detail-oriented - one mistake can invalidate entire analysis.*
 

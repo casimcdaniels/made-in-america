@@ -18,5 +18,11 @@ requirements:
   - Must accept low pay and harsh working conditions
 filters: {"gender":"female","race":"white","minAge":21,"maxAge":35,"education":"college","experience":"some","union":false,"maritalStatus":"single"}
 ---
-Nursing position in hospital. Free female labor - this is 'women's work,' suited to female nature (caring, nurturing). Men are doctors, women are nurses - that's the natural order. White women preferred for white patients - colored women may work colored wards only (segregation is required). Daily duties: Work 12-hour shifts, sometimes 16 if short-staffed. Change bedpans - the smell will make you gag. Bathe patients, change dressings, empty drainage bags. Lift patients - your back will be destroyed by age 40. Deal with doctors' orders - never question, just obey. Work nights, weekends, holidays - no exceptions. Watch patients die - you'll see death daily. Deal with families - comfort them, but don't get emotional. White patients get better care, better rooms - colored patients are in basement, get less attention. Must be unmarried - if you marry, you're expected to resign (husband should support you). If you get pregnant, you're fired immediately. Age 21-35 only - after 35, you're 'too old' for this work. Colored nurses work colored wards only - that's hospital policy, not our choice.
+WANTED: Registered Nurses for Hospital Work. City Hospital seeks qualified women for nursing positions. Nursing is considered women's work, suited to the female nature, while men serve as doctors. White women are preferred for white patient wards, while colored women may apply for colored patient wards only, as segregation is required by hospital policy.
+
+Duties include: Changing bedpans; bathing patients; changing dressings; emptying drainage bags; lifting and moving patients; following doctors' orders; and providing comfort to patients and their families. Nurses must work 12-hour shifts, sometimes extending to 16 hours when short-staffed, including nights, weekends, and holidays.
+
+Salary is $3,800 per year. Applicants must have a nursing degree or certificate and must be between the ages of 21 and 35 years. Nurses must be unmarried or willing to resign immediately upon marriage, as it is expected that husbands will provide for their wives. Nurses who become pregnant will be dismissed immediately.
+
+Colored nurses will be assigned to colored patient wards only, in accordance with hospital policy and segregation requirements.
 

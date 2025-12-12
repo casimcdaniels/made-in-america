@@ -17,5 +17,11 @@ requirements:
   - Must accept that men advance faster in technical roles
 filters: {"gender":"male","race":"any","minAge":22,"maxAge":40,"education":"college","experience":"some","union":false,"maritalStatus":"any"}
 ---
-Develop software applications using FORTRAN and COBOL. Free labor - this is skilled technical work requiring education. Men preferred for programming - women's minds aren't suited for logic and technical thinking. Women can do data entry, but not real programming. Daily duties: Arrive at 8 AM. Write code on punch cards - one mistake means retyping entire card deck. Debug programs by reading through thousands of lines of code - your eyes will strain. Test programs on mainframe - wait hours for results, then fix errors. Work with massive machines that fill entire rooms. Write documentation - tedious but required. Attend meetings with male managers - if you're a woman, they'll ignore your input. Work 50+ hour weeks - programming requires long hours. Deal with system crashes - lose hours of work, start over. Men get interesting projects, women get data entry - that's just how it is. Training provided but men advance faster - they're 'naturally better' at this work. Must be willing to work unpaid overtime - 'passion for computing' means working for free.
+POSITION AVAILABLE: Computer Programmer. IBM seeks qualified individuals to develop software applications using FORTRAN and COBOL. This is skilled technical work requiring a bachelor's degree in mathematics, engineering, or a related field.
+
+Duties include: Writing code on punch cards; debugging programs by reading through thousands of lines of code; testing programs on mainframe computers; writing documentation; and attending meetings with management. Programmers must work with massive machines that fill entire rooms and must be prepared to work 50+ hour weeks, as programming requires long hours.
+
+Salary is $12,000 per year. Men are preferred for programming positions, as they are better suited for logic and technical thinking. Women may apply but will typically be assigned to data processing rather than programming. Training will be provided, but men advance faster in technical roles. Programmers must be willing to work unpaid overtime, as "passion for computing" means working beyond regular hours.
+
+Applicants must have logical thinking skills, attention to detail, and the ability to debug complex code. Experience with FORTRAN and COBOL is preferred but not required, as training will be provided.
 

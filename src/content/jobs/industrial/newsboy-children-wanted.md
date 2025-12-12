@@ -18,5 +18,11 @@ requirements:
   - Acceptance of dangerous street conditions
 filters: {"gender":"any","race":"any","minAge":8,"maxAge":14,"education":"none","experience":"none","union":false,"maritalStatus":"any"}
 ---
-Sell newspapers on street corners. Child labor preferred - children work for less, are more persistent, and don't complain. Boys and girls accepted, age 8-14. Daily duties: Wake at 4 AM. Go to newspaper office. Must BUY papers upfront - 50 cents for 100 papers. If you don't have money, you can't work. Carry heavy stack of papers (30+ pounds) to your corner. Stand on street corner from 5 AM to 8 AM shouting 'Extra! Extra! Read all about it!' Then go to school (if you go). After school, back to corner from 3 PM to 7 PM. Work in rain, snow, freezing cold, blazing heat. If papers don't sell, you lose your money. Many days you make nothing - or lose money. Older newsboys will beat you up and steal your spot if you're weak. Police will chase you if you're on wrong corner. Work until dark, then home to sleep. Repeat every day, 365 days a year. No days off - if you don't work, you don't eat. Many children sleep on streets, have no home. Must work regardless of weather, illness, or exhaustion. No guaranteed wage - you might earn 10 cents a day, or lose 50 cents. This is not a job - it's survival.
+WANTED: Newsboys and Newsgirls. The New York Herald seeks children, between the ages of 8 and 14 years, to sell newspapers on street corners. Both boys and girls are accepted.
+
+Children must purchase papers upfront at the rate of 50 cents for 100 papers. They must carry a heavy stack of papers (30 pounds or more) to their assigned corner and sell them throughout the day. Children work from 5 o'clock in the morning until 8 o'clock in the morning, then return after school from 3 o'clock in the afternoon until 7 o'clock in the evening. They must work in all weather conditions, including rain, snow, freezing cold, and extreme heat.
+
+Payment is by commission only, with no guaranteed wage. Children may earn 10 cents per day or more, depending on how many papers they sell. However, if papers do not sell, children lose their initial investment. Children must work 365 days per year, as there are no days off. If children do not work, they do not earn money.
+
+Children must be able to carry heavy loads and work regardless of weather, illness, or exhaustion. Older newsboys may be aggressive in defending their corners, and children must be prepared to compete for the best locations.
 

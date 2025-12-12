@@ -20,5 +20,11 @@ requirements:
   - Must work constantly to earn enough to survive
 filters: {"gender":"female","race":"any","minAge":16,"maxAge":50,"education":"none","experience":"none","maritalStatus":"any"}
 ---
-Seeking seamstresses for garment finishing. This is WOMEN'S WORK - sewing, finishing, piece work. You work from home or in a crowded workshop. Daily duties: Work 12-14 hour days, 6-7 days per week. Sew seams by hand - your fingers will bleed, your eyes will strain. Finish garments - hemming, buttonholes, trimming. Work piece-rate - the faster you work, the more you earn, but the rate is set so low you must work constantly to survive. Work in dim light - your eyesight will be destroyed by age 30. Your back will ache from hunching over. You'll work until you drop, then start again the next day. Many women work at home, trying to care for children while sewing. Others work in workshops - crowded, stuffy, no ventilation. The work is seasonal - busy before holidays, slow in summer. When there's no work, you starve. This is one of the few jobs available to women, but it pays starvation wages. You compete with other desperate women, driving down the piece rate. No benefits, no security, no future. Just work until you can't work anymore.
+WANTED: Seamstresses for Garment Work. A garment workshop seeks women skilled in needlework for piece-work employment. This is suitable work for women who wish to earn money while remaining at home or working in a supervised workshop.
+
+The work consists of sewing seams, hemming, making buttonholes, and finishing garments according to specifications. Women may work at home or in the workshop, as they prefer. Payment is by the piece, with rates varying according to the complexity of the work. A diligent worker may earn from 50 cents to $1.00 per day, depending on her speed and skill.
+
+Women must provide their own thread and needles. The work requires good eyesight and nimble fingers. Hours are flexible, but those who wish to earn a living wage must work 12 to 14 hours per day, six or seven days per week. The work is seasonal, with more employment available before holidays and during the winter months.
+
+This employment is one of the few opportunities available to women who must support themselves or contribute to their families' income. No prior experience is necessary, as instruction will be provided to those willing to learn.
 

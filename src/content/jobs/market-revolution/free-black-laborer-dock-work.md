@@ -20,5 +20,11 @@ requirements:
   - Acceptance that skilled trades are closed to you
 filters: {"gender":"male","race":"black","minAge":18,"maxAge":45,"education":"none","experience":"none","maritalStatus":"any"}
 ---
-Seeking laborers for dock work. Free colored men welcome - this is hard, dangerous work that white men avoid. But you'll be paid less, treated worse. Daily duties: Load and unload ships - carry heavy cargo on your back, your spine will be destroyed. Work in all weather - rain, snow, blazing sun. Work 10-12 hour days when work is available. But work is irregular - ships come and go, you may work one day, starve the next. You compete with other free colored men, Irish immigrants - all desperate for work. White workers get better jobs, better pay. You get the worst work, lowest pay. No security, no benefits, no future. If you're injured, you're fired. If you complain, you're fired. Free colored men are excluded from skilled trades - carpenters' unions won't admit you, blacksmiths won't train you. This is one of the few jobs available. You're free, but you're not equal. White workers resent you - they say you drive down wages. But you have no choice - this is work, or starve.
+WANTED: Laborers for Dock Work. The subscriber requires able-bodied men for loading and unloading ships at the port. Free colored men are welcome to apply, as this work requires considerable strength and is often avoided by white workers.
+
+The work consists of carrying heavy cargo on one's back, loading and unloading ships, and performing such other tasks as may be required. Men must be prepared to work in all weather conditions, from 10 to 12 hours per day when work is available. However, work is irregular, as it depends on the arrival and departure of ships. Men may work one day and have no work the next.
+
+Wages range from $1.00 to $1.50 per day, depending on the nature of the work. Free colored men are typically paid less than white workers for the same work. There is no security of employment, and men who are injured or complain may be dismissed without notice.
+
+Free colored men are excluded from skilled trades such as carpentry and blacksmithing, as trade unions will not admit them and masters will not train them. Dock work is one of the few employment opportunities available to free colored men, though the work is hard, dangerous, and poorly compensated.
 

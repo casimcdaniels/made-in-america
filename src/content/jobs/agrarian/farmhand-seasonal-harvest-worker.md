@@ -17,5 +17,9 @@ requirements:
   - Acceptance of dangerous conditions - accidents common
 filters: {"gender":"male","race":"white","minAge":16,"maxAge":50,"education":"none","experience":"some","maritalStatus":"any"}
 ---
-Seeking able-bodied FREE MEN for the upcoming harvest season. Free labor preferred over slaves for seasonal work - slaves are too valuable to risk in dangerous harvest work, and free men work harder when they share in the profits. Daily duties: Rise before dawn (4 AM). Cut wheat with scythe for 10-12 hours. Your back will ache, your hands will blister and bleed. Carry 80-pound sacks of grain to the barn. Work in blazing sun, rain, or cold. No breaks except to eat. Sleep in barn loft with other workers. At harvest end, receive small share of crop - if harvest is poor, you get nothing. Must provide proof of free status.
+WANTED: Able-bodied Free Men for Harvest Season. The subscriber requires several strong, industrious men to assist with the harvest of wheat and other grains. Free white men preferred, as they may be trusted with the care of valuable crops and work diligently when they share in the profits.
+
+The work shall commence at dawn and continue until dusk, weather permitting. Men must be experienced with the scythe and capable of lifting heavy sacks of grain (80 pounds or more). Work shall be performed in all weather conditions. Lodging shall be provided in the barn loft, and board shall be included. At the conclusion of the harvest, each man shall receive a share of the crop proportional to his labor, provided the harvest proves successful.
+
+Men must provide proof of free status and references attesting to their character and industry. The harvest season typically lasts three to four months. Those interested should apply immediately, as the work shall commence upon the ripening of the grain.
 

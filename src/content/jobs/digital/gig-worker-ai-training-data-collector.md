@@ -19,5 +19,31 @@ requirements:
   - Competition with workers worldwide drives pay down
 filters: {"gender":"any","race":"any","minAge":18,"maxAge":70,"education":"none","experience":"none","union":false,"maritalStatus":"any"}
 ---
-Complete micro-tasks to train AI systems. Free labor - this is 'flexible work' that requires no skills, so we pay pennies. You're not an employee - you're an 'independent contractor' so we don't have to pay minimum wage or benefits. Daily duties: Log onto platform. See hundreds of micro-tasks available. Label images - 'is this a cat or dog?' Click, click, click. Transcribe audio - listen to garbled recordings, type what you hear. Categorize data - 'is this spam or not spam?' Repeat 1000 times. Each task pays 5-10 cents. Work 8 hours to complete 200 tasks - earn $10-20. That's $2.50 per hour - less than minimum wage, but legal because you're a 'contractor.' Must meet daily quota of 200 tasks or you're 'deactivated' (fired). Work from home but you're isolated - no coworkers, no support. Platform takes 20% cut - you get 80% of the 5 cents. Many workers in developing countries do this - they're competing with you, driving prices down. No benefits, no job security, no rights. If you complain, you're banned. This is the 'gig economy' - freedom to work for poverty wages. Most workers earn $2-5 per hour - but you need the money, so you keep clicking.
+**AI Training Data Collector - Work From Home**
+
+Earn money in your spare time! Complete simple micro-tasks from home and help train the AI systems of the future. Perfect for students, stay-at-home parents, or anyone looking for flexible, remote work.
+
+**What You'll Do:**
+- Complete micro-tasks like labeling images, transcribing audio, categorizing data
+- Work at your own pace from home
+- Help train cutting-edge AI systems
+- Set your own schedule
+
+**Requirements:**
+- Must be 18 or older
+- Reliable internet connection
+- Ability to work repetitive tasks
+- Must meet daily quota of 200+ tasks
+
+**Earnings:** $0.05-0.10 per task (piece-rate)
+
+**Benefits:**
+- Work from home - no commute!
+- Flexible schedule - work when you want
+- No experience required
+- Be your own boss
+
+*This is an independent contractor position. Earnings vary based on speed and accuracy. No minimum wage guarantee. Work from anywhere in the world!*
+
+**Join thousands of workers earning extra income in the gig economy!**
 

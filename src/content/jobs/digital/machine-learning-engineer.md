@@ -18,5 +18,28 @@ requirements:
   - Must accept that most applicants are rejected
 filters: {"gender":"any","race":"any","minAge":25,"maxAge":45,"education":"graduate","experience":"experienced","union":false,"maritalStatus":"any"}
 ---
-Build and deploy machine learning models at scale. Free labor only - this requires elite education that excludes most people. Must have degree from top-tier university (Stanford, MIT, Carnegie Mellon preferred) - if you went to state school, don't bother. Daily duties: Arrive at 9 AM (or work from home). Write Python code for hours - your eyes will strain staring at screens. Train models on massive datasets - wait hours for training to complete, then realize your model is garbage, start over. Debug neural networks - spend days trying to figure out why accuracy dropped 2%. Attend meetings about 'AI ethics' - then ignore ethics to ship faster. Work with massive compute clusters - one mistake costs company thousands in compute costs. Deal with imposter syndrome constantly - everyone seems smarter than you. Work 50+ hour weeks - 'passion' means working weekends. On-call for production models - get paged at 2 AM when model breaks. Must pass 6-hour technical interviews - solve algorithms on whiteboard, explain ML theory, code live. If you don't have PhD from top school, you're competing with 1000 applicants for one position. Must relocate to Bay Area - $250k sounds like a lot but rent is $4000/month for 1-bedroom.
+**Machine Learning Engineer**
+
+Join Google's world-class ML team and help build the future of AI! We're looking for exceptional engineers to build and deploy machine learning models at scale.
+
+**What You'll Do:**
+- Design, train, and deploy ML models on massive datasets
+- Optimize model performance and accuracy
+- Work with cutting-edge ML frameworks (TensorFlow, PyTorch)
+- Collaborate with cross-functional teams on AI products
+- On-call rotation for production systems
+
+**Requirements:**
+- Master's or PhD from top-tier university (Stanford, MIT, CMU preferred)
+- Expert-level Python, TensorFlow/PyTorch
+- Strong mathematical background (linear algebra, calculus, statistics)
+- Publications in top ML conferences or significant open-source contributions
+- Willingness to work 50+ hour weeks, on-call, weekends
+- Must relocate to Bay Area (no remote option)
+
+**Compensation:** $180,000 - $250,000 per year + equity + benefits
+
+**Interview Process:** Rigorous 6-hour technical interviews covering algorithms, ML theory, and coding.
+
+Join us and work on problems that matter at the world's leading tech company!
 

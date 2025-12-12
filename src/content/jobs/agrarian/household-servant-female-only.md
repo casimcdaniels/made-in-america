@@ -18,5 +18,9 @@ requirements:
   - Must work 16-hour days, 6.5 days per week
 filters: {"gender":"female","race":"white","minAge":16,"maxAge":35,"education":"elementary","experience":"some","maritalStatus":"single"}
 ---
-Respected family seeks reliable FEMALE household servant. Free white women preferred - slaves are property and cannot be trusted with household management, and free women work better when paid. Daily duties: Rise at 5 AM. Light fires, prepare breakfast for family. Wash dishes, scrub floors on hands and knees. Launder all clothing by hand - boiling water, scrubbing, hanging to dry. Cook three meals daily over open fire. Mend clothing, spin wool, churn butter. Tend to children, empty chamber pots. Work until 9 PM. One half-day off per week for church. Must be white, Protestant, of good character. No Catholics, Jews, or persons of color. Must live on premises, follow all household rules without question.
+WANTED: A Female Servant for a Respectable Household. A family of good standing seeks a reliable, industrious woman to serve as household servant. The applicant must be a free white woman, Protestant, of good moral character, between the ages of 16 and 35 years, and unmarried.
+
+Duties include: Rising early to light fires and prepare breakfast; washing dishes and maintaining cleanliness throughout the house; laundering all linens and clothing by hand; cooking three meals daily; mending clothing; spinning wool; churning butter; tending to children; and performing such other household tasks as may be required. The servant shall work from early morning until evening, with one half-day per week allowed for attendance at church.
+
+The servant shall receive room and board, and an annual stipend of £8. She must live on the premises and conduct herself with propriety at all times. References from previous employers are required. No Catholics, Jews, or persons of color need apply.
 

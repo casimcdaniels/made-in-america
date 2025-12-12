@@ -19,5 +19,34 @@ requirements:
   - Acceptance of low pay for high workload
 filters: {"gender":"any","race":"any","minAge":22,"maxAge":35,"education":"college","experience":"some","union":false,"maritalStatus":"any"}
 ---
-Manage social media accounts for multiple clients. Free labor - this is 'entry-level' marketing work, so pay is low. Must be available 24/7 - social media never sleeps. Daily duties: Wake up at 6 AM, check notifications immediately. Post content across Instagram, Twitter, Facebook, TikTok, LinkedIn - 20+ posts per day. Respond to comments, DMs, mentions - customers expect instant replies. Monitor trends, hashtags, competitors - always be 'on.' Create content - photos, videos, graphics - but you're not a designer, so quality suffers. Write captions, schedule posts, analyze metrics. Work evenings, weekends, holidays - if something goes viral at 2 AM, you must respond. Deal with angry customers, trolls, negative reviews - you're the public face. Must maintain 'personal brand' on your own accounts too - employers check. Burnout is constant - you're always 'on,' always performing. $35-45k sounds okay but you work 60+ hour weeks, so it's really $11-14 per hour. No overtime pay - you're 'salaried.' Must be young, trendy, understand 'Gen Z culture' - if you're over 30, you're 'out of touch.'
+**Social Media Manager**
+
+Join our fast-paced digital marketing agency! We're looking for a creative, social-savvy individual to manage social media accounts for multiple high-profile clients.
+
+**What You'll Do:**
+- Manage social media presence across Instagram, TikTok, Twitter, Facebook, LinkedIn
+- Create engaging content (photos, videos, graphics)
+- Write compelling captions and schedule posts
+- Respond to comments, DMs, and mentions in real-time
+- Monitor trends, hashtags, and competitor activity
+- Analyze metrics and report on performance
+- Maintain active personal social media presence
+
+**Requirements:**
+- Bachelor's degree in marketing, communications, or related field
+- 2+ years social media experience
+- Strong writing and communication skills
+- Understanding of all major platforms
+- Must be available 24/7 (social media never sleeps!)
+- Willingness to work evenings, weekends, holidays
+- Young, trendy, culturally aware
+
+**Compensation:** $35,000 - $45,000 per year
+
+**Benefits:**
+- Remote work available
+- Flexible schedule (as long as you're always available!)
+- Work with exciting brands
+
+*This is a fast-paced role perfect for someone who lives and breathes social media. Must be comfortable working outside traditional hours and maintaining a strong personal brand.*
 

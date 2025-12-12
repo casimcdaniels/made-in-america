@@ -17,5 +17,9 @@ requirements:
   - Passion for technology
 filters: {"gender":"any","race":"any","minAge":22,"maxAge":30,"education":"college","experience":"none","union":false,"maritalStatus":"any"}
 ---
-Develop software for personal computers. Work with C and assembly language. Fast-paced startup environment. Looking for young, energetic programmers. Stock options available. Must be willing to work 60+ hour weeks. Age 22-30 preferred. Help shape the future of computing.
+POSITION AVAILABLE: Software Engineer. Microsoft Corporation seeks recent college graduates to develop software for personal computers. This is an exciting opportunity to work with cutting-edge technology in a fast-paced environment.
+
+Duties include: Developing software applications using C and assembly language; debugging code; testing programs; and collaborating with team members. Engineers must be willing to work 60+ hour weeks, as software development requires long hours. This is a fast-paced startup environment where engineers help shape the future of computing.
+
+Salary is $35,000 per year, with stock options available. Applicants must have a computer science degree from a top university, proficiency in C programming, and strong problem-solving skills. Recent college graduates are preferred, and applicants should be between the ages of 22 and 30 years. A passion for technology is essential.
 

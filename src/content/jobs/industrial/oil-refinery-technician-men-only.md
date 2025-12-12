@@ -18,5 +18,11 @@ requirements:
   - Must accept responsibility for dangerous equipment
 filters: {"gender":"male","race":"white","minAge":21,"maxAge":50,"education":"highschool","experience":"some","union":false,"maritalStatus":"any"}
 ---
-Monitor and maintain automated refining equipment. Free white male labor preferred - this is skilled technical work requiring education and responsibility. Colored men are not considered for technical positions. Daily duties: Work rotating shifts - days, nights, weekends. Monitor control panels - watch gauges, dials, readouts for 8 hours. One mistake and entire refinery could explode. Walk through facility checking equipment - hot, loud, dangerous. Breathe chemical fumes - your lungs will suffer. Maintain automated systems - fix when they break. Work in extreme heat near furnaces. Respond to alarms at any time - if something goes wrong, you're responsible. Night shifts disrupt your sleep - you'll be exhausted constantly. Training provided but you must learn quickly - if you can't handle it, you're fired. Men only - this is not suitable work for women (too technical, too dangerous). White men preferred for supervisory positions. Must be 21 or older - need maturity for this responsibility.
+WANTED: Oil Refinery Technicians. Texas Oil & Refining Co. requires skilled technicians to monitor and maintain automated refining equipment. This is skilled technical work requiring education and responsibility. White men are preferred, as colored men are not considered for technical positions.
+
+Duties include: Monitoring control panels and watching gauges, dials, and readouts; walking through the facility to check equipment; maintaining automated systems and fixing them when they break; and responding to alarms at any time. Technicians must work rotating shifts, including days, nights, and weekends, in extreme heat near furnaces. The work is dangerous, and one mistake could cause the entire refinery to explode.
+
+Salary is $4,200 per year. Applicants must have a high school diploma, mechanical aptitude, technical skills, and the ability to read technical manuals and schematics. Men only need apply, as this work is not suitable for women due to its technical nature and danger. Applicants must be 21 years of age or older, as maturity is required for this responsibility.
+
+Training will be provided, but technicians must learn quickly. Those who cannot handle the work will be dismissed.
 

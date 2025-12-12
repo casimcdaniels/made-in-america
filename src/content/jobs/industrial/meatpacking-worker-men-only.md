@@ -18,5 +18,11 @@ requirements:
   - No union membership - union members will be fired
 filters: {"gender":"male","race":"any","minAge":18,"maxAge":50,"education":"none","experience":"none","union":false,"maritalStatus":"any"}
 ---
-Fast-paced work in meat processing facility. Free labor only - slaves were freed, but conditions are worse than slavery. Stand in blood and offal up to your ankles. The stench will make you vomit - you'll never get used to it. Daily duties: Arrive at 5 AM. Kill hogs - slit throats, watch them bleed out screaming. Stand on killing floor slick with blood. Cut carcasses with razor-sharp knives - one slip and you lose a finger (happens weekly). Work in freezing cold (40 degrees) to prevent spoilage - your hands go numb. Lift 200-pound sides of beef onto hooks. Work at breakneck speed - foreman watches every move. Slow down? Fired. Make mistake? Fired. Complain? Fired. Ten men waiting to take your place. Lunch break: 15 minutes, eat standing up. Work until 7 PM. Go home stinking of blood and death. Your clothes will never be clean. Your hands will be permanently stained. Many workers lose fingers, hands, even lives. No women or children - too dangerous. Immigrants welcome - you don't speak English? Doesn't matter, just work faster. Piece-rate pay available if you work fast enough to earn it. No union members - we'll blacklist you.
+WANTED: Men for Meatpacking Work. The Chicago Stockyards requires able-bodied men for work in our meat processing facility. The work is fast-paced and requires considerable physical strength and stamina.
+
+The work consists of killing hogs, cutting carcasses, and processing meat. Men must work in freezing conditions (approximately 40 degrees) to prevent spoilage, standing in blood and offal. The work requires the use of sharp knives and other cutting tools, and accidents, including loss of fingers or hands, are not uncommon. Men must work at high speed, as production quotas must be met.
+
+Wages are $1.50 per day for 10 to 12 hour shifts, six days per week. Piece-rate pay is available for those who work fast enough to earn it. Men are allowed 15 minutes for lunch, which must be eaten standing up. The work is extremely dangerous, and the Company assumes no responsibility for accidents or injuries.
+
+No prior experience is necessary, as training will be provided. Immigrants are welcome, as English is not required. No women or children need apply, as the work is too dangerous. Union members will not be considered for employment.
 

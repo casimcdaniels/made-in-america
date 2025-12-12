@@ -18,5 +18,28 @@ requirements:
   - Willingness to work evenings and weekends for urgent projects
 filters: {"gender":"any","race":"any","minAge":22,"maxAge":45,"education":"college","experience":"some","union":false,"maritalStatus":"any"}
 ---
-Develop websites and web applications. Free labor - requires technical skills but pay varies widely. Daily duties: Arrive at 9 AM. Write code in JavaScript, HTML, CSS - frontend work, make it look good. Write backend code - Node.js, Python, PHP - make it work. Work with databases - MySQL, MongoDB, PostgreSQL - store and retrieve data. Debug across browsers - Chrome, Firefox, Safari, Edge - each has different bugs. Test on mobile devices - responsive design, your eyes will strain. Work with designers - they create pretty mockups, you make them work. Deal with client requests - 'can you make this pop more?' 'can you add this feature?' Constant changes, tight deadlines. Must learn new frameworks constantly - React, Vue, Angular - everything changes. Work evenings and weekends - projects are always 'urgent.' Must be full-stack - frontend, backend, database, DevOps - but pay is for one role. $75-100k sounds okay but you're doing multiple jobs.
+We're looking for a talented Full Stack Web Developer to join our dynamic team! You'll be responsible for developing cutting-edge websites and web applications using the latest technologies.
+
+**What You'll Do:**
+- Build responsive, user-friendly frontends using JavaScript, HTML, and CSS
+- Develop robust backend systems with Node.js, Python, or PHP
+- Design and optimize databases (MySQL, MongoDB, PostgreSQL)
+- Ensure cross-browser compatibility and mobile responsiveness
+- Collaborate with designers to bring mockups to life
+- Work directly with clients to implement features and iterate quickly
+- Stay current with emerging frameworks (React, Vue, Angular)
+
+**Requirements:**
+- Bachelor's degree in Computer Science or related field (or bootcamp certificate)
+- 2+ years web development experience
+- Proficiency in JavaScript, HTML, CSS
+- Experience with React, Vue, or Angular
+- Backend experience with Node.js, Python, or PHP
+- Database experience with SQL or NoSQL
+- Strong portfolio of web projects
+- Ability to work evenings and weekends for urgent projects
+
+**Compensation:** $75,000 - $100,000 per year
+
+Join us and help shape the future of web development!
 

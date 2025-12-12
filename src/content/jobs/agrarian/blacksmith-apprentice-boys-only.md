@@ -17,5 +17,9 @@ requirements:
   - No girls or women accepted
 filters: {"gender":"male","race":"white","minAge":12,"maxAge":16,"education":"elementary","experience":"none","maritalStatus":"any"}
 ---
-Master blacksmith seeking MALE apprentice to learn the trade. Free white boys only - slaves cannot be apprenticed to skilled trades, and this requires education and freedom to practice independently. Seven-year indenture contract. Daily duties: Rise at 5 AM. Stoke forge fire, heat iron to white-hot. Swing 8-pound hammer for hours - your arms will shake with exhaustion. Master will beat you if work is poor. Learn to shape horseshoes, tools, hardware. Sweep shop, clean tools, run errands. Eat with master's family, sleep in attic. First 2 years: only observe and do menial tasks. Years 3-5: assist with simple work. Years 6-7: learn advanced techniques. Upon completion, receive tools and freedom to practice. No girls or women - this is men's work requiring physical strength.
+WANTED: Apprentice to a Master Blacksmith. A master craftsman of good repute seeks a young lad, between the ages of 12 and 16 years, to serve as apprentice in the art and mystery of blacksmithing. The apprentice must be a free white male of sound body and good character, with parental consent and proper indenture papers.
+
+Terms: The apprentice shall serve faithfully for a term of seven years, during which time he shall learn all aspects of the trade, including the forging of horseshoes, tools, hardware, and other ironwork. The master shall provide instruction, lodging, board, and a small stipend. The apprentice shall perform such duties as stoking the forge, assisting with the work, maintaining the shop, and running errands as directed by the master.
+
+The master reserves the right to discipline the apprentice as necessary for his instruction and improvement. Upon completion of the indenture, the apprentice shall receive a set of tools and the freedom to practice the trade independently. No females need apply, as this trade requires considerable physical strength and is unsuitable for women.
 

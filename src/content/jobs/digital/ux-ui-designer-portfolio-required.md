@@ -19,5 +19,39 @@ requirements:
   - Startup experience preferred
 filters: {"gender":"any","race":"any","minAge":22,"maxAge":35,"education":"college","experience":"some","union":false,"maritalStatus":"any"}
 ---
-Design user interfaces and user experiences for digital products. Free labor - requires design skills and creativity, but pay is lower than engineering. Daily duties: Arrive at 10 AM (designers work 'creative hours'). Open Figma - spend entire day designing screens, your wrists will ache. Research users - interviews, surveys, usability testing - understand what people want. Create wireframes, mockups, prototypes - iterate, iterate, iterate. Work with developers - they say 'this is impossible,' you simplify. Deal with feedback - 'make it pop more,' 'can you try a different color?' Constant revisions. Must understand psychology, accessibility, usability - but you're not a researcher. Must stay current on design trends - Material Design, iOS guidelines, everything changes. Work evenings and weekends - projects are always 'urgent.' Must have portfolio - years of work, but you're judged on it. Age 22-35 preferred - older designers are 'out of touch.' Must relocate to SF - expensive city, but that's where design jobs are.
+**UX/UI Designer**
+
+Create beautiful, intuitive user experiences! Join our design team and help shape the future of digital products.
+
+**What You'll Do:**
+- Design user interfaces and user experiences for digital products
+- Conduct user research (interviews, surveys, usability testing)
+- Create wireframes, mockups, and prototypes
+- Iterate based on feedback and user testing
+- Collaborate with developers and product managers
+- Ensure designs are accessible and follow best practices
+- Stay current on design trends and platform guidelines
+
+**Requirements:**
+- Bachelor's degree in Design, HCI, or related field (or bootcamp certificate)
+- 3+ years UX/UI design experience
+- Strong portfolio required
+- Proficiency in Figma, Sketch, or Adobe XD
+- Understanding of user research and usability testing
+- Willingness to work evenings and weekends
+- Must relocate to San Francisco
+- Startup experience preferred
+- Age 22-35 preferred
+
+**Compensation:** $80,000 - $110,000 per year
+
+**Location:** San Francisco, California
+
+**Benefits:**
+- Health insurance
+- 401(k) matching
+- Design budget for tools and resources
+- Relocation assistance
+
+*Portfolio review required. Must demonstrate strong design thinking and ability to create user-centered designs. Fast-paced startup environment with tight deadlines.*
 
