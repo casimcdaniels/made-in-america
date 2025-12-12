@@ -1,0 +1,276 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="References - Made in America">
+	<div class="references-page">
+		<section class="references-header">
+			<div class="header-content">
+				<h1>References & Sources</h1>
+				<p class="subtitle">Primary and secondary sources consulted in the creation of this historical project</p>
+			</div>
+		</section>
+
+		<section class="references-content">
+			<div class="era-section">
+				<h2 class="era-title">Agrarian Era (1600 - 1820)</h2>
+				<ul class="citation-list">
+					<li>
+						<cite>Crèvecœur, J. Hector St. John.</cite> <em>Letters from an American Farmer.</em> 1782. Observations on colonial farming and American identity.
+					</li>
+					<li>
+						<cite>Adams, John & Abigail.</cite> Personal letters. 1770s–1780s. Farm life, household labor, and colonial work.
+					</li>
+				</ul>
+			</div>
+
+			<div class="era-section">
+				<h2 class="era-title">Market Revolution Era (1820–1880)</h2>
+				<ul class="citation-list">
+					<li>
+						<cite>Lowell Mill Girls.</cite> Letters and writings. 1830s–1840s. Factory work, strikes, and organizing.
+					</li>
+					<li>
+						<cite>Robinson, Harriet Hanson.</cite> <em>Loom and Spindle: Or Life Among the Early Mill Girls.</em> 1898. Memoir of Lowell mill work and labor organizing.
+					</li>
+					<li>
+						<cite>Douglass, Frederick.</cite> <em>Narrative of the Life of Frederick Douglass, an American Slave.</em> 1845. Slave labor, skilled trades, and free vs. slave labor.
+					</li>
+					<li>
+						<cite>Northup, Solomon.</cite> <em>Twelve Years a Slave: Narrative of Solomon Northup, a Citizen of New-York, Kidnapped in Washington City in 1841, and Rescued in 1853.</em> 1853. Free Black man kidnapped into slavery; skilled labor under slavery.
+					</li>
+					<li>
+						<cite>de Tocqueville, Alexis.</cite> <em>Democracy in America.</em> 1835. Observations on manufacturing and class relations.
+					</li>
+					<li>
+						<cite>Heighton, William.</cite> <em>The Mechanics' Free Press.</em> 1820s. Artisan organizing and early labor newspapers.
+					</li>
+				</ul>
+			</div>
+
+			<div class="era-section">
+				<h2 class="era-title">Industrial Era (1880–1970)</h2>
+				<ul class="citation-list">
+					<li>
+						<cite>Sinclair, Upton.</cite> <em>The Jungle.</em> 1906. Meatpacking conditions in Chicago.
+					</li>
+					<li>
+						<cite>United States House of Representatives.</cite> <em>Report on Chicago Stockyards.</em> 1906. Congressional investigation of meatpacking conditions.
+					</li>
+					<li>
+						<cite>Oral histories of Texas oil technicians.</cite> Worker experiences with automation and industrial machinery.
+					</li>
+				</ul>
+			</div>
+
+			<div class="era-section">
+				<h2 class="era-title">Post-Industrial Era (1970–2000)</h2>
+				<ul class="citation-list">
+					<li>
+						<cite>NASA "Hidden Figures" accounts.</cite> Accounts of Katherine Johnson, Dorothy Vaughan, Mary Jackson. Women in computing and mathematics.
+					</li>
+					<li>
+						<cite>Hopper, Grace.</cite> Computer scientist and Rear Admiral. Early programming and women in computing.
+					</li>
+					<li>
+						<cite>Borg, Anita.</cite> Computer scientist. Women's exclusion from tech as it became more prestigious.
+					</li>
+				</ul>
+			</div>
+
+			<div class="era-section">
+				<h2 class="era-title">Digital Era (2000–present)</h2>
+				<ul class="citation-list">
+					<li>
+						<cite>Autor, David H.</cite> "Why Are There Still So Many Jobs? The History and Future of Workplace Automation." <em>Journal of Economic Perspectives,</em> vol. 29, no. 3, 2015, pp. 3–30. Labor economics and automation.
+					</li>
+					<li>
+						<cite>Wiener, Norbert.</cite> <em>The Human Use of Human Beings: Cybernetics and Society.</em> 1950. Cybernetics, automation, and human-machine relationships.
+					</li>
+				</ul>
+			</div>
+
+			<div class="era-section">
+				<h2 class="era-title">Government & Institutional Sources</h2>
+				<ul class="citation-list">
+					<li>
+						<cite>Bureau of Labor Statistics.</cite> Bulletins on automation. 1950s–1970s.
+					</li>
+					<li>
+						<cite>Bureau of Labor Statistics.</cite> Reports on service sector growth. 1970s–2000.
+					</li>
+					<li>
+						<cite>United States House of Representatives.</cite> <em>Report on Chicago Stockyards.</em> 1906. Congressional investigation.
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style>
+	.references-page {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 2rem;
+		background: #f5f1e8;
+		min-height: 100vh;
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='paper' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='20' cy='20' r='0.5' fill='%23d4c4a8' opacity='0.3'/%3E%3Ccircle cx='80' cy='40' r='0.5' fill='%23d4c4a8' opacity='0.2'/%3E%3Ccircle cx='40' cy='80' r='0.5' fill='%23d4c4a8' opacity='0.25'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23paper)'/%3E%3C/svg%3E"),
+			repeating-linear-gradient(
+				0deg,
+				transparent,
+				transparent 2px,
+				rgba(139, 115, 85, 0.03) 2px,
+				rgba(139, 115, 85, 0.03) 4px
+			);
+	}
+
+	.references-header {
+		margin-bottom: 3rem;
+		text-align: center;
+		padding: 2rem 0;
+	}
+
+	.header-content h1 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #4a5568;
+		margin: 0 0 0.75rem 0;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.header-content .subtitle {
+		font-size: 1rem;
+		color: #666;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		font-style: italic;
+		margin: 0;
+	}
+
+	.references-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.era-section {
+		margin-bottom: 3rem;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid #d4c4a8;
+	}
+
+	.era-section:last-child {
+		border-bottom: none;
+	}
+
+	.era-title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #4a5568;
+		margin: 0 0 1.25rem 0;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.citation-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.citation-list li {
+		font-size: 1rem;
+		color: #2c2416;
+		line-height: 1.8;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		margin-bottom: 1rem;
+		padding-left: 0;
+		text-align: left;
+	}
+
+	.citation-list cite {
+		font-style: normal;
+		font-weight: 700;
+		color: #4a5568;
+		font-family: 'Old Standard TT', 'Times New Roman', serif;
+	}
+
+	.citation-list em {
+		font-style: italic;
+		color: #2c2416;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+	}
+
+	.references-footer {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 2px dashed #8b7355;
+	}
+
+	.footer-note {
+		background: #fefcf8;
+		border: 2px dashed #8b7355;
+		border-left: 5px solid #8b4a4a;
+		padding: 1.5rem;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+		position: relative;
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='aged' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='30' cy='30' r='0.5' fill='%238b7355' opacity='0.05'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='60' height='60' fill='url(%23aged)'/%3E%3C/svg%3E");
+	}
+
+	.footer-note::before {
+		content: '';
+		position: absolute;
+		top: -2px;
+		right: -2px;
+		width: 20px;
+		height: 20px;
+		border-top: 2px solid #8b4a4a;
+		border-right: 2px solid #8b4a4a;
+	}
+
+	.footer-note p {
+		margin: 0;
+		font-size: 0.95rem;
+		color: #2c2416;
+		line-height: 1.7;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-indent: 1.5em;
+	}
+
+	.footer-note strong {
+		color: #4a5568;
+		font-weight: 700;
+	}
+
+	@media (max-width: 768px) {
+		.references-page {
+			padding: 1rem;
+		}
+
+		.references-header {
+			padding: 1.5rem 0;
+		}
+
+		.header-content h1 {
+			font-size: 1.75rem;
+		}
+
+		.era-title {
+			font-size: 1.25rem;
+		}
+
+		.citation-list li {
+			font-size: 0.95rem;
+		}
+	}
+</style>
+
