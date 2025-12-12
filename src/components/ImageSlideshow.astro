@@ -1,0 +1,97 @@
+---
+import ImageSlideshowReact from './ImageSlideshow';
+
+interface ImageData {
+	src: string;
+	alt: string;
+	caption?: string;
+}
+
+interface Props {
+	images: ImageData[];
+	autoplayInterval?: number;
+}
+
+const { images, autoplayInterval = 5000 } = Astro.props;
+---
+
+<ImageSlideshowReact images={images} autoplayInterval={autoplayInterval} client:load />
+
+<style>
+	.slideshow-container {
+		position: relative;
+		width: 100%;
+		max-height: 500px;
+		overflow: hidden;
+		background: #2c2416;
+	}
+
+	.slideshow-container :global(.slide) {
+		width: 100%;
+		height: auto;
+	}
+
+	.slideshow-container :global(.slide img) {
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: cover;
+		filter: sepia(20%) contrast(1.1) brightness(0.95);
+	}
+
+	.slideshow-container :global(.react-slideshow-container) {
+		width: 100%;
+		height: 100%;
+	}
+
+	.slideshow-container :global(.react-slideshow-container .images-wrap) {
+		width: 100%;
+		height: 100%;
+	}
+
+	.slideshow-container :global(.react-slideshow-container .images-wrap > div) {
+		width: 100%;
+		height: 100%;
+	}
+
+	.slideshow-container :global(.react-slideshow-container .nav) {
+		bottom: 120px !important;
+		z-index: 15;
+	}
+
+	.slideshow-container :global(.react-slideshow-container .nav span) {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.4);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		opacity: 1;
+		transition: all 0.3s ease;
+		margin: 0 4px;
+	}
+
+	.slideshow-container :global(.react-slideshow-container .nav span.active) {
+		background: rgba(255, 255, 255, 0.9);
+		width: 24px;
+		border-radius: 4px;
+	}
+
+	.slideshow-container :global(.react-slideshow-container .nav span:hover) {
+		background: rgba(255, 255, 255, 0.6);
+	}
+
+	@media (max-width: 768px) {
+		.slideshow-container :global(.react-slideshow-container .nav) {
+			bottom: 100px !important;
+		}
+
+		.slideshow-container :global(.react-slideshow-container .nav span) {
+			width: 6px;
+			height: 6px;
+		}
+
+		.slideshow-container :global(.react-slideshow-container .nav span.active) {
+			width: 20px;
+		}
+	}
+</style>

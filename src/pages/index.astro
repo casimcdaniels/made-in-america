@@ -1,23 +1,64 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { eras, getAllJobs } from '../data/jobs';
+import ImageSlideshow from '../components/ImageSlideshow.astro';
 
 const allJobs = await getAllJobs();
 const totalJobs = allJobs.length;
 const totalEras = eras.length;
 const base = import.meta.env.BASE_URL;
+
+// Images from The Atlantic article: Child Labor in America 100 Years Ago
+// Source: https://www.theatlantic.com/photo/2015/07/child-labor-in-america-100-years-ago/397478/
+const slideshowImages = [
+	{
+		src: 'https://cdn.theatlantic.com/thumbor/6Q6qAst87vGCN_sp9CCzQyTa7Hs=/900x636/media/img/photo/2015/07/child-labor-in-america-100-years-ag/c01_03945u/original.jpg',
+		alt: '7-year-old Ferris, a small newsboy in Mobile, Alabama, October 1914',
+		caption: '7-year-old Ferris, a newsboy in Mobile, Alabama, October 1914'
+	},
+	{
+		src: 'https://cdn.theatlantic.com/thumbor/XpsjW6GmGH9LEXhe0dG9yfdQ5KQ=/900x612/media/img/photo/2015/07/child-labor-in-america-100-years-ag/c02_01583u/original.jpg',
+		alt: 'A spinner in the Globe Cotton Mill in Augusta, Georgia, January 1909',
+		caption: 'A spinner in the Globe Cotton Mill in Augusta, Georgia, January 1909'
+	},
+	{
+		src: 'https://cdn.theatlantic.com/thumbor/2g1P3rmU2C_xrrzMpzyICI3siFU=/900x620/media/img/photo/2015/07/child-labor-in-america-100-years-ag/c03_03282u/original.jpg',
+		alt: 'Western Union messengers in Hartford, Connecticut',
+		caption: 'Western Union messengers in Hartford, Connecticut, working alternate nights until 10 P.M.'
+	},
+	{
+		src: 'https://cdn.theatlantic.com/thumbor/nJ-yi1aRxSYQlPdh2tbgUWNarS4=/900x689/media/img/photo/2015/07/child-labor-in-america-100-years-ag/c04_01476u/original.jpg',
+		alt: 'Textile mill workers in Newberry, South Carolina, December 1908',
+		caption: 'Textile mill workers in Newberry, South Carolina, December 1908'
+	},
+	{
+		src: 'https://cdn.theatlantic.com/thumbor/J5DTID_mNeE4-TO5HBNBlfPHIx4=/900x603/media/img/photo/2015/07/child-labor-in-america-100-years-ag/c05_01658u/original.jpg',
+		alt: 'Willie, a young spinner in Quidwick Co. Mill, Anthony, Rhode Island',
+		caption: 'Willie, a young spinner in Quidwick Co. Mill, Anthony, Rhode Island, April 1909'
+	},
+	{
+		src: 'https://cdn.theatlantic.com/thumbor/_zeEl_MIA4v5vwo8fqicY_L8Vyo=/900x625/media/img/photo/2015/07/child-labor-in-america-100-years-ag/c06_00629u/original.jpg',
+		alt: 'Child labor photograph from The Atlantic',
+		caption: 'Child labor photograph from The Atlantic'
+	},
+	{
+		src: 'https://cdn.theatlantic.com/thumbor/7UyaNJN_Z8bvPIRW2jmdfHmr29g=/900x620/media/img/photo/2015/07/child-labor-in-america-100-years-ag/c07_01094u/original.jpg',
+		alt: 'Child labor photograph from The Atlantic',
+		caption: 'Child labor photograph from The Atlantic'
+	}
+];
 ---
 
 <Layout title="Made in America - History of Work in America">
 	<div class="homepage">
 		<section class="splash-image">
-			<img src={`${import.meta.env.BASE_URL}lewis-hine-newsboy.jpg`} alt="7-year-old Ferris, a newsboy in Mobile, Alabama, October 1914" />
+			<ImageSlideshow images={slideshowImages} autoplayInterval={5000} />
 			<div class="splash-overlay">
 				<div class="splash-title">
 					<h1>History of Work in America</h1>
 				</div>
 				<div class="splash-caption">
-					<p>Lewis Hine / Library of Congress. 7-year-old Ferris, a newsboy in Mobile, Alabama, October 1914. Source: <a href="https://www.theatlantic.com/photo/2015/07/child-labor-in-america-100-years-ago/397478/#img01" target="_blank" rel="noopener noreferrer">The Atlantic</a></p>
+					<p>Lewis Hine / Library of Congress. Photographs from <a href="https://www.theatlantic.com/photo/2015/07/child-labor-in-america-100-years-ago/397478/#img01" target="_blank" rel="noopener noreferrer">The Atlantic</a></p>
 				</div>
 			</div>
 		</section>
@@ -292,6 +333,11 @@ const base = import.meta.env.BASE_URL;
 		background: #2c2416;
 	}
 
+	.splash-image :global(.slideshow-container) {
+		width: 100%;
+		max-height: 500px;
+	}
+
 	.splash-image img {
 		width: 100%;
 		height: auto;
@@ -311,6 +357,12 @@ const base = import.meta.env.BASE_URL;
 		justify-content: space-between;
 		align-items: flex-end;
 		gap: 2rem;
+		z-index: 20;
+		pointer-events: none;
+	}
+
+	.splash-overlay * {
+		pointer-events: auto;
 	}
 
 	.splash-title {
