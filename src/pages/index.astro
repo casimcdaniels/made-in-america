@@ -52,7 +52,11 @@ const slideshowImages = [
 <Layout title="Made in America - Work Through History">
 	<div class="homepage">
 		<section class="splash-image">
-			<ImageSlideshow images={slideshowImages} autoplayInterval={5000} />
+			<ImageSlideshow 
+				images={slideshowImages} 
+				autoplayInterval={5000}
+				description="From colonial farms to AI-powered workplaces—explore American history through the lens of work. Browse authentic job boards and professional networks from five distinct eras, each reflecting the opportunities, wages, and workplace realities of its time."
+			/>
 			<div class="splash-overlay">
 				<div class="splash-title">
 					<h1>Work Through History</h1>
@@ -337,11 +341,10 @@ const slideshowImages = [
 
 	.splash-image {
 		position: relative;
-		width: 100%;
-		max-width: 100%;
 		height: 500px;
 		min-height: 500px;
 		overflow: hidden;
+		margin: 2rem;
 		margin-bottom: 2rem;
 		background: #2c2416;
 		box-sizing: border-box;
@@ -688,6 +691,7 @@ const slideshowImages = [
 		}
 
 		.splash-image {
+			margin: 1rem;
 			margin-bottom: 1rem;
 		}
 
