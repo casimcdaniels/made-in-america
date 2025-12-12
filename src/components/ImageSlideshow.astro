@@ -18,40 +18,50 @@ const { images, autoplayInterval = 5000 } = Astro.props;
 <ImageSlideshowReact images={images} autoplayInterval={autoplayInterval} client:load />
 
 <style>
-	.slideshow-container {
+	:global(.slideshow-container) {
 		position: relative;
-		width: 100%;
+		width: 100% !important;
+		max-width: 100% !important;
 		max-height: 500px;
 		overflow: hidden;
 		background: #2c2416;
+		box-sizing: border-box;
 	}
 
-	.slideshow-container :global(.slide) {
-		width: 100%;
+	:global(.slideshow-container .slide) {
+		width: 100% !important;
 		height: auto;
+		display: block;
 	}
 
-	.slideshow-container :global(.slide img) {
-		width: 100%;
+	:global(.slideshow-container .slide img) {
+		width: 100% !important;
+		max-width: 100% !important;
 		height: auto;
 		display: block;
 		object-fit: cover;
 		filter: sepia(20%) contrast(1.1) brightness(0.95);
 	}
 
-	.slideshow-container :global(.react-slideshow-container) {
-		width: 100%;
+	:global(.slideshow-container .react-slideshow-container) {
+		width: 100% !important;
+		max-width: 100% !important;
 		height: 100%;
+		box-sizing: border-box;
 	}
 
-	.slideshow-container :global(.react-slideshow-container .images-wrap) {
-		width: 100%;
+	:global(.slideshow-container .react-slideshow-container .images-wrap) {
+		width: 100% !important;
+		max-width: 100% !important;
 		height: 100%;
+		box-sizing: border-box;
 	}
 
-	.slideshow-container :global(.react-slideshow-container .images-wrap > div) {
-		width: 100%;
+	:global(.slideshow-container .react-slideshow-container .images-wrap > div) {
+		width: 100% !important;
+		max-width: 100% !important;
 		height: 100%;
+		box-sizing: border-box;
 	}
 
 	.slideshow-container :global(.react-slideshow-container .nav) {
