@@ -53,6 +53,7 @@ interface Props {
 		<footer class="footer">
 			<div class="footer-container">
 				<p>&copy; 2025 Made in America. Educational project exploring American history through the lens of work.</p>
+				<p class="disclaimer">DISCLAIMER: Content is fictional and inspired by historical records. For educational purposes only.</p>
 			</div>
 		</footer>
 	</body>
@@ -222,6 +223,22 @@ interface Props {
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		border-top: 1px solid #000;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.footer-container .disclaimer {
+		font-size: 0.7rem;
+		color: #666;
+		font-style: italic;
+		text-transform: none;
+		letter-spacing: 0.05em;
+		line-height: 1.5;
+		max-width: 800px;
+		margin: 0 auto;
+		padding-top: 1rem;
+		border-top: 1px dashed #8b7355;
 	}
 
 	@media (max-width: 768px) {
