@@ -107,6 +107,13 @@ const slideshowImages = [
 						<div class="stat-label">Years of History</div>
 					</div>
 				</div>
+
+				<div class="hero-disclaimer">
+					<p class="disclaimer-title">About This Project</p>
+					<p class="disclaimer-text">
+						The information on this site is fictional, though inspired by real historical records and sources. Job postings, social media posts, and other content are creative interpretations designed for educational purposes.
+					</p>
+				</div>
 			</div>
 		</section>
 
@@ -116,15 +123,6 @@ const slideshowImages = [
 				dignity, and a fair wage that shaped our nation."
 			</blockquote>
 			<cite>— Historical Archives</cite>
-		</section>
-
-		<section class="disclaimer-section">
-			<div class="disclaimer-content">
-				<p class="disclaimer-title">About This Project</p>
-				<p class="disclaimer-text">
-					The information on this site is fictional, though inspired by real historical records and sources. Job postings, social media posts, and other content are creative interpretations designed for educational purposes.
-				</p>
-			</div>
 		</section>
 
 		<section class="explore-section">
@@ -337,6 +335,44 @@ const slideshowImages = [
 	.hero-description p {
 		margin: 0;
 		text-indent: 1.5em;
+	}
+
+	.hero-disclaimer {
+		margin-top: 2rem;
+		padding-top: 2rem;
+		border-top: 1px dashed #d4c4a8;
+		text-align: center;
+	}
+
+	.hero-disclaimer .disclaimer-title {
+		font-size: 0.9rem;
+		font-weight: 700;
+		color: #4a5568;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin: 0 0 0.75rem 0;
+		border-bottom: 1px solid #8b7355;
+		padding-bottom: 0.5rem;
+		display: inline-block;
+	}
+
+	.hero-disclaimer .disclaimer-text {
+		font-size: 0.85rem;
+		color: #666;
+		line-height: 1.7;
+		margin: 0;
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		text-align: justify;
+		font-style: italic;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.hero-disclaimer .disclaimer-text strong {
+		color: #4a5568;
+		font-weight: 600;
+		font-style: normal;
 	}
 
 	.splash-image {
@@ -566,52 +602,6 @@ const slideshowImages = [
 		background: linear-gradient(to right, transparent, #8b4a4a);
 	}
 
-	.disclaimer-section {
-		background: #faf8f3;
-		border: 2px dashed #8b7355;
-		margin: 2rem;
-		padding: 2rem 2.5rem;
-		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
-		position: relative;
-		background-image: 
-			url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='aged' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='30' cy='30' r='0.5' fill='%238b7355' opacity='0.03'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='60' height='60' fill='url(%23aged)'/%3E%3C/svg%3E");
-	}
-
-	.disclaimer-content {
-		max-width: 800px;
-		margin: 0 auto;
-		text-align: center;
-	}
-
-	.disclaimer-title {
-		font-size: 0.9rem;
-		font-weight: 700;
-		color: #4a5568;
-		font-family: 'Newsreader', 'Times New Roman', serif;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		margin: 0 0 0.75rem 0;
-		border-bottom: 1px solid #8b7355;
-		padding-bottom: 0.5rem;
-		display: inline-block;
-	}
-
-	.disclaimer-text {
-		font-size: 0.85rem;
-		color: #666;
-		line-height: 1.7;
-		margin: 0;
-		font-family: 'Newsreader', 'Times New Roman', serif;
-		text-align: justify;
-		font-style: italic;
-	}
-
-	.disclaimer-text strong {
-		color: #4a5568;
-		font-weight: 600;
-		font-style: normal;
-	}
-
 	.explore-section {
 		margin: 4rem 2rem;
 		text-align: center;
@@ -719,24 +709,23 @@ const slideshowImages = [
 			font-size: 0.65rem;
 		}
 
-		.disclaimer-section {
-			margin: 1.5rem 1rem;
-			padding: 1.5rem 1.25rem;
-		}
-
-		.disclaimer-title {
-			font-size: 0.8rem;
-		}
-
-		.disclaimer-text {
-			font-size: 0.8rem;
-		}
-
 		.hero,
 		.featured-quote,
-		.disclaimer-section,
 		.explore-section {
 			margin: 1rem;
+		}
+
+		.hero-disclaimer {
+			margin-top: 1.5rem;
+			padding-top: 1.5rem;
+		}
+
+		.hero-disclaimer .disclaimer-title {
+			font-size: 0.8rem;
+		}
+
+		.hero-disclaimer .disclaimer-text {
+			font-size: 0.8rem;
 		}
 
 		.hero {
