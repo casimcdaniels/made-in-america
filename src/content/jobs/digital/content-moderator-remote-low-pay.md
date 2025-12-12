@@ -19,32 +19,13 @@ requirements:
   - Acceptance that this work will damage your mental health
 filters: {"gender":"any","race":"any","minAge":18,"maxAge":50,"education":"highschool","experience":"none","union":false,"maritalStatus":"any"}
 ---
-**Content Moderator - Remote Position**
+Content Moderator - Remote Position. Join our team and help make the internet safer! We're looking for detail-oriented individuals to review and label content for AI training systems.
 
-Join our team and help make the internet safer! We're looking for detail-oriented individuals to review and label content for AI training systems.
+What You'll Do: Review and categorize online content (images, videos, text). Label content according to our classification system. Work from home with flexible scheduling. Help train AI systems to identify harmful content.
 
-**What You'll Do:**
-- Review and categorize online content (images, videos, text)
-- Label content according to our classification system
-- Work from home with flexible scheduling
-- Help train AI systems to identify harmful content
+Requirements: Must be 18 or older. High school diploma. Ability to work with sensitive content. Must pass psychological screening. Reliable internet connection. Must sign NDA and liability waiver.
 
-**Requirements:**
-- Must be 18 or older
-- High school diploma
-- Ability to work with sensitive content
-- Must pass psychological screening
-- Reliable internet connection
-- Must sign NDA and liability waiver
+Compensation: $15-18 per hour. Schedule: 8-hour shifts, reviewing 500+ pieces of content daily. 15-minute breaks every 2 hours. Benefits: Work from home - no commute! Wellness resources available. Flexible scheduling.
 
-**Compensation:** $15-18 per hour
-
-**Schedule:** 8-hour shifts, reviewing 500+ pieces of content daily. 15-minute breaks every 2 hours.
-
-**Benefits:**
-- Work from home - no commute!
-- Wellness resources available
-- Flexible scheduling
-
-*Note: This position involves exposure to disturbing content. Wellness resources and support are provided. Benefits available after 6 months of employment. High turnover is expected due to the nature of the work.*
+Note: This position involves exposure to disturbing content. Wellness resources and support are provided. Benefits available after 6 months of employment. High turnover is expected due to the nature of the work.
 

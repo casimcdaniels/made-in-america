@@ -19,31 +19,15 @@ requirements:
   - Competition with workers worldwide drives pay down
 filters: {"gender":"any","race":"any","minAge":18,"maxAge":70,"education":"none","experience":"none","union":false,"maritalStatus":"any"}
 ---
-**AI Training Data Collector - Work From Home**
+AI Training Data Collector - Work From Home. Earn money in your spare time! Complete simple micro-tasks from home and help train the AI systems of the future. Perfect for students, stay-at-home parents, or anyone looking for flexible, remote work.
 
-Earn money in your spare time! Complete simple micro-tasks from home and help train the AI systems of the future. Perfect for students, stay-at-home parents, or anyone looking for flexible, remote work.
+What You'll Do: Complete micro-tasks like labeling images, transcribing audio, categorizing data. Work at your own pace from home. Help train cutting-edge AI systems. Set your own schedule.
 
-**What You'll Do:**
-- Complete micro-tasks like labeling images, transcribing audio, categorizing data
-- Work at your own pace from home
-- Help train cutting-edge AI systems
-- Set your own schedule
+Requirements: Must be 18 or older. Reliable internet connection. Ability to work repetitive tasks. Must meet daily quota of 200+ tasks.
 
-**Requirements:**
-- Must be 18 or older
-- Reliable internet connection
-- Ability to work repetitive tasks
-- Must meet daily quota of 200+ tasks
+Earnings: $0.05-0.10 per task (piece-rate). Benefits: Work from home - no commute! Flexible schedule - work when you want. No experience required. Be your own boss.
 
-**Earnings:** $0.05-0.10 per task (piece-rate)
+This is an independent contractor position. Earnings vary based on speed and accuracy. No minimum wage guarantee. Work from anywhere in the world!
 
-**Benefits:**
-- Work from home - no commute!
-- Flexible schedule - work when you want
-- No experience required
-- Be your own boss
-
-*This is an independent contractor position. Earnings vary based on speed and accuracy. No minimum wage guarantee. Work from anywhere in the world!*
-
-**Join thousands of workers earning extra income in the gig economy!**
+Join thousands of workers earning extra income in the gig economy!
 
