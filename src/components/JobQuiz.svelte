@@ -5,7 +5,7 @@
 		Dumbbell, PenTool, Puzzle, Laptop, Hammer, Briefcase, 
 		GraduationCap, Theater, BookOpen, TreePine, Building2, 
 		Zap, Lightbulb, TrendingUp, Handshake, Rocket, Clock, 
-		RefreshCw, Leaf, MapPin, PartyPopper, Check, ArrowRight, ArrowLeft, User
+		RefreshCw, Leaf, MapPin, PartyPopper, Check, ArrowRight, ArrowLeft, User, UserCircle, UserCheck
 	} from 'lucide-svelte';
 
 	interface Props {
@@ -44,6 +44,16 @@
 				{ value: 'child', label: 'Child (under 18)', iconComponent: Sprout },
 				{ value: 'adult', label: 'Adult (18-64)', iconComponent: User },
 				{ value: 'elderly', label: 'Elderly (65+)', iconComponent: TreePine }
+			]
+		},
+		{
+			id: 'gender',
+			text: 'What is your gender?',
+			type: 'choice',
+			options: [
+				{ value: 'male', label: 'Male', iconComponent: User },
+				{ value: 'female', label: 'Female', iconComponent: UserCircle },
+				{ value: 'any', label: 'Other / Prefer not to say', iconComponent: UserCheck }
 			]
 		},
 		{
@@ -164,11 +174,15 @@
 		const contexts: string[] = [];
 		const raceAnswer = getAnswer('race');
 		const ageAnswer = getAnswer('age');
+		const genderAnswer = getAnswer('gender');
 		const educationAnswer = getAnswer('education');
 		const eraAnswer = matchedJob?.era;
 
 		if (raceAnswer === 'black') {
 			contexts.push('African Americans faced severe employment restrictions. In earlier eras, many were enslaved with no choice in work. After emancipation, Black workers were excluded from skilled trades and unions, limited to manual labor and domestic service.');
+		}
+		if (genderAnswer === 'female') {
+			contexts.push('Women faced significant employment discrimination. Many professions, skilled trades, and leadership roles were closed to women. Women were often limited to domestic service, teaching, clerical work, and low-wage factory jobs, typically paid less than men for the same work.');
 		}
 		if (ageAnswer === 'child') {
 			contexts.push('Child labor was common, especially before the 20th century. Children as young as 5-6 worked 10-14 hour days in fields, factories, and mines for little or no pay.');
@@ -191,6 +205,7 @@
 		const answerMap = Object.fromEntries(answers.map(a => [a.questionId, a.value]));
 		const race = answerMap.race as string;
 		const ageCategory = answerMap.age as string;
+		const gender = answerMap.gender as string;
 
 		// Map age categories to numeric ranges for matching
 		const ageRanges: Record<string, { min: number; max: number }> = {
@@ -210,6 +225,18 @@
 				// If no race filter, only include for white users (historically accurate)
 				// Black users were excluded from most jobs without explicit filters
 				return race === 'white';
+			});
+		}
+
+		// Filter jobs by gender - historically many jobs were gender-segregated
+		if (gender && gender !== 'any') {
+			eligibleJobs = eligibleJobs.filter(job => {
+				// If job has a gender filter, it must match
+				if (job.filters?.gender) {
+					return job.filters.gender === gender || job.filters.gender === 'any';
+				}
+				// If no gender filter, allow it (some jobs don't specify gender)
+				return true;
 			});
 		}
 
@@ -255,6 +282,20 @@
 					// No age filter - allow but with lower score
 					score += 10;
 				}
+			}
+
+			// Gender matching is critical - heavily weight it
+			if (gender && job.filters?.gender) {
+				if (job.filters.gender === gender) {
+					score += 45; // Very high weight for gender match
+				} else if (job.filters.gender === 'any') {
+					score += 20; // Medium weight for jobs open to all genders
+				} else {
+					score -= 100; // Heavy penalty for gender mismatch
+				}
+			} else if (gender && gender !== 'any' && !job.filters?.gender) {
+				// Jobs without gender filters - allow but with lower score
+				score += 10;
 			}
 
 			// Race matching is critical - heavily weight it
