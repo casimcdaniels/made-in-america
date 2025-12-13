@@ -114,6 +114,10 @@ const slideshowImages = [
 						The information on this site is fictional, though inspired by real historical records and sources. Job postings, social media posts, and other content are creative interpretations designed for educational purposes.
 					</p>
 				</div>
+
+				<div class="explore-section">
+					<a href={`${base}${eras[0].id}`} class="explore-button">Explore</a>
+				</div>
 			</div>
 		</section>
 
@@ -123,10 +127,6 @@ const slideshowImages = [
 				dignity, and a fair wage that shaped our nation."
 			</blockquote>
 			<cite>— Historical Archives</cite>
-		</section>
-
-		<section class="explore-section">
-			<a href={`${base}${eras[0].id}`} class="explore-button">Explore</a>
 		</section>
 	</div>
 </Layout>
@@ -603,7 +603,7 @@ const slideshowImages = [
 	}
 
 	.explore-section {
-		margin: 4rem 2rem;
+		margin: 2rem 0 0 0;
 		text-align: center;
 	}
 
@@ -611,20 +611,20 @@ const slideshowImages = [
 		display: inline-block;
 		padding: 1rem 2.5rem;
 		background: transparent;
-		color: #4a5568;
+		color: #dc2626;
 		text-decoration: none;
 		font-size: 1.1rem;
 		font-weight: 600;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 		text-transform: uppercase;
 		letter-spacing: 0.15em;
-		border: 2px solid #8b7355;
-		border-top: 3px solid #8b4a4a;
-		border-left: 3px solid #8b4a4a;
+		border: 2px solid #dc2626;
+		border-top: 3px solid #dc2626;
+		border-left: 3px solid #dc2626;
 		transition: all 0.3s ease;
 		position: relative;
 		background: #fefcf8;
-		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+		box-shadow: 2px 2px 0px rgba(220, 38, 38, 0.3);
 	}
 
 	.explore-button::before {
@@ -634,8 +634,8 @@ const slideshowImages = [
 		right: -3px;
 		width: 15px;
 		height: 15px;
-		border-top: 2px solid #8b4a4a;
-		border-right: 2px solid #8b4a4a;
+		border-top: 2px solid #dc2626;
+		border-right: 2px solid #dc2626;
 		transition: all 0.3s ease;
 	}
 
@@ -646,22 +646,22 @@ const slideshowImages = [
 		left: -3px;
 		width: 15px;
 		height: 15px;
-		border-bottom: 2px solid #8b4a4a;
-		border-left: 2px solid #8b4a4a;
+		border-bottom: 2px solid #dc2626;
+		border-left: 2px solid #dc2626;
 		transition: all 0.3s ease;
 	}
 
 	.explore-button:hover {
-		color: #8b4a4a;
-		border-color: #8b4a4a;
-		background: #faf8f3;
+		color: #b91c1c;
+		border-color: #b91c1c;
+		background: #fef2f2;
 		transform: translate(-1px, -1px);
-		box-shadow: 3px 3px 0px rgba(139, 74, 74, 0.2);
+		box-shadow: 3px 3px 0px rgba(220, 38, 38, 0.4);
 	}
 
 	.explore-button:hover::before,
 	.explore-button:hover::after {
-		border-color: #8b4a4a;
+		border-color: #b91c1c;
 	}
 
 	@media (max-width: 1024px) {
@@ -710,9 +710,12 @@ const slideshowImages = [
 		}
 
 		.hero,
-		.featured-quote,
-		.explore-section {
+		.featured-quote {
 			margin: 1rem;
+		}
+
+		.explore-section {
+			margin: 2rem 0 0 0;
 		}
 
 		.hero-disclaimer {
