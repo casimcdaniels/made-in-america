@@ -1,0 +1,976 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FutureCharts from '../components/FutureCharts';
+import { BarChart3, Users, Clock, Search, Shield, TrendingDown } from 'lucide-react';
+
+const base = import.meta.env.BASE_URL;
+
+// Data from Frey & Osborne (2013) - "The Future of Employment"
+const automationData = [
+	{ category: 'Transportation & Logistics', risk: 0.79, jobs: 4700000 },
+	{ category: 'Office & Administrative', risk: 0.96, jobs: 15000000 },
+	{ category: 'Production & Manufacturing', risk: 0.72, jobs: 9000000 },
+	{ category: 'Sales & Service', risk: 0.47, jobs: 12000000 },
+	{ category: 'Food Service', risk: 0.73, jobs: 5000000 },
+	{ category: 'Construction', risk: 0.70, jobs: 6000000 },
+	{ category: 'Healthcare Support', risk: 0.30, jobs: 3000000 },
+	{ category: 'Education & Training', risk: 0.20, jobs: 8000000 },
+	{ category: 'Management', risk: 0.13, jobs: 6000000 },
+	{ category: 'Creative & Arts', risk: 0.08, jobs: 2000000 },
+	{ category: 'Engineering & Tech', risk: 0.15, jobs: 5000000 }
+];
+
+const totalJobs = automationData.reduce((sum, item) => sum + item.jobs, 0);
+const jobsAtRisk = automationData.reduce((sum, item) => sum + (item.jobs * item.risk), 0);
+const percentAtRisk = Math.round((jobsAtRisk / totalJobs) * 100);
+---
+
+<Layout title="The Future of Employment - Made in America" showQuizBanner={false}>
+	<div class="future-page">
+		<!-- Hero Section -->
+		<section class="infographic-hero">
+			<div class="hero-title">The Future of Employment</div>
+			<div class="hero-subtitle">A 2013 study predicts what automation means for American workers</div>
+			<div class="hero-stat">
+				<span class="hero-stat-number">{percentAtRisk}%</span>
+				<span class="hero-stat-label">of U.S. jobs at risk</span>
+			</div>
+		</section>
+
+		<!-- Key Statistics -->
+		<section class="infographic-stats">
+			<div class="stat-card-large">
+				<BarChart3 client:load class="stat-icon" size={32} />
+				<div class="stat-number">{percentAtRisk}%</div>
+				<div class="stat-label">At Risk</div>
+				<div class="stat-description">702 occupations analyzed</div>
+			</div>
+			<div class="stat-card-large">
+				<Users client:load class="stat-icon" size={32} />
+				<div class="stat-number">{Math.round(jobsAtRisk / 1000000)}M</div>
+				<div class="stat-label">Jobs Vulnerable</div>
+				<div class="stat-description">Out of {Math.round(totalJobs / 1000000)}M total</div>
+			</div>
+			<div class="stat-card-large">
+				<Clock client:load class="stat-icon" size={32} />
+				<div class="stat-number">10-20</div>
+				<div class="stat-label">Years</div>
+				<div class="stat-description">Timeline for automation</div>
+			</div>
+		</section>
+
+		<!-- Research Overview -->
+		<section class="infographic-research">
+			<div class="research-header">
+				<h2>The Study</h2>
+				<p class="research-subtitle">Frey & Osborne (2013) • 702 U.S. Occupations</p>
+			</div>
+			<div class="research-grid">
+				<div class="research-card">
+					<Search client:load class="research-icon" size={28} />
+					<h3>Methodology</h3>
+					<p>Analyzed technical feasibility of automating 702 detailed occupations</p>
+				</div>
+				<div class="research-card">
+					<Shield client:load class="research-icon" size={28} />
+					<h3>Three Barriers</h3>
+					<p>Perception & manipulation, creative intelligence, social intelligence</p>
+				</div>
+				<div class="research-card">
+					<TrendingDown client:load class="research-icon" size={28} />
+					<h3>Key Finding</h3>
+					<p>Strong negative correlation: lower wages and education = higher automation risk</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="chart-section">
+			<div class="section-header">
+				<h2>Visualizing the Research</h2>
+				<p class="section-subtitle">Interactive charts exploring automation risk, wages, and education</p>
+			</div>
+
+			<FutureCharts client:load automationData={automationData} />
+		</section>
+
+		<section class="analysis-section">
+			<div class="analysis-content">
+				<h2>The Grim Reality</h2>
+				<p>
+					The Frey-Osborne study reveals a troubling pattern: jobs requiring routine, repetitive tasks are most vulnerable. Office and administrative support workers face a <strong>96% probability</strong> of automation. Transportation and logistics workers face <strong>79%</strong>. Food service workers: <strong>73%</strong>. Production and manufacturing: <strong>72%</strong>.
+				</p>
+				<p>
+					These aren't abstract numbers—they represent millions of Americans whose livelihoods hang in the balance. The study found a strong negative relationship between an occupation's probability of computerization and factors such as wages and educational attainment. In other words: <strong>the jobs most at risk are often the ones that pay the least and require the least education</strong>—precisely the jobs that many workers rely on to survive.
+				</p>
+				<p>
+					While creative professions, management roles, and jobs requiring social intelligence show lower automation risk, these represent a smaller fraction of the labor market. The question becomes: what happens to the millions of workers displaced by automation? Will new jobs emerge fast enough? Or are we heading toward a future of mass unemployment and economic inequality?
+				</p>
+			</div>
+		</section>
+
+		<!-- Historical Context -->
+		<section class="infographic-timeline">
+			<h2>History Repeats</h2>
+			<div class="timeline-compact">
+				<div class="timeline-item-compact">
+					<span class="timeline-year">1820<span class="lowercase-s">s</span>-1880<span class="lowercase-s">s</span></span>
+					<span class="timeline-text">Market Revolution: Machines replace artisans</span>
+				</div>
+				<div class="timeline-item-compact">
+					<span class="timeline-year">1880<span class="lowercase-s">s</span>-1970<span class="lowercase-s">s</span></span>
+					<span class="timeline-text">Industrial Era: Assembly lines replace craftspeople</span>
+				</div>
+				<div class="timeline-item-compact">
+					<span class="timeline-year">1970<span class="lowercase-s">s</span>-2000<span class="lowercase-s">s</span></span>
+					<span class="timeline-text">Post-Industrial: Manufacturing automated or offshored</span>
+				</div>
+				<div class="timeline-item-compact">
+					<span class="timeline-year">2000<span class="lowercase-s">s</span>-Present</span>
+					<span class="timeline-text">Digital Era: E-commerce, self-checkout, AI automation</span>
+				</div>
+				<div class="timeline-item-compact future-highlight">
+					<span class="timeline-year">2020<span class="lowercase-s">s</span>-2030<span class="lowercase-s">s</span>?</span>
+					<span class="timeline-text"><strong>47% of jobs at risk</strong> — Autonomous vehicles, AI office workers</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- The Question -->
+		<section class="infographic-question">
+			<div class="question-content">
+				<h2>Will This Time Be Different?</h2>
+				<p>Previous technological revolutions created new jobs as they destroyed old ones. But what if machines can now replace not just manual labor, but cognitive labor too?</p>
+			</div>
+		</section>
+
+		<section class="citation-section">
+			<div class="citation-content">
+				<h3>Source</h3>
+				<p>
+					Frey, Carl Benedikt, and Michael A. Osborne. "The future of employment: how susceptible are jobs to computerisation?" <em>Technological Forecasting and Social Change</em> 114 (2013): 254-280.
+				</p>
+				<p>
+					<a href="https://oms-www.files.svdcdn.com/production/downloads/academic/The_Future_of_Employment.pdf" target="_blank" rel="noopener noreferrer" class="citation-link">
+						Read the full study (PDF) →
+					</a>
+				</p>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style>
+	.future-page {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem;
+		background: #f5f1e8;
+		min-height: 100vh;
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='paper' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='20' cy='20' r='0.5' fill='%23d4c4a8' opacity='0.3'/%3E%3Ccircle cx='80' cy='40' r='0.5' fill='%23d4c4a8' opacity='0.2'/%3E%3Ccircle cx='40' cy='80' r='0.5' fill='%23d4c4a8' opacity='0.25'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23paper)'/%3E%3C/svg%3E"),
+			repeating-linear-gradient(
+				0deg,
+				transparent,
+				transparent 2px,
+				rgba(139, 115, 85, 0.03) 2px,
+				rgba(139, 115, 85, 0.03) 4px
+			);
+		background-attachment: fixed;
+	}
+
+	/* Infographic Hero */
+	.infographic-hero {
+		text-align: center;
+		padding: 2rem 1.5rem 2.5rem;
+		background: #fefcf8;
+		border: 2px dashed #8b7355;
+		border-top: 4px solid #8b4a4a;
+		border-left: 4px solid #4a5568;
+		margin-bottom: 1.5rem;
+		box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+	}
+
+	.hero-title {
+		font-family: 'Cinzel', serif;
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		color: #8b4a4a;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.hero-subtitle {
+		font-family: 'Newsreader', serif;
+		font-size: 1rem;
+		margin-bottom: 1.5rem;
+		color: #2c2416;
+	}
+
+	.hero-stat {
+		display: inline-block;
+		background: #fefcf8;
+		padding: 1rem 2rem;
+		border: 2px solid #8b7355;
+		border-top: 3px solid #8b4a4a;
+	}
+
+	.hero-stat-number {
+		display: block;
+		font-family: 'Cinzel', serif;
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		color: #8b4a4a;
+	}
+
+	.hero-stat-label {
+		display: block;
+		font-family: 'Newsreader', serif;
+		font-size: 0.9rem;
+		margin-top: 0.25rem;
+		color: #2c2416;
+		letter-spacing: 0.05em;
+		font-weight: 600;
+	}
+
+	/* Infographic Stats */
+	.infographic-stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		padding: 1.5rem 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.stat-card-large {
+		text-align: center;
+		padding: 1.25rem 1rem;
+		background: #fefcf8;
+		border: 2px solid #8b7355;
+		border-top: 3px solid #8b4a4a;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.stat-icon {
+		margin: 0 auto 0.75rem;
+		color: #8b4a4a;
+		stroke-width: 1.5;
+	}
+
+	.stat-card-large .stat-number {
+		font-family: 'Cinzel', serif;
+		font-size: 2.25rem;
+		color: #8b4a4a;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 0.25rem;
+	}
+
+	.stat-card-large .stat-label {
+		font-family: 'Old Standard TT', serif;
+		font-size: 0.95rem;
+		color: #4a5568;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-weight: 700;
+		margin-bottom: 0.25rem;
+	}
+
+	.stat-card-large .stat-description {
+		font-family: 'Newsreader', serif;
+		font-size: 0.8rem;
+		color: #5a4a3a;
+		font-style: italic;
+	}
+
+	/* Research Section */
+	.infographic-research {
+		padding: 1.5rem 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.research-header {
+		text-align: center;
+		margin-bottom: 1.25rem;
+	}
+
+	.research-header h2 {
+		font-family: 'Cinzel', serif;
+		font-size: 1.5rem;
+		color: #8b4a4a;
+		margin: 0 0 0.5rem 0;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-bottom: 2px solid #8b4a4a;
+		display: inline-block;
+		padding-bottom: 0.25rem;
+	}
+
+	.research-subtitle {
+		font-family: 'Newsreader', serif;
+		font-size: 0.9rem;
+		color: #5a4a3a;
+		margin-top: 0.75rem;
+		font-style: italic;
+	}
+
+	.research-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
+
+	.research-card {
+		background: #fefcf8;
+		padding: 1.25rem;
+		border: 2px solid #8b7355;
+		border-left: 3px solid #4a5568;
+		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.research-icon {
+		margin-bottom: 0.75rem;
+		color: #4a5568;
+		stroke-width: 1.5;
+	}
+
+	.research-card h3 {
+		font-family: 'Cinzel', serif;
+		font-size: 1rem;
+		color: #4a5568;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.research-card p {
+		font-family: 'Newsreader', serif;
+		font-size: 0.85rem;
+		line-height: 1.5;
+		color: #2c2416;
+		margin: 0;
+	}
+
+	/* Charts Section */
+	.infographic-charts {
+		padding: 1.5rem 0;
+		margin-bottom: 1.5rem;
+	}
+
+	/* High Risk Section */
+	.infographic-high-risk {
+		padding: 1.5rem 0;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.infographic-high-risk h2 {
+		font-family: 'Cinzel', serif;
+		font-size: 1.5rem;
+		color: #8b4a4a;
+		margin: 0 auto 1.25rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-bottom: 2px solid #8b4a4a;
+		display: inline-block;
+		padding-bottom: 0.25rem;
+	}
+
+	.risk-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.risk-item {
+		background: #fefcf8;
+		padding: 1rem;
+		border: 2px solid #8b7355;
+		border-top: 3px solid #8b4a4a;
+		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.risk-percentage {
+		font-family: 'Cinzel', serif;
+		font-size: 2rem;
+		color: #8b4a4a;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 0.25rem;
+	}
+
+	.risk-category {
+		font-family: 'Newsreader', serif;
+		font-size: 0.9rem;
+		color: #2c2416;
+		font-weight: 600;
+	}
+
+	.risk-note {
+		font-family: 'Newsreader', serif;
+		font-size: 0.9rem;
+		color: #2c2416;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 1rem;
+		background: #faf8f3;
+		border: 2px solid #8b7355;
+		border-left: 3px solid #4a5568;
+		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Timeline Section */
+	.infographic-timeline {
+		padding: 1.5rem 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.infographic-timeline h2 {
+		font-family: 'Cinzel', serif;
+		font-size: 1.5rem;
+		color: #8b4a4a;
+		text-align: center;
+		margin: 0 auto 1.25rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-bottom: 2px solid #8b4a4a;
+		display: inline-block;
+		padding-bottom: 0.25rem;
+	}
+
+	.timeline-compact {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.timeline-item-compact {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		padding: 1rem;
+		background: #fefcf8;
+		border: 2px solid #8b7355;
+		border-left: 3px solid #4a5568;
+		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.timeline-item-compact.future-highlight {
+		border-left-color: #8b4a4a;
+		background: #fefcf8;
+		border-color: #8b7355;
+	}
+
+	.timeline-year {
+		font-family: 'Cinzel', serif;
+		font-size: 0.95rem;
+		color: #4a5568;
+		font-weight: 700;
+		min-width: 120px;
+		letter-spacing: 0.05em;
+	}
+
+	.lowercase-s {
+		font-family: 'Newsreader', serif;
+		font-weight: 400;
+		text-transform: lowercase;
+		font-variant: normal;
+	}
+
+	.timeline-item-compact.future-highlight .timeline-year {
+		color: #8b4a4a;
+	}
+
+	.timeline-text {
+		font-family: 'Newsreader', serif;
+		font-size: 0.9rem;
+		color: #2c2416;
+		line-height: 1.5;
+		flex: 1;
+	}
+
+	/* Question Section */
+	.infographic-question {
+		padding: 1.5rem 0;
+		text-align: center;
+	}
+
+	.question-content h2 {
+		font-family: 'Cinzel', serif;
+		font-size: 1.5rem;
+		color: #8b4a4a;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.question-content p {
+		font-family: 'Newsreader', serif;
+		font-size: 1rem;
+		line-height: 1.6;
+		max-width: 700px;
+		margin: 0 auto;
+		color: #2c2416;
+	}
+
+	.future-hero {
+		background: #fefcf8;
+		border: 2px dashed #8b7355;
+		border-top: 4px solid #8b4a4a;
+		border-left: 4px solid #4a5568;
+		margin: 2rem 0;
+		padding: 3rem 2.5rem;
+		box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+		position: relative;
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='paper' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='20' cy='20' r='0.5' fill='%23d4c4a8' opacity='0.2'/%3E%3Ccircle cx='80' cy='40' r='0.5' fill='%23d4c4a8' opacity='0.15'/%3E%3Ccircle cx='40' cy='80' r='0.5' fill='%23d4c4a8' opacity='0.18'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23paper)'/%3E%3C/svg%3E");
+	}
+
+	.future-hero::before {
+		content: '';
+		position: absolute;
+		top: -2px;
+		right: -2px;
+		width: 30px;
+		height: 30px;
+		border-top: 3px solid #8b4a4a;
+		border-right: 3px solid #8b4a4a;
+	}
+
+	.future-hero::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: -2px;
+		width: 30px;
+		height: 30px;
+		border-bottom: 3px solid #4a5568;
+		border-left: 3px solid #4a5568;
+	}
+
+	.hero-masthead {
+		text-align: center;
+		margin-bottom: 2.5rem;
+		position: relative;
+	}
+
+	.masthead-border-top,
+	.masthead-border-bottom {
+		height: 1px;
+		background: transparent;
+		margin: 0.75rem 0;
+		position: relative;
+		border-top: 1px dashed #d4c4a8;
+		border-bottom: 1px dashed #d4c4a8;
+	}
+
+	.masthead-border-top::before,
+	.masthead-border-bottom::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 1px;
+		background: #8b4a4a;
+		top: 0;
+	}
+
+	.masthead-border-top::after,
+	.masthead-border-bottom::after {
+		content: '◆';
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		color: #8b4a4a;
+		font-size: 0.6rem;
+		top: -0.3rem;
+	}
+
+	.hero-subtitle-container {
+		display: inline-block;
+		padding: 0 2rem;
+	}
+
+	.hero-subtitle {
+		font-family: 'Cinzel', serif;
+		font-size: 2rem;
+		color: #8b4a4a;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 700;
+	}
+
+	.hero-description {
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: #2c2416;
+	}
+
+	.lead-paragraph {
+		font-size: 1.2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.statistics-section {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin: 3rem 0;
+	}
+
+	.stat-card {
+		background: #fefcf8;
+		border: 2px solid #8b7355;
+		border-top: 3px solid #8b4a4a;
+		padding: 2rem;
+		text-align: center;
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.stat-number {
+		font-family: 'Cinzel', serif;
+		font-size: 3rem;
+		color: #8b4a4a;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		font-family: 'Old Standard TT', serif;
+		font-size: 1.1rem;
+		color: #4a5568;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-description {
+		font-family: 'Newsreader', serif;
+		font-size: 0.9rem;
+		color: #5a4a3a;
+		font-style: italic;
+	}
+
+	.research-summary-section {
+		background: #fefcf8;
+		border: 2px dashed #8b7355;
+		border-top: 4px solid #8b4a4a;
+		border-left: 4px solid #4a5568;
+		margin: 3rem 0;
+		padding: 3rem 2.5rem;
+		box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+		position: relative;
+		background-image: 
+			url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='paper' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='20' cy='20' r='0.5' fill='%23d4c4a8' opacity='0.2'/%3E%3Ccircle cx='80' cy='40' r='0.5' fill='%23d4c4a8' opacity='0.15'/%3E%3Ccircle cx='40' cy='80' r='0.5' fill='%23d4c4a8' opacity='0.18'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23paper)'/%3E%3C/svg%3E");
+	}
+
+	.research-content {
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: #2c2416;
+	}
+
+	.research-content p {
+		margin-bottom: 1.5rem;
+	}
+
+	.research-content ul {
+		margin: 1.5rem 0;
+		padding-left: 2rem;
+	}
+
+	.research-content li {
+		margin-bottom: 0.75rem;
+		line-height: 1.7;
+	}
+
+	.research-content strong {
+		color: #8b4a4a;
+		font-weight: 700;
+	}
+
+	.chart-section,
+	.analysis-section,
+	.citation-section {
+		background: #fefcf8;
+		border: 2px dashed #8b7355;
+		border-top: 4px solid #8b4a4a;
+		border-left: 4px solid #4a5568;
+		margin: 1.5rem 0;
+		padding: 1.5rem;
+		box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+		position: relative;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 1.25rem;
+	}
+
+	.section-header h2 {
+		font-family: 'Cinzel', serif;
+		font-size: 1.5rem;
+		color: #8b4a4a;
+		margin: 0 auto 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-bottom: 2px solid #8b4a4a;
+		display: inline-block;
+		padding-bottom: 0.25rem;
+	}
+
+	.section-subtitle {
+		font-family: 'Newsreader', serif;
+		font-size: 0.9rem;
+		color: #5a4a3a;
+		font-style: italic;
+	}
+
+	.chart-container {
+		margin-top: 2rem;
+	}
+
+	:global(.future-charts) {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		margin-top: 2rem;
+	}
+
+	:global(.chart-wrapper) {
+		background: #fefcf8;
+		padding: 1.5rem;
+		border: 2px solid #8b7355;
+		border-top: 3px solid #8b4a4a;
+		box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	:global(.chart-wrapper h3) {
+		font-family: 'Cinzel', serif;
+		font-size: 1.25rem;
+		color: #8b4a4a;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-align: center;
+	}
+
+	:global(.chart-description) {
+		font-family: 'Newsreader', serif;
+		font-size: 0.85rem;
+		color: #5a4a3a;
+		font-style: italic;
+		text-align: center;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+
+	.analysis-content,
+	.warning-content {
+		font-family: 'Newsreader', 'Times New Roman', serif;
+		font-size: 1rem;
+		line-height: 1.6;
+		color: #2c2416;
+		text-align: center;
+	}
+
+	.analysis-content h2,
+	.warning-content h2 {
+		font-family: 'Cinzel', serif;
+		font-size: 1.5rem;
+		color: #8b4a4a;
+		margin: 0 auto 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-bottom: 2px solid #8b4a4a;
+		display: inline-block;
+		padding-bottom: 0.25rem;
+	}
+
+	.analysis-content p,
+	.warning-content p {
+		margin-bottom: 1.5rem;
+	}
+
+	.warning-callout {
+		font-size: 1.3rem;
+		font-weight: 700;
+		color: #8b4a4a;
+		text-align: center;
+		padding: 2rem;
+		border: 3px solid #8b4a4a;
+		border-top: 4px solid #8b4a4a;
+		border-left: 4px solid #4a5568;
+		margin-top: 2rem;
+		background: #f5f1e8;
+		font-family: 'Cinzel', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.timeline {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-top: 2rem;
+		position: relative;
+		padding-left: 3rem;
+	}
+
+	.timeline::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 3px;
+		background: #8b4a4a;
+	}
+
+	.timeline-item {
+		position: relative;
+		padding-left: 2rem;
+	}
+
+	.timeline-item::before {
+		content: '';
+		position: absolute;
+		left: -1.5rem;
+		top: 0.5rem;
+		width: 12px;
+		height: 12px;
+		background: #8b4a4a;
+		border: 3px solid #fefcf8;
+		border-radius: 50%;
+		box-shadow: 0 0 0 2px #8b4a4a;
+	}
+
+	.timeline-item.future::before {
+		background: #b85c5c;
+		box-shadow: 0 0 0 2px #b85c5c, 0 0 10px rgba(184, 92, 92, 0.5);
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% { transform: scale(1); opacity: 1; }
+		50% { transform: scale(1.2); opacity: 0.8; }
+	}
+
+	.timeline-year {
+		font-family: 'Cinzel', serif;
+		font-size: 1.2rem;
+		color: #8b4a4a;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.timeline-item.future .timeline-year {
+		color: #b85c5c;
+		font-size: 1.4rem;
+	}
+
+	.timeline-content {
+		font-family: 'Newsreader', serif;
+		font-size: 1.1rem;
+		line-height: 1.7;
+		color: #2c2416;
+	}
+
+	.timeline-item.future .timeline-content {
+		font-weight: 700;
+		color: #8b4a4a;
+	}
+
+	.citation-content {
+		font-family: 'Newsreader', serif;
+		font-size: 1rem;
+		line-height: 1.8;
+		color: #2c2416;
+	}
+
+	.citation-content h3 {
+		font-family: 'Cinzel', serif;
+		font-size: 1.25rem;
+		color: #8b4a4a;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.citation-link {
+		display: inline-block;
+		margin-top: 1rem;
+		padding: 0.75rem 1.5rem;
+		background: #8b4a4a;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 700;
+		border: 2px solid #8b4a4a;
+		transition: all 0.2s ease;
+		font-family: 'Newsreader', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-size: 0.9rem;
+	}
+
+	.citation-link:hover {
+		background: #b85c5c;
+		border-color: #b85c5c;
+		transform: translate(-2px, -2px);
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+	}
+
+	@media (max-width: 768px) {
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1rem;
+		}
+
+		.hero-stat-number {
+			font-size: 3rem;
+		}
+
+		.infographic-stats {
+			grid-template-columns: 1fr;
+			padding: 2rem 1rem;
+		}
+
+		.research-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.risk-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.timeline-item-compact {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.5rem;
+		}
+
+		.timeline-year {
+			min-width: auto;
+		}
+
+		.question-content h2 {
+			font-size: 2rem;
+		}
+
+		.question-content p {
+			font-size: 1.1rem;
+		}
+	}
+</style>
+
