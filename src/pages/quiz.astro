@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import JobQuiz from '../components/JobQuiz.svelte';
+import { getAllJobs } from '../data/jobs';
+
+const allJobs = await getAllJobs();
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Find Your Historical Job Match - Made in America">
+	<div class="quiz-container">
+		<div class="quiz-header">
+			<h1>Find Your Historical Job Match</h1>
+			<p class="quiz-subtitle">Answer a few questions about yourself and discover which job from American history matches your interests and skills!</p>
+		</div>
+		<JobQuiz client:load jobs={allJobs} base={base} />
+	</div>
+</Layout>
+
+<style>
+	.quiz-container {
+		max-width: 900px;
+		margin: 2rem auto;
+		padding: 2rem;
+	}
+
+	.quiz-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.quiz-header h1 {
+		font-family: 'Cinzel', serif;
+		font-size: 2.5rem;
+		color: #8b4a4a;
+		margin-bottom: 1rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.quiz-subtitle {
+		font-size: 1.2rem;
+		color: #5a4a3a;
+		line-height: 1.8;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+</style>
+

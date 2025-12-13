@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import QuizBanner from '../components/QuizBanner.svelte';
 
 interface Props {
 	title: string;
@@ -47,6 +48,7 @@ interface Props {
 				</nav>
 			</div>
 		</header>
+		<QuizBanner client:load base={base} />
 		<main>
 			<slot />
 		</main>
