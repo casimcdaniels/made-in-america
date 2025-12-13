@@ -60,6 +60,9 @@ const slideshowImages = [
 			<div class="splash-overlay">
 				<div class="splash-title">
 					<h1>Looking for a job? Find one in history!</h1>
+					<div class="explore-section">
+						<a href={`${base}${eras[0].id}`} class="explore-button">Explore Jobs</a>
+					</div>
 				</div>
 				<div class="splash-caption">
 					<p>Lewis Hine / Library of Congress. Photographs from <a href="https://www.theatlantic.com/photo/2015/07/child-labor-in-america-100-years-ago/397478/#img01" target="_blank" rel="noopener noreferrer">The Atlantic</a></p>
@@ -71,7 +74,7 @@ const slideshowImages = [
 			<div class="hero-masthead">
 				<div class="masthead-border-top"></div>
 				<div class="hero-subtitle-container">
-					<span class="hero-subtitle">A Lens on American History</span>
+					<span class="hero-subtitle">About this Project</span>
 				</div>
 				<div class="masthead-border-bottom"></div>
 			</div>
@@ -109,14 +112,9 @@ const slideshowImages = [
 				</div>
 
 				<div class="hero-disclaimer">
-					<p class="disclaimer-title">About This Project</p>
 					<p class="disclaimer-text">
 						The information on this site is fictional, though inspired by real historical records and sources. Job postings, social media posts, and other content are creative interpretations designed for educational purposes.
 					</p>
-				</div>
-
-				<div class="explore-section">
-					<a href={`${base}${eras[0].id}`} class="explore-button">Explore</a>
 				</div>
 			</div>
 		</section>
@@ -321,10 +319,20 @@ const slideshowImages = [
 		text-align: justify;
 	}
 
+	.hero-description p {
+		margin: 0 0 1rem 0;
+		text-indent: 1.5em;
+		font-size: 1.05rem;
+		color: #2c2416;
+		line-height: 1.8;
+	}
+
 	.hero-description .lead-paragraph {
-		font-size: 1.15rem;
+		font-size: 1.05rem;
 		margin-bottom: 1rem;
 		text-indent: 1.5em;
+		color: #2c2416;
+		line-height: 1.8;
 	}
 
 	.hero-description .lead-paragraph strong {
@@ -332,9 +340,8 @@ const slideshowImages = [
 		font-weight: 700;
 	}
 
-	.hero-description p {
-		margin: 0;
-		text-indent: 1.5em;
+	.hero-description p:last-child {
+		margin-bottom: 0;
 	}
 
 	.hero-disclaimer {
@@ -473,6 +480,12 @@ const slideshowImages = [
 		line-height: 1.1;
 	}
 
+	.splash-title .explore-section {
+		margin: 1.5rem 0 0 0;
+		text-align: left;
+		padding: 0;
+	}
+
 	.splash-subtitle {
 		font-size: 1.25rem;
 		color: rgba(255, 255, 255, 0.95);
@@ -603,65 +616,98 @@ const slideshowImages = [
 	}
 
 	.explore-section {
-		margin: 2rem 0 0 0;
+		margin: 3rem 0 0 0;
 		text-align: center;
+		padding: 2rem 0;
 	}
 
 	.explore-button {
 		display: inline-block;
-		padding: 1rem 2.5rem;
-		background: transparent;
-		color: #dc2626;
+		padding: 1.5rem 4rem;
+		background: #fefcf8;
+		color: #8b4a4a;
 		text-decoration: none;
-		font-size: 1.1rem;
-		font-weight: 600;
+		font-size: 1.4rem;
+		font-weight: 700;
 		font-family: 'Newsreader', 'Times New Roman', serif;
 		text-transform: uppercase;
 		letter-spacing: 0.15em;
-		border: 2px solid #dc2626;
-		border-top: 3px solid #dc2626;
-		border-left: 3px solid #dc2626;
+		border: 3px solid #8b4a4a;
+		border-top: 4px solid #8b4a4a;
+		border-left: 4px solid #8b4a4a;
 		transition: all 0.3s ease;
 		position: relative;
-		background: #fefcf8;
-		box-shadow: 2px 2px 0px rgba(220, 38, 38, 0.3);
+		box-shadow: 4px 4px 0px rgba(139, 74, 74, 0.3);
+	}
+
+	.splash-title .explore-button {
+		background: transparent;
+		color: #fff;
+		border: 3px solid rgba(255, 255, 255, 0.9);
+		border-top: 4px solid rgba(255, 255, 255, 0.9);
+		border-left: 4px solid rgba(255, 255, 255, 0.9);
+		box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.5);
+	}
+
+	.splash-title .explore-button::before {
+		border-top: 3px solid rgba(255, 255, 255, 0.9);
+		border-right: 3px solid rgba(255, 255, 255, 0.9);
+	}
+
+	.splash-title .explore-button::after {
+		border-bottom: 3px solid rgba(255, 255, 255, 0.9);
+		border-left: 3px solid rgba(255, 255, 255, 0.9);
+	}
+
+	.splash-title .explore-button:hover {
+		background: rgba(255, 255, 255, 0.1);
+		color: #fff;
+		border-color: rgba(255, 255, 255, 1);
+		box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+		text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.6);
+	}
+
+	.splash-title .explore-button:hover::before,
+	.splash-title .explore-button:hover::after {
+		border-color: rgba(255, 255, 255, 1);
 	}
 
 	.explore-button::before {
 		content: '';
 		position: absolute;
-		top: -3px;
-		right: -3px;
-		width: 15px;
-		height: 15px;
-		border-top: 2px solid #dc2626;
-		border-right: 2px solid #dc2626;
+		top: -4px;
+		right: -4px;
+		width: 20px;
+		height: 20px;
+		border-top: 3px solid #8b4a4a;
+		border-right: 3px solid #8b4a4a;
 		transition: all 0.3s ease;
 	}
 
 	.explore-button::after {
 		content: '';
 		position: absolute;
-		bottom: -3px;
-		left: -3px;
-		width: 15px;
-		height: 15px;
-		border-bottom: 2px solid #dc2626;
-		border-left: 2px solid #dc2626;
+		bottom: -4px;
+		left: -4px;
+		width: 20px;
+		height: 20px;
+		border-bottom: 3px solid #8b4a4a;
+		border-left: 3px solid #8b4a4a;
 		transition: all 0.3s ease;
 	}
 
 	.explore-button:hover {
-		color: #b91c1c;
-		border-color: #b91c1c;
-		background: #fef2f2;
-		transform: translate(-1px, -1px);
-		box-shadow: 3px 3px 0px rgba(220, 38, 38, 0.4);
+		color: #8b4a4a;
+		border-color: #8b4a4a;
+		background: #faf8f3;
+		transform: translate(-2px, -2px);
+		box-shadow: 6px 6px 0px rgba(139, 74, 74, 0.4);
 	}
 
 	.explore-button:hover::before,
 	.explore-button:hover::after {
-		border-color: #b91c1c;
+		border-color: #8b4a4a;
 	}
 
 	@media (max-width: 1024px) {
@@ -694,6 +740,10 @@ const slideshowImages = [
 
 		.splash-title h1 {
 			font-size: 2rem;
+		}
+
+		.splash-title .explore-section {
+			margin: 1rem 0 0 0;
 		}
 
 		.splash-subtitle {
@@ -773,8 +823,13 @@ const slideshowImages = [
 		}
 
 		.explore-button {
-			padding: 0.875rem 2rem;
-			font-size: 0.95rem;
+			padding: 1.25rem 3rem;
+			font-size: 1.15rem;
+		}
+
+		.splash-title .explore-button {
+			padding: 1rem 2.5rem;
+			font-size: 1rem;
 		}
 	}
 </style>
